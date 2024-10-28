@@ -1,0 +1,117 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Minimal pagination
+// ========================================
+
+@import '../../../scss/global/settings/all';
+@import '../../../scss/global/helpers/all';
+
+// Class: 'gw-minimal-pagination-link'.
+.gw-minimal-pagination-link {
+  display: inline-block;
+  margin-bottom: $gw-spacing-08;
+
+  // Class: 'gw-minimal-pagination-link__title'.
+  &__title {
+    @include gw-mixin-font-size($gw-font-size-pagination-title, null);
+    @include gw-mixin-letter-spacing(
+      $gw-font-size-pagination-title,
+      $gw-letter-spacing-tight
+    );
+
+    @include gw-mixin-media-query(md) {
+      @include gw-mixin-font-size($gw-font-size-pagination-title-md, null);
+      @include gw-mixin-letter-spacing(
+        $gw-font-size-pagination-title-md,
+        $gw-letter-spacing-tight
+      );
+    }
+  }
+
+  // Class: 'gw-minimal-pagination-link__label'.
+  &__label {
+    display: block;
+    font-weight: $gw-font-weight-normal;
+    color: $gw-colour-pagination-label;
+    @include gw-mixin-font-size($gw-font-size-pagination-label, null);
+    @include gw-mixin-letter-spacing(
+      $gw-font-size-pagination-label,
+      $gw-letter-spacing-tight
+    );
+
+    @include gw-mixin-media-query(md) {
+      @include gw-mixin-font-size($gw-font-size-pagination-label-md, null);
+      @include gw-mixin-letter-spacing(
+        $gw-font-size-pagination-label-md,
+        $gw-letter-spacing-tight
+      );
+    }
+  }
+
+  // Class: 'gw-minimal-pagination-link--prev'.
+  &--prev {
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left 2px;
+
+    @include gw-mixin-background-svg(
+      $gw-ui-chevron-left,
+      $gw-colour-link-default
+    ); // SVG image, SVG colour.
+
+    @include gw-mixin-media-query(md) {
+      padding-left: 30px;
+      background-size: 18px;
+      background-position: left 4px;
+    }
+
+    &:hover {
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-left,
+        $gw-colour-link-hover
+      );
+    }
+
+    &:focus {
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-left,
+        $gw-colour-focus-ui
+      );
+    }
+  }
+
+  // Class: 'gw-minimal-pagination-link--next'.
+  &--next {
+    float: right;
+    text-align: right;
+    padding-right: 25px;
+
+    @include gw-mixin-background-svg(
+      $gw-ui-chevron-right,
+      $gw-colour-link-default
+    ); //// SVG image, SVG colour.
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 2px;
+
+    @include gw-mixin-media-query(md) {
+      padding-right: 30px;
+      background-size: 18px;
+      background-position: right 4px;
+    }
+
+    &:hover {
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-right,
+        $gw-colour-link-hover
+      );
+    }
+
+    &:focus {
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-right,
+        $gw-colour-focus-ui
+      );
+    }
+  }
+}

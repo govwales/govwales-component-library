@@ -1,0 +1,18 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Link: Skip
+// ========================================
+
+@import '../../../scss/global/settings/all';
+@import '../../../scss/global/helpers/all';
+
+// Class: 'gw-link--skip'.
+.gw-link--skip {
+  display: inline-block;
+  padding-top: $gw-spacing-01;
+  padding-right: $gw-spacing-02;
+  padding-bottom: $gw-spacing-01;
+  padding-left: $gw-spacing-02;
+  margin-top: $gw-spacing-02;
+  margin-bottom: $gw-spacing-02;
+  margin-left: -10px;
+}

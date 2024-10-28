@@ -1,0 +1,44 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as SiteSearchStories from './SiteSearch.stories';
+
+<Meta of={SiteSearchStories} />
+
+# GOV.WALES Site search
+
+A search box that allows users to search a site for a keyword or phrase.
+
+Listed below are additional variations of the component.
+
+### Site search in header
+
+<Canvas of={SiteSearchStories.PlacementInHeader} />
+
+### Site search in header with placeholder
+
+<Canvas of={SiteSearchStories.PlacementInHeaderWithPlaceholder} />
+
+### Site search in header with value
+
+<Canvas of={SiteSearchStories.PlacementInHeaderWithValue} />
+
+### Site search in content
+
+<Canvas of={SiteSearchStories.PlacementInContent} />
+
+### Site search in content with placeholder
+
+<Canvas of={SiteSearchStories.PlacementInContentWithPlaceholder} />
+
+### Site search in content with value
+
+<Canvas of={SiteSearchStories.PlacementInContentWithValue} />

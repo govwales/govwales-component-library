@@ -1,0 +1,30 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as ImageStories from './Image.stories';
+
+<Meta of={ImageStories} />
+
+# GOV.WALES image
+
+Listed below are additional variations of the component.
+
+### Default
+
+<Canvas of={ImageStories.Default} />
+
+### Image with fixed width and height
+
+<Canvas of={ImageStories.FixedWidthAndHeight} />
+
+### Image with percentage width and height
+
+<Canvas of={ImageStories.PercentageWidthAndHeight} />

@@ -1,0 +1,25 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Page header
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Class: 'gw-page-header'.
+.gw-page-header {
+  margin-bottom: $gw-spacing-08;
+
+  // Class: 'gw-page-header--with-border'.
+  &--with-border {
+    @include gw-mixin-border(
+      $border-position: $gw-border-position-bottom,
+      $border-color: $gw-colour-border-grey,
+      $border-width: $gw-border-height-medium
+    );
+  }
+
+  // Class: 'gw-page-header__subheading'.
+  &__subheading {
+    @include gw-mixin-subheading;
+  }
+}

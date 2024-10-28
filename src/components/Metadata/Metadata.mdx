@@ -1,0 +1,28 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as MetadataStories from './Metadata.stories';
+
+<Meta of={MetadataStories} name='Meta data' />
+
+# GOV.WALES metadata
+
+Displays node metadata.
+
+Listed below are additional variations of the component.
+
+### Metadata
+
+<Canvas of={MetadataStories.Default} />
+
+### Metadata with date and time
+
+<Canvas of={MetadataStories.DateAndTime} />

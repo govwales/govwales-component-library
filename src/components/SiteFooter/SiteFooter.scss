@@ -1,0 +1,91 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Site footer
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Specific variables.
+$gw-footer-background: $gw-colour-layout-footer-background;
+$gw-footer-nav-border-color: $gw-colour-grey-5;
+$gw-footer-link-color: $gw-colour-black;
+$gw-footer-font-size-primary-link: 18px;
+$gw-footer-line-height-primary-link: 24px;
+$gw-footer-font-size-secondary-link: 16px;
+$gw-footer-line-height-secondary-link: 20px;
+
+// Class: 'gw-site-footer'.
+.gw-site-footer {
+  background-color: $gw-footer-background;
+  padding-top: $gw-spacing-12;
+  padding-bottom: $gw-spacing-08;
+
+  // Class: 'gw-site-footer__branding'.
+  &__branding {
+    @include gw-mixin-site-logo($gw-logo-colour);
+  }
+
+  // Class: 'gw-site-footer__nav'.
+  &__nav {
+    margin-bottom: $gw-spacing-10;
+
+    // Class: 'gw-site-footer__nav--primary'.
+    // Class: 'gw-site-footer__nav--secondary'.
+    &--primary,
+    &--secondary {
+      list-style: none;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: $gw-spacing-03;
+      margin-left: 0;
+      padding-top: 0;
+      padding-left: 0;
+      padding-bottom: $gw-spacing-04;
+      padding-left: 0;
+
+      li {
+        display: inline-block;
+        margin-right: $gw-spacing-05;
+      }
+
+      a {
+        color: $gw-footer-link-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+
+    // Class: 'gw-site-footer__nav--primary'.
+    &--primary {
+      @include gw-mixin-border(
+        $border-position: $gw-border-position-bottom,
+        $border-color: $gw-footer-nav-border-color,
+        $border-width: $gw-border-height-medium
+      );
+
+      a {
+        @include gw-mixin-font-size(
+          $gw-footer-font-size-primary-link,
+          $gw-footer-line-height-primary-link
+        );
+      }
+    }
+
+    // Class: 'gw-site-footer__nav--secondary'.
+    &--secondary {
+      a {
+        @include gw-mixin-font-size(
+          $gw-footer-font-size-secondary-link,
+          $gw-footer-line-height-secondary-link
+        );
+        font-weight: $gw-font-weight-normal;
+      }
+    }
+  }
+}

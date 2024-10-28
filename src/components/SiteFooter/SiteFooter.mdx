@@ -1,0 +1,32 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as SiteFooterStories from './SiteFooter.stories';
+
+<Meta of={SiteFooterStories} />
+
+# GOV.WALES site footer
+
+To be used in the site-header component.
+
+Listed below are additional variations of the component.
+
+### Footer
+
+<Canvas of={SiteFooterStories.Footer} />
+
+### Footer with secondary navigation
+
+<Canvas of={SiteFooterStories.FooterWithSecondaryNavigation} />
+
+### Footer with primary and secondary navigation
+
+<Canvas of={SiteFooterStories.FooterWithPrimaryAndSecondaryNavigation} />

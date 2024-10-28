@@ -1,0 +1,20 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as ErrorMessageStories from './ErrorMessage.stories';
+
+<Meta of={ErrorMessageStories} />
+
+# GOV.WALES GEL error message
+
+Displays an error message to the user when there is an input validation error.
+
+<Canvas of={ErrorMessageStories.Default} />

@@ -1,0 +1,28 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Metadata
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Class: 'gw-metadata'.
+.gw-metadata {
+  @include gw-mixin-font-size($gw-font-size-meta, null);
+  @include gw-mixin-letter-spacing(
+    $gw-font-size-meta,
+    $gw-letter-spacing-tight
+  );
+  color: $gw-colour-meta-grey;
+  margin-bottom: $gw-spacing-01;
+
+  // Metadata types.
+  // Class: 'gw-metadata--white'.
+  &--white {
+    color: $gw-colour-meta-white;
+  }
+
+  // Class: 'gw-metadata--part-of'.
+  &--part-of {
+    flex-shrink: 1 0 auto;
+  }
+}

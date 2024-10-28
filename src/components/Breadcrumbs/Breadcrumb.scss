@@ -1,0 +1,30 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Link: Breadcrumb
+// ========================================
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Class 'gw-link-breadcrumb'.
+.gw-link-breadcrumb {
+  @include gw-mixin-font-size($gw-font-size-breadcrumb, $gw-line-height);
+
+  // Class 'gw-link-breadcrumb--current'.
+  &--current {
+    font-weight: $gw-font-weight-normal;
+    color: $gw-colour-breadcrumb-current-link;
+
+    &:active,
+    &:visited {
+      color: $gw-colour-breadcrumb-current-link;
+    }
+
+    &:hover {
+      color: $gw-colour-breadcrumb-current-link-hover;
+      @include gw-mixin-transitions(
+        $gw-transition-in-time,
+        color,
+        background-image
+      );
+    }
+  }
+}

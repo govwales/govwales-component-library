@@ -1,0 +1,47 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Site utilities
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Specific variables.
+$gw-site-utilities-background: $gw-colour-grey-6;
+
+// Class: 'gw-site-utilities'.
+.gw-site-utilities {
+  background-color: $gw-site-utilities-background;
+  padding-top: $gw-spacing-03;
+  padding-bottom: $gw-spacing-01;
+
+  // Class: 'gw-site-utilities__share-this-page'.
+  &__share-this-page {
+    display: inline-block;
+    margin-right: $gw-spacing-04;
+    margin-bottom: $gw-spacing-02;
+  }
+
+  // Class: 'gw-site-utilities__back-to-top'.
+  &__back-to-top {
+    display: inline-block;
+    margin-bottom: $gw-spacing-02;
+
+    $gw-colour-btn-back-to-top-border: $gw-colour-grey-2;
+    $gw-font-size-back-to-top: 16px;
+    $gw-line-height-back-to-top: 20px;
+
+    .gw-btn--secondary {
+      background-position: left 10px center;
+      background-size: 15px;
+      background-color: $gw-colour-grey-6;
+      border-color: $gw-colour-grey-2;
+      padding: $gw-spacing-02 $gw-spacing-04 $gw-spacing-02 $gw-spacing-07;
+
+      &:hover {
+        background-color: $gw-colour-grey-4;
+        color: $gw-colour-black;
+        @include gw-mixin-background-svg($gw-ui-chevron-up, $gw-colour-black);
+      }
+    }
+  }
+}

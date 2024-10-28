@@ -1,0 +1,68 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Breadcrumbs
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+@import './Breadcrumb.scss';
+
+// Class 'gw-breadcrumbs'.
+.gw-breadcrumbs {
+  padding-top: $gw-spacing-04;
+  padding-bottom: $gw-spacing-07;
+
+  // Class 'gw-breadcrumbs__list'.
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    @include gw-mixin-font-size($gw-font-size-breadcrumb, $gw-line-height);
+    @include gw-mixin-letter-spacing(
+      $gw-font-size-breadcrumb,
+      $gw-letter-spacing-tight
+    );
+  }
+
+  // Class 'gw-breadcrumbs__item'.
+  &__item {
+    display: none;
+
+    // Class 'gw-breadcrumbs__item--parent'.
+    &--parent {
+      display: inline-block;
+      padding-left: $gw-spacing-04;
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-left,
+        $gw-colour-breadcrumb-pointer
+      );
+      background-repeat: no-repeat;
+      background-size: 8px;
+      background-position: left 5px;
+    }
+
+    @include gw-mixin-media-query(md) {
+      display: inline-block;
+      margin-left: 0;
+      margin-right: $gw-spacing-02;
+      padding-right: $gw-spacing-04;
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-right,
+        $gw-colour-breadcrumb-pointer
+      );
+      background-repeat: no-repeat;
+      background-size: 8px;
+      background-position: right 5px;
+
+      &:last-child {
+        background-image: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+
+      &--parent {
+        padding-left: 0;
+      }
+    }
+  }
+}

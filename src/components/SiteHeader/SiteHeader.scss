@@ -1,0 +1,111 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Site header
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Specific variables.
+$gw-header-background: $gw-colour-layout-header-background;
+$gw-header-text-colour: $gw-colour-white;
+$gw-header-site-search-border: $gw-colour-white;
+
+// Class: 'gw-site-header'.
+.gw-site-header {
+  background-color: $gw-colour-layout-header-background;
+  color: $gw-header-text-colour;
+  padding-top: $gw-spacing-04;
+  padding-bottom: $gw-spacing-04;
+
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  // Class: 'gw-site-header--without-breadcrumb'.
+  &--without-breadcrumb {
+    margin-bottom: $gw-spacing-08;
+  }
+
+  a {
+    color: $gw-header-text-colour;
+  }
+
+  // Class: 'gw-site-header__branding'.
+  &__branding {
+    @include gw-mixin-site-logo($gw-logo-colour--header);
+    float: left;
+
+    // Print version of the logo and placement.
+    @include gw-mixin-media-query(print) {
+      width: $gw-print-logo-width;
+      height: $gw-print-logo-height;
+      @include gw-mixin-background-svg(
+        $gw-print-logo,
+        null
+      ); //// SVG image, SVG colour.
+      background-repeat: no-repeat;
+      background-size: $gw-print-logo-width $gw-print-logo-height;
+      background-position: top left;
+      float: right;
+    }
+
+    &-wrapper {
+      @include gw-mixin-media-query(print) {
+        width: 100%;
+      }
+    }
+
+    a {
+      @include gw-mixin-media-query(print) {
+        display: none;
+      }
+    }
+  }
+
+  // Class: 'gw-site-header__wrapper'.
+  &__wrapper {
+    text-align: right;
+
+    @include gw-mixin-media-query(md) {
+      float: right;
+    }
+  }
+
+  // Class: 'gw-site-header__language'.
+  &__language {
+    display: inline-block;
+
+    .gw-btn--primary {
+      &:hover {
+        // TODO: Align colours with Figma designs when done.
+        background-color: $gw-colour-grey-1;
+      }
+    }
+  }
+
+  // Class: 'gw-site-header__search'.
+  &__search {
+    width: 100%;
+    margin-top: $gw-spacing-03;
+
+    @include gw-mixin-media-query(md) {
+      width: 334px;
+      margin-top: 0;
+      margin-left: $gw-spacing-04;
+      display: inline-block;
+    }
+
+    .gw-input {
+      border-color: $gw-header-site-search-border;
+    }
+  }
+
+  @include gw-mixin-media-query(print) {
+    background-color: transparent;
+    color: $gw-colour-print-default;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

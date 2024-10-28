@@ -1,0 +1,9 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ReadME
+README.dist.md
+Orig.README.md
+
+# Package
+package.dist.json
+package.orig.json

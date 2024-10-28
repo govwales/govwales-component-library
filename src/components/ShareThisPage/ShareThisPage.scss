@@ -1,0 +1,98 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: ShareThisPage
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Specific variables.
+$gw-font-size-share-this-page: 16px;
+$gw-line-height-share-this-page: 22px;
+$gw-colour-btn-share-this-page-border: $gw-colour-grey-2;
+$gw-colour-btn-share-this-page-background: $gw-colour-grey-6;
+$gw-colour-btn-share-this-page-background: $gw-colour-grey-6;
+$gw-colour-btn-share-this-page-background-hover: $gw-colour-grey-4;
+$gw-colour-btn-share-this-page-text: $gw-colour-black;
+$gw-colour-btn-share-this-page-border: $gw-colour-grey-2;
+
+// Class: 'gw-share-this-page'.
+.gw-share-this-page {
+  display: inline-block;
+  border: 1px solid $gw-colour-btn-share-this-page-border;
+  background-color: $gw-colour-btn-share-this-page-background;
+
+  // Class: 'gw-share-this-page__container'.
+  &__container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  summary {
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    background-size: 15px;
+    margin-bottom: 0;
+    @include gw-mixin-font-size(
+      $gw-font-size-share-this-page,
+      $gw-line-height-share-this-page
+    );
+    @include gw-mixin-letter-spacing(
+      $gw-font-size-share-this-page,
+      $gw-letter-spacing-tight
+    );
+    @include gw-mixin-background-svg(
+      $gw-ui-share,
+      $gw-colour-btn-share-this-page-text
+    );
+    @include gw-mixin-btn(
+      $btn-text-colour: $gw-colour-btn-share-this-page-text,
+      $btn-text-colour-hover: $gw-colour-btn-share-this-page-text,
+      $btn-background-colour: $gw-colour-btn-share-this-page-background,
+      $btn-background-colour-hover:
+        $gw-colour-btn-share-this-page-background-hover,
+      $btn-border: none,
+      $btn-padding-left: $gw-spacing-07,
+    );
+
+    &:focus {
+      @include gw-mixin-focused-btn;
+      @include gw-mixin-background-svg(
+        $gw-ui-share,
+        $gw-colour-btn-share-this-page-text
+      );
+    }
+  }
+
+  & ul {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include gw-mixin-font-size(
+      $gw-font-size-share-this-page,
+      $gw-line-height-share-this-page
+    );
+    @include gw-mixin-letter-spacing(
+      $gw-font-size-share-this-page,
+      $gw-letter-spacing-tight
+    );
+
+    li {
+      display: inline;
+    }
+  }
+
+  a {
+    padding-top: $gw-spacing-02;
+    padding-right: $gw-spacing-03;
+    padding-bottom: $gw-spacing-02;
+    padding-left: $gw-spacing-09;
+    background-position: left 15px center;
+
+    &:focus {
+      @include gw-mixin-focused-btn;
+    }
+  }
+}

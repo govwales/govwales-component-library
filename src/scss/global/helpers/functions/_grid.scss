@@ -1,0 +1,31 @@
+// LLYW.CYMRU | GOV.WALES
+// Functions: Grid
+// ========================================
+
+@function gw-function--grid-class-generic($breakpoint) {
+  @if $breakpoint == 'all' {
+    @return '';
+  }
+
+  @return '-' + $breakpoint;
+}
+
+@function gw-function--grid-class($breakpoint, $size) {
+  @if $breakpoint == 'all' {
+    @return '';
+  }
+
+  @return '-' + $breakpoint + '-' + $size;
+}
+
+@function gw-function--grid-placement($breakpoint, $placement) {
+  @if $breakpoint == 'all' {
+    @return 'col--' + $placement;
+  }
+
+  @return 'col-' + $breakpoint + '--' + $placement;
+}
+
+@function gw-function--grid-push-pull($breakpoint, $size, $type) {
+  @return '-' + $breakpoint + '-' + $type + '-' + $size;
+}

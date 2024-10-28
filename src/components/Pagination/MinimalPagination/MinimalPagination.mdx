@@ -1,0 +1,26 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as MinimalPaginationStories from './MinimalPagination.stories';
+
+<Meta of={MinimalPaginationStories} />
+
+# GOV.WALES minimal pagination
+
+Listed below are additional variations of the component.
+
+### Previous
+
+<Canvas of={MinimalPaginationStories.Previous} />
+
+### Next
+
+<Canvas of={MinimalPaginationStories.Next} />

@@ -1,0 +1,99 @@
+{/* Typography.mdx */}
+
+import { Title, Subtitle, Meta, Typeset } from '@storybook/blocks';
+
+<Meta title='Documentation/Typography' />
+
+export const SampleText =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+# GOV.WALES typography
+<br/>
+
+## Font family
+<br/>
+
+<p style={{ fontSize: '18px', lineHeight: '24px', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}>Arial, Helvetica, 'Nimbus Sans L', sans-serif</p>
+
+## Font weights
+<br/>
+
+<p style={{ fontSize: '18px', lineHeight: '24px', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}>400 (regular)</p>
+<p style={{ fontSize: '18px', fontWeight: 700, lineHeight: '24px', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}>700 (bold)</p>
+<br/>
+
+## Headings
+<br/>
+
+Fluid, below breakpoint medium (md)
+
+<h1 style={{ fontSize: '34px', lineHeight: '40px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 25, paddingTop: 0, margin: 0 }}><span style={{ fontSize: '34px', lineHeight: '40px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H1 </span>34/40 Bold</h1>
+<h2 style={{ fontSize: '28px', lineHeight: '34px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 25, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '28px', lineHeight: '34px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H2 </span>28/34 Bold</h2>
+<h3 style={{ fontSize: '24px', lineHeight: '28px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '24px', lineHeight: '28px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H3 </span>24/28 Bold</h3>
+<h4 style={{ fontSize: '20px', lineHeight: '24px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '20px', lineHeight: '24px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H4 </span>20/24 Bold</h4>
+<h5 style={{ fontSize: '18px', lineHeight: '22px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '18px', lineHeight: '22px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H5 </span>18/22 Bold</h5>
+<h6 style={{ fontSize: '14px', lineHeight: '18px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '14px', lineHeight: '18px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H6 </span>14/18 Bold</h6>
+<br/>
+
+Breakpoint medium (md) and above
+
+<h1 style={{ fontSize: '48px', lineHeight: '58px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 25, paddingTop: 0, margin: 0 }}><span style={{ fontSize: '48px', lineHeight: '58px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H1 </span>48/58 Bold</h1>
+<h2 style={{ fontSize: '36px', lineHeight: '44px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 25, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '36px', lineHeight: '44px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H2 </span>36/44 Bold</h2>
+<h3 style={{ fontSize: '28px', lineHeight: '34px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '28px', lineHeight: '34px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H3 </span>28/34 Bold</h3>
+<h4 style={{ fontSize: '24px', lineHeight: '28px', borderBottom: 'none', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '24px', lineHeight: '28px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H4 </span>24/28 Bold</h4>
+<h5 style={{ fontSize: '22px', lineHeight: '26px',borderBottom: 'none', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '22px', lineHeight: '26px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H5 </span>22/26 Bold</h5>
+<h6 style={{ fontSize: '18px', lineHeight: '22px',borderBottom: 'none', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}><span style={{ fontSize: '18px', lineHeight: '22px', borderBottom: 'none', color: '#1f1f1f', width: '80px', display: 'inline-block' }}>H6 </span>18/22 Bold</h6>
+<br/>
+
+Scale
+
+<table>
+  <tr>
+    <th>Element</th>
+    <th>Weight</th>
+    <th>Size</th>
+    <th>Size (md & above)</th>
+  </tr>
+  <tr>
+    <td>`<h1>`</td>
+    <td>700</td>
+    <td>34px</td>
+    <td>48px</td>
+  </tr>
+  <tr>
+    <td>`<h2>`</td>
+    <td>700</td>
+    <td>28px</td>
+    <td>36px</td>
+  </tr>
+  <tr>
+    <td>`<h3>`</td>
+    <td>700</td>
+    <td>24px</td>
+    <td>28px</td>
+  </tr>
+  <tr>
+    <td>`<h4>`</td>
+    <td>700</td>
+    <td>20px</td>
+    <td>24px</td>
+  </tr>
+  <tr>
+    <td>`<h5>`</td>
+    <td>700</td>
+    <td>18px</td>
+    <td>22px</td>
+  </tr>
+  <tr>
+    <td>`<h6>`</td>
+    <td>700</td>
+    <td>14px</td>
+    <td>18px</td>
+  </tr>
+</table>
+<br/>
+
+## Paragraphs
+<br/>
+
+<p style={{ fontSize: '18px', lineHeight: '24px', color: '#1f1f1f', paddingBottom: 20, paddingTop: 0, margin: 0  }}>The default paragraph font size is 18px</p>

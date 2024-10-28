@@ -1,0 +1,40 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as CallOutStories from './CallOut.stories';
+
+<Meta of={CallOutStories} />
+
+# GOV.WALES call out
+
+To be used to display call out notices to users.
+
+Listed below are additional variations of the component.
+
+### Information
+
+<Canvas of={CallOutStories.Information} />
+
+### Warning
+
+<Canvas of={CallOutStories.Warning} />
+
+### Alert
+
+<Canvas of={CallOutStories.Alert} />
+
+### Alert small
+
+<Canvas of={CallOutStories.AlertSmall} />
+
+### Positive
+
+<Canvas of={CallOutStories.Positive} />

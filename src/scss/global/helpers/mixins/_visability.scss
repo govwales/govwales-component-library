@@ -1,0 +1,21 @@
+// LLYW.CYMRU | GOV.WALES
+// Mixins: Visibility
+// ========================================
+
+@mixin gw-mixin-visually-hidden() {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+// Display hidden element on focus.
+
+@mixin gw-mixin-visually-hidden-focus() {
+  width: auto;
+  height: auto;
+  overflow: unset;
+  clip: unset;
+  position: relative;
+}

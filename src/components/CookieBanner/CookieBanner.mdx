@@ -1,0 +1,25 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as CookieBannerStories from './CookieBanner.stories';
+
+<Meta of={CookieBannerStories} />
+
+# GOV.WALES cookie banner
+
+A notice to help users to understand what cookies do.
+
+<Canvas of={CookieBannerStories.Default} />
+<Controls of={CookieBannerStories.Default} />
+
+### Cookies accepted message
+
+<Canvas of={CookieBannerStories.CookiesAccepted} />

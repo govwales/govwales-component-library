@@ -1,0 +1,34 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+# GOV.WALES card
+
+Listed below are additional variations of the component.
+
+### Default
+
+<Canvas of={CardStories.Default} />
+
+### Card with description
+
+<Canvas of={CardStories.WithDescription} />
+
+### Card with image
+
+<Canvas of={CardStories.WithImage} />
+
+### Card with callout
+
+<Canvas of={CardStories.WithCallOut} />

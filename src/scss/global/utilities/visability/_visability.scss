@@ -1,0 +1,17 @@
+// LLYW.CYMRU | GOV.WALES
+// Utilities: Visibility
+// ========================================
+
+.gw-visually-hidden {
+  @include gw-mixin-visually-hidden;
+
+  &--focusable {
+    &:focus {
+      @include gw-mixin-visually-hidden-focus;
+    }
+  }
+}
+
+.gw-fully-hidden {
+  display: none !important;
+}

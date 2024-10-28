@@ -1,0 +1,22 @@
+stages:
+  - UI tests
+  - Publish
+
+before_script:
+  - npm install
+
+# 👇 Adds Chromatic as a job
+Chromatic:
+  stage: UI tests
+  script:
+    - npx chromatic --exit-zero-on-changes
+  interruptible: true
+
+# 👇 Publishes the component library to NPM when code is merged to main branch
+Publish NPM:
+  stage: Publish
+  script:
+    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+    - npm publish --access public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'

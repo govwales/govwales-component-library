@@ -1,0 +1,30 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Button: Primary
+// ========================================
+
+@import '../../../scss/global/settings/all';
+@import '../../../scss/global/helpers/all';
+
+.gw-btn {
+  // Class: 'gw-btn--cta'.
+  &--cta {
+    background-color: $gw-colour-blue;
+    color: $gw-colour-white;
+    border-radius: $gw-spacing-14;
+    padding: $gw-spacing-03 $gw-spacing-05;
+    @include gw-mixin-font-size($gw-font-size-button-cta, $gw-line-height);
+
+    &.gw-btn--lg {
+      padding: $gw-spacing-04 $gw-spacing-06;
+      @include gw-mixin-font-size(
+        $gw-font-size-button-cta-large,
+        $gw-line-height
+      );
+    }
+
+    &.gw-btn--icon-right {
+      padding-right: $gw-spacing-08;
+      background-position: right $gw-spacing-03 center;
+    }
+  }
+}

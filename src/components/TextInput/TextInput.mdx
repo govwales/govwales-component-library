@@ -1,0 +1,56 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as TextInputStories from './TextInput.stories';
+
+<Meta of={TextInputStories} />
+
+# GOV.WALES Text input
+
+A form field that allows users to enter a single line of text.
+
+### Input
+
+<Canvas of={TextInputStories.Default} />
+
+### Input with large label
+
+<Canvas of={TextInputStories.TextInputWithLargeLabel} />
+
+### Input for multiple questions
+
+<Canvas of={TextInputStories.TextInputForMultipleQuestions} />
+
+### Input with visibility hidden label
+
+<Canvas of={TextInputStories.TextInputWithVisiblyHiddenLabel} />
+
+### Input with error message
+
+<Canvas of={TextInputStories.TextInputWithErrorMessage} />
+
+### Input with on change event
+
+<Canvas of={TextInputStories.TextInputWithOnChangeEvent} />
+
+### Fixed-width input
+
+<Canvas of={TextInputStories.TextInputWithFixedWidth} />
+
+### Fluid-width input
+
+Three quarters: 75%,
+Two thirds: 66%,
+Half: 50%,
+One third: 33%,
+One quarter: 25%.
+
+<Canvas of={TextInputStories.TextInputWithFluidWidth} />

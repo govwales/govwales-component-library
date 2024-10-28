@@ -1,0 +1,91 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Call Out
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Class: 'gw-callout'.
+.gw-callout {
+  $this: &;
+  padding-top: $gw-spacing-05;
+  padding-right: $gw-spacing-05;
+  padding-bottom: $gw-spacing-05;
+  padding-left: $gw-spacing-05;
+  background-color: $gw-colour-callout-background;
+  @include gw-mixin-border(
+    $border-position: $gw-border-position-left,
+    $border-color: $gw-colour-callout-border,
+    $border-width: $gw-border-width-large
+  );
+  @include gw-mixin-font-size($gw-font-size-callout, null);
+
+  p {
+    @include gw-mixin-font-size($gw-font-size-callout, null);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Call out types.
+  // Class: 'gw-callout--warning'.
+  &--warning {
+    @include gw-mixin-background-svg(
+      $gw-ui-callout-warning,
+      $gw-colour-callout-warning-icon
+    ); //// SVG image, SVG colour.
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: left 10px center;
+    padding-left: $gw-spacing-09;
+  }
+
+  // Class: 'gw-callout--alert'.
+  &--alert {
+    @include gw-mixin-background-svg(
+      $gw-ui-callout-alert,
+      $gw-colour-callout-alert-icon
+    ); //// SVG image, SVG colour.
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: left 10px center;
+    padding-left: $gw-spacing-09;
+    background-color: $gw-colour-callout-alert-background;
+    @include gw-mixin-border(
+      $border-position: $gw-border-position-left,
+      $border-color: $gw-colour-callout-alert-border,
+      $border-width: $gw-border-width-large
+    );
+  }
+
+  // Class: 'gw-callout--positive'.
+  &--positive {
+    background-color: $gw-colour-callout-positive-background;
+    @include gw-mixin-border(
+      $border-position: $gw-border-position-left,
+      $border-color: $gw-colour-callout-positive-border,
+      $border-width: $gw-border-width-large
+    );
+  }
+
+  // Class: 'gw-callout--sm'.
+  &--sm {
+    padding-top: $gw-spacing-02;
+    padding-bottom: $gw-spacing-02;
+    padding-right: $gw-spacing-04;
+    @include gw-mixin-font-size($gw-font-size-callout-small, null);
+    background-size: 20px 20px;
+
+    p {
+      @include gw-mixin-font-size($gw-font-size-callout-small, null);
+    }
+  }
+
+  // Class: 'gw-callout--alert--sm'.
+  &--alert#{$this}--sm,
+  // Class: 'gw-callout--warning--sm'.
+  &--warning#{$this}--sm {
+    padding-left: $gw-spacing-08;
+  }
+}

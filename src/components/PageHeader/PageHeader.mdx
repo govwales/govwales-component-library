@@ -1,0 +1,50 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as PageHeaderStories from './PageHeader.stories';
+
+<Meta of={PageHeaderStories} />
+
+# GOV.WALES page header
+
+Listed below are additional variations of the component.
+
+### Page header
+
+<Canvas of={PageHeaderStories.Default} />
+
+### Page header with subheading
+
+<Canvas of={PageHeaderStories.WithSubheading} />
+
+### Page header with border
+
+<Canvas of={PageHeaderStories.WithBorder} />
+
+### Page header with subheading and border
+
+<Canvas of={PageHeaderStories.WithSubheadingAndBorder} />
+
+### Page header with abbreviation elements
+
+<Canvas of={PageHeaderStories.WithAbbrElements} />
+
+### Page header with superscript elements
+
+<Canvas of={PageHeaderStories.WithSupElements} />
+
+### Page header with subscript elements
+
+<Canvas of={PageHeaderStories.WithSubElements} />
+
+### Page header with span elements
+
+<Canvas of={PageHeaderStories.WithSpanElements} />

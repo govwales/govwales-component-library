@@ -1,0 +1,30 @@
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/blocks';
+
+import * as GlobalSearchResultCardStories from './GlobalSearchResultCard.stories';
+
+<Meta of={GlobalSearchResultCardStories} />
+
+# GOV.WALES global search result card
+
+To be used on the global search results page.
+
+### Global search card with day
+
+<Canvas of={GlobalSearchResultCardStories.WithDay} />
+
+### Global search card without day
+
+<Canvas of={GlobalSearchResultCardStories.WithoutDay} />
+
+### Global search card with time
+
+<Canvas of={GlobalSearchResultCardStories.WithTime} />

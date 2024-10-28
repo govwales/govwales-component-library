@@ -1,0 +1,30 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Error Message
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Class: 'gw-error-message'.
+.gw-error-message {
+  padding-top: $gw-spacing-05;
+  padding-left: $gw-spacing-04;
+  padding-bottom: $gw-spacing-05;
+  padding-right: $gw-spacing-04;
+  background-color: $gw-colour-error-message-background;
+  margin-bottom: $gw-spacing-03;
+  @include gw-mixin-border(
+    $border-position: $gw-border-position-left,
+    $border-color: $gw-colour-error-message-border,
+    $border-width: $gw-border-width-medium
+  );
+  @include gw-mixin-font-size($gw-font-size-error, null);
+
+  p, ul, ol {
+    @include gw-mixin-font-size($gw-font-size-error, null);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

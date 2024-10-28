@@ -1,0 +1,56 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Site search
+// ========================================
+
+@import '../../scss/global/settings/all';
+@import '../../scss/global/helpers/all';
+
+// Class: 'gw-site-search'.
+.gw-site-search {
+  position: relative;
+
+  .gw-btn--primary {
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    background-size: 15px;
+  }
+
+  .gw-input {
+    height: 34px;
+    padding-top: $gw-spacing-02;
+    padding-right: $gw-spacing-09;
+    padding-bottom: $gw-spacing-02;
+    padding-left: $gw-spacing-02;
+  }
+
+  .gw-label {
+    color: $gw-colour-label-white;
+  }
+
+  // Class: 'gw-site-search--lg'.
+  &--lg {
+    .gw-btn--primary {
+      background-size: 20px;
+    }
+
+    .gw-label {
+      color: $gw-colour-label-black;
+    }
+
+    .gw-input {
+      height: 44px;
+      padding-top: $gw-spacing-02;
+      padding-right: $gw-spacing-09;
+      padding-bottom: $gw-spacing-02;
+      padding-left: $gw-spacing-02;
+      border-width: $gw-input-border-heavy;
+      @include gw-mixin-font-size($gw-font-size-input-large, $gw-line-height);
+
+      &:focus {
+        border-width: $gw-input-border-medium;
+      }
+    }
+  }
+}

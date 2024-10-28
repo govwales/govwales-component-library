@@ -1,0 +1,34 @@
+// LLYW.CYMRU | GOV.WALES
+// Components: Link: Report this page
+// ========================================
+
+@import '../../../scss/global/settings/all';
+@import '../../../scss/global/helpers/all';
+
+// Specific variables.
+$gw-colour-link-default-report-this-page: $gw-colour-grey-1;
+$gw-colour-link-default-report-this-page-hover: $gw-colour-black;
+
+// Class: 'gw-link-report-this-page'.
+.gw-link--report-this-page {
+  color: $gw-colour-link-default-report-this-page;
+  font-weight: $gw-font-weight-normal;
+  text-decoration: underline;
+  @include gw-mixin-transitions($gw-transition-out-time, color);
+  margin-bottom: $gw-spacing-06;
+  display: inline-block;
+
+  &:active,
+  &:visited {
+    color: $gw-colour-link-default-report-this-page;
+  }
+
+  &:hover {
+    color: $gw-colour-link-default-report-this-page-hover;
+    @include gw-mixin-transitions($gw-transition-in-time, color);
+  }
+
+  &:focus {
+    @include gw-mixin-focused-text;
+  }
+}
