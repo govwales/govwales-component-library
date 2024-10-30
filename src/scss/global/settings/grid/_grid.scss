@@ -1,9 +1,11 @@
+@use "../breakpoints/breakpoints";
+
 // LLYW.CYMRU | GOV.WALES
 // Settings: Grid
 // ========================================
 
 // Container maximum width.
-$gw-container-width: $gw-lg + 40px;
+breakpoints.$gw-container-width: breakpoints.$gw-lg + 40px;
 
 // Number of columns.
 $gw-columns: 12;

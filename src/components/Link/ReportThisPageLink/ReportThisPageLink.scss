@@ -2,20 +2,26 @@
 // Components: Link: Report this page
 // ========================================
 
-@import '../../../scss/global/settings/all';
-@import '../../../scss/global/helpers/all';
+@use '../../../scss/global/settings/all';
+@use '../../../scss/global/helpers/all' as all2;
+@use "../../../scss/global/helpers/mixins/focus";
+@use "../../../scss/global/helpers/mixins/transitions";
+@use "../../../scss/global/settings/colours/colours";
+@use "../../../scss/global/settings/spacing/spacing";
+@use "../../../scss/global/settings/transition/transition";
+@use "../../../scss/global/settings/typography/base";
 
 // Specific variables.
-$gw-colour-link-default-report-this-page: $gw-colour-grey-1;
-$gw-colour-link-default-report-this-page-hover: $gw-colour-black;
+$gw-colour-link-default-report-this-page: colours.$gw-colour-grey-1;
+$gw-colour-link-default-report-this-page-hover: colours.$gw-colour-black;
 
 // Class: 'gw-link-report-this-page'.
 .gw-link--report-this-page {
   color: $gw-colour-link-default-report-this-page;
-  font-weight: $gw-font-weight-normal;
+  font-weight: base.$gw-font-weight-normal;
   text-decoration: underline;
-  @include gw-mixin-transitions($gw-transition-out-time, color);
-  margin-bottom: $gw-spacing-06;
+  @include transitions.gw-mixin-transitions(transition.$gw-transition-out-time, color);
+  margin-bottom: spacing.$gw-spacing-06;
   display: inline-block;
 
   &:active,
@@ -25,10 +31,10 @@ $gw-colour-link-default-report-this-page-hover: $gw-colour-black;
 
   &:hover {
     color: $gw-colour-link-default-report-this-page-hover;
-    @include gw-mixin-transitions($gw-transition-in-time, color);
+    @include transitions.gw-mixin-transitions(transition.$gw-transition-in-time, color);
   }
 
   &:focus {
-    @include gw-mixin-focused-text;
+    @include focus.gw-mixin-focused-text;
   }
 }

@@ -1,3 +1,4 @@
+@use "sass:list";
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Transitions
 // ========================================
@@ -6,7 +7,7 @@
   $transition: ();
 
   @each $property in $properties {
-    $transition: append($transition, ($property $time), $separator: comma);
+    $transition: list.append($transition, ($property $time), $separator: comma);
   }
 
   transition: $transition;

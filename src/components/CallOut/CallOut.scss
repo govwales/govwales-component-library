@@ -2,26 +2,34 @@
 // Components: Call Out
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/border";
+@use "../../scss/global/helpers/mixins/inline-svg";
+@use "../../scss/global/helpers/mixins/typography";
+@use "../../scss/global/settings/borders/borders";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/spacing/spacing";
+@use "../../scss/global/settings/typography/font-sizes";
+@use "../../scss/global/settings/ui-images/ui-images";
 
 // Class: 'gw-callout'.
 .gw-callout {
   $this: &;
-  padding-top: $gw-spacing-05;
-  padding-right: $gw-spacing-05;
-  padding-bottom: $gw-spacing-05;
-  padding-left: $gw-spacing-05;
-  background-color: $gw-colour-callout-background;
-  @include gw-mixin-border(
-    $border-position: $gw-border-position-left,
-    $border-color: $gw-colour-callout-border,
-    $border-width: $gw-border-width-large
+  padding-top: spacing.$gw-spacing-05;
+  padding-right: spacing.$gw-spacing-05;
+  padding-bottom: spacing.$gw-spacing-05;
+  padding-left: spacing.$gw-spacing-05;
+  background-color: colours.$gw-colour-callout-background;
+  @include border.gw-mixin-border(
+    $border-position: borders.$gw-border-position-left,
+    $border-color: colours.$gw-colour-callout-border,
+    $border-width: borders.$gw-border-width-large
   );
-  @include gw-mixin-font-size($gw-font-size-callout, null);
+  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-callout, null);
 
   p {
-    @include gw-mixin-font-size($gw-font-size-callout, null);
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-callout, null);
 
     &:last-child {
       margin-bottom: 0;
@@ -31,54 +39,54 @@
   // Call out types.
   // Class: 'gw-callout--warning'.
   &--warning {
-    @include gw-mixin-background-svg(
-      $gw-ui-callout-warning,
-      $gw-colour-callout-warning-icon
+    @include inline-svg.gw-mixin-background-svg(
+      ui-images.$gw-ui-callout-warning,
+      colours.$gw-colour-callout-warning-icon
     ); //// SVG image, SVG colour.
     background-repeat: no-repeat;
     background-size: 25px 25px;
     background-position: left 10px center;
-    padding-left: $gw-spacing-09;
+    padding-left: spacing.$gw-spacing-09;
   }
 
   // Class: 'gw-callout--alert'.
   &--alert {
-    @include gw-mixin-background-svg(
-      $gw-ui-callout-alert,
-      $gw-colour-callout-alert-icon
+    @include inline-svg.gw-mixin-background-svg(
+      ui-images.$gw-ui-callout-alert,
+      colours.$gw-colour-callout-alert-icon
     ); //// SVG image, SVG colour.
     background-repeat: no-repeat;
     background-size: 25px 25px;
     background-position: left 10px center;
-    padding-left: $gw-spacing-09;
-    background-color: $gw-colour-callout-alert-background;
-    @include gw-mixin-border(
-      $border-position: $gw-border-position-left,
-      $border-color: $gw-colour-callout-alert-border,
-      $border-width: $gw-border-width-large
+    padding-left: spacing.$gw-spacing-09;
+    background-color: colours.$gw-colour-callout-alert-background;
+    @include border.gw-mixin-border(
+      $border-position: borders.$gw-border-position-left,
+      $border-color: colours.$gw-colour-callout-alert-border,
+      $border-width: borders.$gw-border-width-large
     );
   }
 
   // Class: 'gw-callout--positive'.
   &--positive {
-    background-color: $gw-colour-callout-positive-background;
-    @include gw-mixin-border(
-      $border-position: $gw-border-position-left,
-      $border-color: $gw-colour-callout-positive-border,
-      $border-width: $gw-border-width-large
+    background-color: colours.$gw-colour-callout-positive-background;
+    @include border.gw-mixin-border(
+      $border-position: borders.$gw-border-position-left,
+      $border-color: colours.$gw-colour-callout-positive-border,
+      $border-width: borders.$gw-border-width-large
     );
   }
 
   // Class: 'gw-callout--sm'.
   &--sm {
-    padding-top: $gw-spacing-02;
-    padding-bottom: $gw-spacing-02;
-    padding-right: $gw-spacing-04;
-    @include gw-mixin-font-size($gw-font-size-callout-small, null);
+    padding-top: spacing.$gw-spacing-02;
+    padding-bottom: spacing.$gw-spacing-02;
+    padding-right: spacing.$gw-spacing-04;
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-callout-small, null);
     background-size: 20px 20px;
 
     p {
-      @include gw-mixin-font-size($gw-font-size-callout-small, null);
+      @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-callout-small, null);
     }
   }
 
@@ -86,6 +94,6 @@
   &--alert#{$this}--sm,
   // Class: 'gw-callout--warning--sm'.
   &--warning#{$this}--sm {
-    padding-left: $gw-spacing-08;
+    padding-left: spacing.$gw-spacing-08;
   }
 }

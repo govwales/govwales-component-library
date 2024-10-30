@@ -1,17 +1,21 @@
+@use "../../helpers/functions/fonts";
+@use "../../settings/colours/colours";
+@use "../../settings/typography/base";
+
 // LLYW.CYMRU | GOV.WALES
 // Body
 // ========================================
 
 body {
-  background: $gw-colour-layout-body-background;
-  color: $gw-colour-base-text;
-  font-family: $gw-font-family-primary;
-  font-size: gw-function--px-to-rem($gw-font-size);
-  font-style: $gw-font-style;
-  font-weight: $gw-font-weight-normal;
-  -webkit-font-smoothing: $gw-font-smoothing;
-  line-height: $gw-line-height;
+  background: colours.$gw-colour-layout-body-background;
+  color: colours.$gw-colour-base-text;
+  font-family: base.$gw-font-family-primary;
+  font-size: fonts.gw-function--px-to-rem(base.$gw-font-size);
+  font-style: base.$gw-font-style;
+  font-weight: base.$gw-font-weight-normal;
+  -webkit-font-smoothing: base.$gw-font-smoothing;
+  line-height: base.$gw-line-height;
   margin: 0;
-  text-rendering: $gw-font-rendering;
-  letter-spacing: $gw-letter-spacing;
+  text-rendering: base.$gw-font-rendering;
+  letter-spacing: base.$gw-letter-spacing;
 }

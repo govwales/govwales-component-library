@@ -2,45 +2,49 @@
 // Components: Site utilities
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/inline-svg";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/spacing/spacing";
+@use "../../scss/global/settings/ui-images/ui-images";
 
 // Specific variables.
-$gw-site-utilities-background: $gw-colour-grey-6;
+$gw-site-utilities-background: colours.$gw-colour-grey-6;
 
 // Class: 'gw-site-utilities'.
 .gw-site-utilities {
   background-color: $gw-site-utilities-background;
-  padding-top: $gw-spacing-03;
-  padding-bottom: $gw-spacing-01;
+  padding-top: spacing.$gw-spacing-03;
+  padding-bottom: spacing.$gw-spacing-01;
 
   // Class: 'gw-site-utilities__share-this-page'.
   &__share-this-page {
     display: inline-block;
-    margin-right: $gw-spacing-04;
-    margin-bottom: $gw-spacing-02;
+    margin-right: spacing.$gw-spacing-04;
+    margin-bottom: spacing.$gw-spacing-02;
   }
 
   // Class: 'gw-site-utilities__back-to-top'.
   &__back-to-top {
     display: inline-block;
-    margin-bottom: $gw-spacing-02;
+    margin-bottom: spacing.$gw-spacing-02;
 
-    $gw-colour-btn-back-to-top-border: $gw-colour-grey-2;
+    $gw-colour-btn-back-to-top-border: colours.$gw-colour-grey-2;
     $gw-font-size-back-to-top: 16px;
     $gw-line-height-back-to-top: 20px;
 
     .gw-btn--secondary {
       background-position: left 10px center;
       background-size: 15px;
-      background-color: $gw-colour-grey-6;
-      border-color: $gw-colour-grey-2;
-      padding: $gw-spacing-02 $gw-spacing-04 $gw-spacing-02 $gw-spacing-07;
+      background-color: colours.$gw-colour-grey-6;
+      border-color: colours.$gw-colour-grey-2;
+      padding: spacing.$gw-spacing-02 spacing.$gw-spacing-04 spacing.$gw-spacing-02 spacing.$gw-spacing-07;
 
       &:hover {
-        background-color: $gw-colour-grey-4;
-        color: $gw-colour-black;
-        @include gw-mixin-background-svg($gw-ui-chevron-up, $gw-colour-black);
+        background-color: colours.$gw-colour-grey-4;
+        color: colours.$gw-colour-black;
+        @include inline-svg.gw-mixin-background-svg(ui-images.$gw-ui-chevron-up, colours.$gw-colour-black);
       }
     }
   }

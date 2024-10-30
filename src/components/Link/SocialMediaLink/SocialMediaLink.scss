@@ -2,8 +2,15 @@
 // Components: Link: Social media
 // ========================================
 
-@import '../../../scss/global/settings/all';
-@import '../../../scss/global/helpers/all';
+@use "sass:map";
+@use '../../../scss/global/settings/all';
+@use '../../../scss/global/helpers/all' as all2;
+@use "../../../scss/global/helpers/mixins/focus";
+@use "../../../scss/global/helpers/mixins/social-media-link";
+@use "../../../scss/global/helpers/mixins/transitions";
+@use "../../../scss/global/settings/spacing/spacing";
+@use "../../../scss/global/settings/transition/transition";
+@use "../../../scss/global/settings/ui-images/ui-images";
 
 // Specific variables.
 $social-media-list: 'facebook' 'instagram' 'x' 'linkedin' 'pinterest' 'youtube'
@@ -16,19 +23,19 @@ $social-media-list: 'facebook' 'instagram' 'x' 'linkedin' 'pinterest' 'youtube'
   background-repeat: no-repeat;
   background-position: left 10px center;
   cursor: pointer;
-  @include gw-mixin-transitions($gw-transition-out-time, color);
-  padding-top: $gw-spacing-03;
-  padding-bottom: $gw-spacing-03;
+  @include transitions.gw-mixin-transitions(transition.$gw-transition-out-time, color);
+  padding-top: spacing.$gw-spacing-03;
+  padding-bottom: spacing.$gw-spacing-03;
   padding-left: 50px; //FIXME: Need a variable for this value
-  padding-right: $gw-spacing-02;
+  padding-right: spacing.$gw-spacing-02;
 
   // Class: 'gw-social-media-link--sm'.
   &--sm {
     background-position: left 5px center;
-    padding-top: $gw-spacing-01;
-    padding-bottom: $gw-spacing-01;
-    padding-left: $gw-spacing-06;
-    padding-right: $gw-spacing-01;
+    padding-top: spacing.$gw-spacing-01;
+    padding-bottom: spacing.$gw-spacing-01;
+    padding-left: spacing.$gw-spacing-06;
+    padding-right: spacing.$gw-spacing-01;
     background-size: 20px;
   }
 
@@ -45,18 +52,18 @@ $social-media-list: 'facebook' 'instagram' 'x' 'linkedin' 'pinterest' 'youtube'
   }
 
   &:hover {
-    @include gw-mixin-transitions($gw-transition-in-time, color);
+    @include transitions.gw-mixin-transitions(transition.$gw-transition-in-time, color);
   }
 
   &:focus {
-    @include gw-mixin-focused-btn;
+    @include focus.gw-mixin-focused-btn;
   }
 
   @each $platform in $social-media-list {
     // Class: 'gw-social-media-link--#{platform}'.
     &--#{$platform} {
-      @include gw-mixin-social-media-svg(
-        $platform-ui-icon: map-get($gw-ui-social-media, $platform)
+      @include social-media-link.gw-mixin-social-media-svg(
+        $platform-ui-icon: map.get(ui-images.$gw-ui-social-media, $platform)
       );
     }
   }

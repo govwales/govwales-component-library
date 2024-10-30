@@ -2,14 +2,14 @@
 // Settings
 // ========================================
 
-@import 'borders/borders';
-@import 'breakpoints/breakpoints';
-@import 'colours/colours';
-@import 'grid/grid';
-@import 'input/input';
-@import 'site-branding/site-branding';
-@import 'spacing/spacing';
-@import 'transition/transition';
-@import 'typography/base';
-@import 'typography/font-sizes';
-@import 'ui-images/ui-images';
+@use 'borders/borders';
+@use 'breakpoints/breakpoints';
+@use 'colours/colours';
+@use 'grid/grid';
+@use 'input/input';
+@use 'site-branding/site-branding';
+@use 'spacing/spacing';
+@use 'transition/transition';
+@use 'typography/base';
+@use 'typography/font-sizes';
+@use 'ui-images/ui-images';

@@ -1,33 +1,39 @@
+@use "../../settings/colours/colours";
+@use "../../settings/transition/transition";
+@use "../../settings/typography/base";
+@use "focus";
+@use "transitions";
+
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Links
 // ========================================
 
 @mixin gw-mixin-link() {
-  color: $gw-colour-link-default;
-  font-weight: $gw-font-weight-bold;
+  color: colours.$gw-colour-link-default;
+  font-weight: base.$gw-font-weight-bold;
   text-decoration: none;
   cursor: pointer;
-  @include gw-mixin-transitions(
-    $gw-transition-out-time,
+  @include transitions.gw-mixin-transitions(
+    transition.$gw-transition-out-time,
     color,
     background-image
   );
 
   &:active,
   &:visited {
-    color: $gw-colour-link-default;
+    color: colours.$gw-colour-link-default;
   }
 
   &:hover {
-    color: $gw-colour-link-hover;
-    @include gw-mixin-transitions(
-      $gw-transition-in-time,
+    color: colours.$gw-colour-link-hover;
+    @include transitions.gw-mixin-transitions(
+      transition.$gw-transition-in-time,
       color,
       background-image
     );
   }
 
   &:focus {
-    @include gw-mixin-focused-text;
+    @include focus.gw-mixin-focused-text;
   }
 }

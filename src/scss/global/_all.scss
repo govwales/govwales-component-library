@@ -2,9 +2,9 @@
 // Base
 // ========================================
 
-@import "initial/all";
-@import "settings/all";
-@import "helpers/all";
-@import "core/all";
-@import "utilities/all";
-@import "objects/all";
+@use "initial/all";
+@use "settings/all" as all2;
+@use "helpers/all" as all3;
+@use "core/all" as all4;
+@use "utilities/all" as all5;
+@use "objects/all" as all6;

@@ -2,43 +2,49 @@
 // Components: Card
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/media-query";
+@use "../../scss/global/helpers/mixins/typography";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/spacing/spacing";
+@use "../../scss/global/settings/typography/base";
+@use "../../scss/global/settings/typography/font-sizes";
 
 // Class: 'gw-card'.
 .gw-card {
   $this: &;
-  margin-bottom: $gw-spacing-08;
+  margin-bottom: spacing.$gw-spacing-08;
 
   // Class: 'gw-card__image'.
   &__image {
-    margin-bottom: $gw-spacing-04;
+    margin-bottom: spacing.$gw-spacing-04;
   }
 
   // Class: 'gw-card__title'.
   &__title {
-    margin-bottom: $gw-spacing-01;
+    margin-bottom: spacing.$gw-spacing-01;
 
     h3,
     h2 {
       margin-bottom: 0;
-      @include gw-mixin-font-size(
-        $gw-font-size-card-title,
-        $gw-line-height-headings
+      @include typography.gw-mixin-font-size(
+        font-sizes.$gw-font-size-card-title,
+        base.$gw-line-height-headings
       );
-      @include gw-mixin-letter-spacing(
-        $gw-font-size-card-title,
-        $gw-letter-spacing-tight
+      @include typography.gw-mixin-letter-spacing(
+        font-sizes.$gw-font-size-card-title,
+        base.$gw-letter-spacing-tight
       );
 
-      @include gw-mixin-media-query(md) {
-        @include gw-mixin-font-size(
-          $gw-font-size-card-title-md,
-          $gw-line-height-headings
+      @include media-query.gw-mixin-media-query(md) {
+        @include typography.gw-mixin-font-size(
+          font-sizes.$gw-font-size-card-title-md,
+          base.$gw-line-height-headings
         );
-        @include gw-mixin-letter-spacing(
-          $gw-font-size-card-title-md,
-          $gw-letter-spacing-tight
+        @include typography.gw-mixin-letter-spacing(
+          font-sizes.$gw-font-size-card-title-md,
+          base.$gw-letter-spacing-tight
         );
       }
     }
@@ -46,47 +52,47 @@
 
   // Class: 'gw-card__callout'.
   &__callout {
-    margin-bottom: $gw-spacing-02;
+    margin-bottom: spacing.$gw-spacing-02;
   }
 
   // Class: 'gw-card__meta-container'.
   &__meta-container {
-    margin-bottom: $gw-spacing-01;
-    @include gw-mixin-font-size($gw-font-size-meta, null);
+    margin-bottom: spacing.$gw-spacing-01;
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-meta, null);
     display: flex;
     flex-wrap: wrap;
 
     // Class: 'gw-card__meta-container--mb'.
     &--mb {
-      margin-bottom: $gw-spacing-01;
+      margin-bottom: spacing.$gw-spacing-01;
     }
   }
 
   // Class: 'gw-card__meta'.
   &__meta {
-    @include gw-mixin-font-size($gw-font-size-meta, null);
-    @include gw-mixin-letter-spacing(
-      $gw-font-size-meta,
-      $gw-letter-spacing-tight
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-meta, null);
+    @include typography.gw-mixin-letter-spacing(
+      font-sizes.$gw-font-size-meta,
+      base.$gw-letter-spacing-tight
     );
-    color: $gw-colour-meta-grey;
-    margin-bottom: $gw-spacing-01;
-    margin-right: $gw-spacing-04;
+    color: colours.$gw-colour-meta-grey;
+    margin-bottom: spacing.$gw-spacing-01;
+    margin-right: spacing.$gw-spacing-04;
   }
 
   // Class: 'gw-card__description'.
   &__description {
-    margin-bottom: $gw-spacing-02;
-    @include gw-mixin-font-size($gw-font-size-card-description, null);
+    margin-bottom: spacing.$gw-spacing-02;
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-card-description, null);
 
     p {
-      @include gw-mixin-font-size($gw-font-size-card-description, null);
+      @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-card-description, null);
     }
   }
 
   // Modifier for cards displayed in an index list.
   // Class: 'gw-card--index-list'.
   &--index-list {
-    margin-bottom: $gw-spacing-05;
+    margin-bottom: spacing.$gw-spacing-05;
   }
 }

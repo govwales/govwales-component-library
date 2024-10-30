@@ -1,27 +1,33 @@
 // LLYW.CYMRU | GOV.WALES
 // Components: Link: Breadcrumb
 // ========================================
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/transitions";
+@use "../../scss/global/helpers/mixins/typography";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/transition/transition";
+@use "../../scss/global/settings/typography/base";
+@use "../../scss/global/settings/typography/font-sizes";
 
 // Class 'gw-link-breadcrumb'.
 .gw-link-breadcrumb {
-  @include gw-mixin-font-size($gw-font-size-breadcrumb, $gw-line-height);
+  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-breadcrumb, base.$gw-line-height);
 
   // Class 'gw-link-breadcrumb--current'.
   &--current {
-    font-weight: $gw-font-weight-normal;
-    color: $gw-colour-breadcrumb-current-link;
+    font-weight: base.$gw-font-weight-normal;
+    color: colours.$gw-colour-breadcrumb-current-link;
 
     &:active,
     &:visited {
-      color: $gw-colour-breadcrumb-current-link;
+      color: colours.$gw-colour-breadcrumb-current-link;
     }
 
     &:hover {
-      color: $gw-colour-breadcrumb-current-link-hover;
-      @include gw-mixin-transitions(
-        $gw-transition-in-time,
+      color: colours.$gw-colour-breadcrumb-current-link-hover;
+      @include transitions.gw-mixin-transitions(
+        transition.$gw-transition-in-time,
         color,
         background-image
       );

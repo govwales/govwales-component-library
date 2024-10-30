@@ -2,13 +2,21 @@
 // Components: Site footer
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/border";
+@use "../../scss/global/helpers/mixins/site-branding" as mixins-site-branding;
+@use "../../scss/global/helpers/mixins/typography";
+@use "../../scss/global/settings/borders/borders";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/site-branding/site-branding" as site-branding-site-branding;
+@use "../../scss/global/settings/spacing/spacing";
+@use "../../scss/global/settings/typography/base";
 
 // Specific variables.
-$gw-footer-background: $gw-colour-layout-footer-background;
-$gw-footer-nav-border-color: $gw-colour-grey-5;
-$gw-footer-link-color: $gw-colour-black;
+$gw-footer-background: colours.$gw-colour-layout-footer-background;
+$gw-footer-nav-border-color: colours.$gw-colour-grey-5;
+$gw-footer-link-color: colours.$gw-colour-black;
 $gw-footer-font-size-primary-link: 18px;
 $gw-footer-line-height-primary-link: 24px;
 $gw-footer-font-size-secondary-link: 16px;
@@ -17,17 +25,17 @@ $gw-footer-line-height-secondary-link: 20px;
 // Class: 'gw-site-footer'.
 .gw-site-footer {
   background-color: $gw-footer-background;
-  padding-top: $gw-spacing-12;
-  padding-bottom: $gw-spacing-08;
+  padding-top: spacing.$gw-spacing-12;
+  padding-bottom: spacing.$gw-spacing-08;
 
   // Class: 'gw-site-footer__branding'.
   &__branding {
-    @include gw-mixin-site-logo($gw-logo-colour);
+    @include mixins-site-branding.gw-mixin-site-logo(site-branding-site-branding.$gw-logo-colour);
   }
 
   // Class: 'gw-site-footer__nav'.
   &__nav {
-    margin-bottom: $gw-spacing-10;
+    margin-bottom: spacing.$gw-spacing-10;
 
     // Class: 'gw-site-footer__nav--primary'.
     // Class: 'gw-site-footer__nav--secondary'.
@@ -36,16 +44,16 @@ $gw-footer-line-height-secondary-link: 20px;
       list-style: none;
       margin-top: 0;
       margin-right: 0;
-      margin-bottom: $gw-spacing-03;
+      margin-bottom: spacing.$gw-spacing-03;
       margin-left: 0;
       padding-top: 0;
       padding-left: 0;
-      padding-bottom: $gw-spacing-04;
+      padding-bottom: spacing.$gw-spacing-04;
       padding-left: 0;
 
       li {
         display: inline-block;
-        margin-right: $gw-spacing-05;
+        margin-right: spacing.$gw-spacing-05;
       }
 
       a {
@@ -63,14 +71,14 @@ $gw-footer-line-height-secondary-link: 20px;
 
     // Class: 'gw-site-footer__nav--primary'.
     &--primary {
-      @include gw-mixin-border(
-        $border-position: $gw-border-position-bottom,
+      @include border.gw-mixin-border(
+        $border-position: borders.$gw-border-position-bottom,
         $border-color: $gw-footer-nav-border-color,
-        $border-width: $gw-border-height-medium
+        $border-width: borders.$gw-border-height-medium
       );
 
       a {
-        @include gw-mixin-font-size(
+        @include typography.gw-mixin-font-size(
           $gw-footer-font-size-primary-link,
           $gw-footer-line-height-primary-link
         );
@@ -80,11 +88,11 @@ $gw-footer-line-height-secondary-link: 20px;
     // Class: 'gw-site-footer__nav--secondary'.
     &--secondary {
       a {
-        @include gw-mixin-font-size(
+        @include typography.gw-mixin-font-size(
           $gw-footer-font-size-secondary-link,
           $gw-footer-line-height-secondary-link
         );
-        font-weight: $gw-font-weight-normal;
+        font-weight: base.$gw-font-weight-normal;
       }
     }
   }

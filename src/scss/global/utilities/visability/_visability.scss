@@ -1,13 +1,15 @@
+@use "../../helpers/mixins/visability";
+
 // LLYW.CYMRU | GOV.WALES
 // Utilities: Visibility
 // ========================================
 
 .gw-visually-hidden {
-  @include gw-mixin-visually-hidden;
+  @include visability.gw-mixin-visually-hidden;
 
   &--focusable {
     &:focus {
-      @include gw-mixin-visually-hidden-focus;
+      @include visability.gw-mixin-visually-hidden-focus;
     }
   }
 }

@@ -2,18 +2,26 @@
 // Components: ShareThisPage
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/button";
+@use "../../scss/global/helpers/mixins/focus";
+@use "../../scss/global/helpers/mixins/inline-svg";
+@use "../../scss/global/helpers/mixins/typography";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/spacing/spacing";
+@use "../../scss/global/settings/typography/base";
+@use "../../scss/global/settings/ui-images/ui-images";
 
 // Specific variables.
 $gw-font-size-share-this-page: 16px;
 $gw-line-height-share-this-page: 22px;
-$gw-colour-btn-share-this-page-border: $gw-colour-grey-2;
-$gw-colour-btn-share-this-page-background: $gw-colour-grey-6;
-$gw-colour-btn-share-this-page-background: $gw-colour-grey-6;
-$gw-colour-btn-share-this-page-background-hover: $gw-colour-grey-4;
-$gw-colour-btn-share-this-page-text: $gw-colour-black;
-$gw-colour-btn-share-this-page-border: $gw-colour-grey-2;
+$gw-colour-btn-share-this-page-border: colours.$gw-colour-grey-2;
+$gw-colour-btn-share-this-page-background: colours.$gw-colour-grey-6;
+$gw-colour-btn-share-this-page-background: colours.$gw-colour-grey-6;
+$gw-colour-btn-share-this-page-background-hover: colours.$gw-colour-grey-4;
+$gw-colour-btn-share-this-page-text: colours.$gw-colour-black;
+$gw-colour-btn-share-this-page-border: colours.$gw-colour-grey-2;
 
 // Class: 'gw-share-this-page'.
 .gw-share-this-page {
@@ -34,32 +42,32 @@ $gw-colour-btn-share-this-page-border: $gw-colour-grey-2;
     background-position: left 10px center;
     background-size: 15px;
     margin-bottom: 0;
-    @include gw-mixin-font-size(
+    @include typography.gw-mixin-font-size(
       $gw-font-size-share-this-page,
       $gw-line-height-share-this-page
     );
-    @include gw-mixin-letter-spacing(
+    @include typography.gw-mixin-letter-spacing(
       $gw-font-size-share-this-page,
-      $gw-letter-spacing-tight
+      base.$gw-letter-spacing-tight
     );
-    @include gw-mixin-background-svg(
-      $gw-ui-share,
+    @include inline-svg.gw-mixin-background-svg(
+      ui-images.$gw-ui-share,
       $gw-colour-btn-share-this-page-text
     );
-    @include gw-mixin-btn(
+    @include button.gw-mixin-btn(
       $btn-text-colour: $gw-colour-btn-share-this-page-text,
       $btn-text-colour-hover: $gw-colour-btn-share-this-page-text,
       $btn-background-colour: $gw-colour-btn-share-this-page-background,
       $btn-background-colour-hover:
         $gw-colour-btn-share-this-page-background-hover,
       $btn-border: none,
-      $btn-padding-left: $gw-spacing-07,
+      $btn-padding-left: spacing.$gw-spacing-07,
     );
 
     &:focus {
-      @include gw-mixin-focused-btn;
-      @include gw-mixin-background-svg(
-        $gw-ui-share,
+      @include focus.gw-mixin-focused-btn;
+      @include inline-svg.gw-mixin-background-svg(
+        ui-images.$gw-ui-share,
         $gw-colour-btn-share-this-page-text
       );
     }
@@ -70,13 +78,13 @@ $gw-colour-btn-share-this-page-border: $gw-colour-grey-2;
     list-style: none;
     margin: 0;
     padding: 0;
-    @include gw-mixin-font-size(
+    @include typography.gw-mixin-font-size(
       $gw-font-size-share-this-page,
       $gw-line-height-share-this-page
     );
-    @include gw-mixin-letter-spacing(
+    @include typography.gw-mixin-letter-spacing(
       $gw-font-size-share-this-page,
-      $gw-letter-spacing-tight
+      base.$gw-letter-spacing-tight
     );
 
     li {
@@ -85,14 +93,14 @@ $gw-colour-btn-share-this-page-border: $gw-colour-grey-2;
   }
 
   a {
-    padding-top: $gw-spacing-02;
-    padding-right: $gw-spacing-03;
-    padding-bottom: $gw-spacing-02;
-    padding-left: $gw-spacing-09;
+    padding-top: spacing.$gw-spacing-02;
+    padding-right: spacing.$gw-spacing-03;
+    padding-bottom: spacing.$gw-spacing-02;
+    padding-left: spacing.$gw-spacing-09;
     background-position: left 15px center;
 
     &:focus {
-      @include gw-mixin-focused-btn;
+      @include focus.gw-mixin-focused-btn;
     }
   }
 }

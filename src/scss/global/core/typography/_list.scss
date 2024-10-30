@@ -1,3 +1,8 @@
+@use "../../helpers/mixins/typography";
+@use "../../settings/spacing/spacing";
+@use "../../settings/typography/base";
+@use "../../settings/typography/font-sizes";
+
 // LLYW.CYMRU | GOV.WALES
 // Typography: Lists
 // ========================================
@@ -7,12 +12,12 @@ dd, ul, ol {
 }
 
 .gw-list {
-  @include gw-mixin-font-size($gw-font-size-list, $gw-line-height);
-  margin-bottom: $gw-spacing-04;
-  padding-left: $gw-spacing-06;
+  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-list, base.$gw-line-height);
+  margin-bottom: spacing.$gw-spacing-04;
+  padding-left: spacing.$gw-spacing-06;
 
   li {
-    margin-bottom: $gw-spacing-01;
+    margin-bottom: spacing.$gw-spacing-01;
 
     &:last-child {
       margin-bottom: 0;
@@ -37,10 +42,10 @@ dd, ul, ol {
 
   &--dash {
     list-style-type: "-";
-    padding-left: $gw-spacing-05;
+    padding-left: spacing.$gw-spacing-05;
 
     li {
-      padding-left: $gw-spacing-01;
+      padding-left: spacing.$gw-spacing-01;
     }
   }
 
@@ -54,7 +59,7 @@ dd, ul, ol {
   }
 
   &--index {
-    margin-bottom: $gw-spacing-04;
+    margin-bottom: spacing.$gw-spacing-04;
     list-style-type: none;
     padding-left: 0;
   }

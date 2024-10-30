@@ -2,23 +2,28 @@
 // Components: Metadata
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/typography";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/spacing/spacing";
+@use "../../scss/global/settings/typography/base";
+@use "../../scss/global/settings/typography/font-sizes";
 
 // Class: 'gw-metadata'.
 .gw-metadata {
-  @include gw-mixin-font-size($gw-font-size-meta, null);
-  @include gw-mixin-letter-spacing(
-    $gw-font-size-meta,
-    $gw-letter-spacing-tight
+  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-meta, null);
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-meta,
+    base.$gw-letter-spacing-tight
   );
-  color: $gw-colour-meta-grey;
-  margin-bottom: $gw-spacing-01;
+  color: colours.$gw-colour-meta-grey;
+  margin-bottom: spacing.$gw-spacing-01;
 
   // Metadata types.
   // Class: 'gw-metadata--white'.
   &--white {
-    color: $gw-colour-meta-white;
+    color: colours.$gw-colour-meta-white;
   }
 
   // Class: 'gw-metadata--part-of'.

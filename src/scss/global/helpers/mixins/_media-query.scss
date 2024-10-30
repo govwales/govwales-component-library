@@ -1,22 +1,25 @@
+@use "sass:map";
+@use "../../settings/breakpoints/breakpoints";
+
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Media query
 // ========================================
 
 @mixin gw-mixin-media-query($breakpoint) {
 
-  $media-query: $gw-media-breakpoints;
+  $media-query: breakpoints.$gw-media-breakpoints;
 
   @if $breakpoint == 'print' or $breakpoint == 'screen' {
-    $media-query: $gw-media-generic;
+    $media-query: breakpoints.$gw-media-generic;
   }
 
   // validate param.
 
-  @if not map-has-key($media-query, $breakpoint) {
+  @if not map.has-key($media-query, $breakpoint) {
     @error 'Breakpoint "#{$media-query}" not defined.';
   }
 
-  $condition: map-get($media-query, $breakpoint);
+  $condition: map.get($media-query, $breakpoint);
 
   @media #{$condition} {
     @content;

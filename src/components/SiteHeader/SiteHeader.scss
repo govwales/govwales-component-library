@@ -2,20 +2,26 @@
 // Components: Site header
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/inline-svg";
+@use "../../scss/global/helpers/mixins/media-query";
+@use "../../scss/global/helpers/mixins/site-branding" as mixins-site-branding;
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/site-branding/site-branding" as site-branding-site-branding;
+@use "../../scss/global/settings/spacing/spacing";
 
 // Specific variables.
-$gw-header-background: $gw-colour-layout-header-background;
-$gw-header-text-colour: $gw-colour-white;
-$gw-header-site-search-border: $gw-colour-white;
+$gw-header-background: colours.$gw-colour-layout-header-background;
+$gw-header-text-colour: colours.$gw-colour-white;
+$gw-header-site-search-border: colours.$gw-colour-white;
 
 // Class: 'gw-site-header'.
 .gw-site-header {
-  background-color: $gw-colour-layout-header-background;
+  background-color: colours.$gw-colour-layout-header-background;
   color: $gw-header-text-colour;
-  padding-top: $gw-spacing-04;
-  padding-bottom: $gw-spacing-04;
+  padding-top: spacing.$gw-spacing-04;
+  padding-bottom: spacing.$gw-spacing-04;
 
   &::after {
     content: '';
@@ -25,7 +31,7 @@ $gw-header-site-search-border: $gw-colour-white;
 
   // Class: 'gw-site-header--without-breadcrumb'.
   &--without-breadcrumb {
-    margin-bottom: $gw-spacing-08;
+    margin-bottom: spacing.$gw-spacing-08;
   }
 
   a {
@@ -34,31 +40,31 @@ $gw-header-site-search-border: $gw-colour-white;
 
   // Class: 'gw-site-header__branding'.
   &__branding {
-    @include gw-mixin-site-logo($gw-logo-colour--header);
+    @include mixins-site-branding.gw-mixin-site-logo(site-branding-site-branding.$gw-logo-colour--header);
     float: left;
 
     // Print version of the logo and placement.
-    @include gw-mixin-media-query(print) {
-      width: $gw-print-logo-width;
-      height: $gw-print-logo-height;
-      @include gw-mixin-background-svg(
-        $gw-print-logo,
+    @include media-query.gw-mixin-media-query(print) {
+      width: site-branding-site-branding.$gw-print-logo-width;
+      height: site-branding-site-branding.$gw-print-logo-height;
+      @include inline-svg.gw-mixin-background-svg(
+        site-branding-site-branding.$gw-print-logo,
         null
       ); //// SVG image, SVG colour.
       background-repeat: no-repeat;
-      background-size: $gw-print-logo-width $gw-print-logo-height;
+      background-size: site-branding-site-branding.$gw-print-logo-width site-branding-site-branding.$gw-print-logo-height;
       background-position: top left;
       float: right;
     }
 
     &-wrapper {
-      @include gw-mixin-media-query(print) {
+      @include media-query.gw-mixin-media-query(print) {
         width: 100%;
       }
     }
 
     a {
-      @include gw-mixin-media-query(print) {
+      @include media-query.gw-mixin-media-query(print) {
         display: none;
       }
     }
@@ -68,7 +74,7 @@ $gw-header-site-search-border: $gw-colour-white;
   &__wrapper {
     text-align: right;
 
-    @include gw-mixin-media-query(md) {
+    @include media-query.gw-mixin-media-query(md) {
       float: right;
     }
   }
@@ -80,7 +86,7 @@ $gw-header-site-search-border: $gw-colour-white;
     .gw-btn--primary {
       &:hover {
         // TODO: Align colours with Figma designs when done.
-        background-color: $gw-colour-grey-1;
+        background-color: colours.$gw-colour-grey-1;
       }
     }
   }
@@ -88,12 +94,12 @@ $gw-header-site-search-border: $gw-colour-white;
   // Class: 'gw-site-header__search'.
   &__search {
     width: 100%;
-    margin-top: $gw-spacing-03;
+    margin-top: spacing.$gw-spacing-03;
 
-    @include gw-mixin-media-query(md) {
+    @include media-query.gw-mixin-media-query(md) {
       width: 334px;
       margin-top: 0;
-      margin-left: $gw-spacing-04;
+      margin-left: spacing.$gw-spacing-04;
       display: inline-block;
     }
 
@@ -102,9 +108,9 @@ $gw-header-site-search-border: $gw-colour-white;
     }
   }
 
-  @include gw-mixin-media-query(print) {
+  @include media-query.gw-mixin-media-query(print) {
     background-color: transparent;
-    color: $gw-colour-print-default;
+    color: colours.$gw-colour-print-default;
     padding-top: 0;
     padding-bottom: 0;
   }

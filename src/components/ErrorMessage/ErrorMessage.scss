@@ -2,26 +2,32 @@
 // Components: Error Message
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/border";
+@use "../../scss/global/helpers/mixins/typography";
+@use "../../scss/global/settings/borders/borders";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/spacing/spacing";
+@use "../../scss/global/settings/typography/font-sizes";
 
 // Class: 'gw-error-message'.
 .gw-error-message {
-  padding-top: $gw-spacing-05;
-  padding-left: $gw-spacing-04;
-  padding-bottom: $gw-spacing-05;
-  padding-right: $gw-spacing-04;
-  background-color: $gw-colour-error-message-background;
-  margin-bottom: $gw-spacing-03;
-  @include gw-mixin-border(
-    $border-position: $gw-border-position-left,
-    $border-color: $gw-colour-error-message-border,
-    $border-width: $gw-border-width-medium
+  padding-top: spacing.$gw-spacing-05;
+  padding-left: spacing.$gw-spacing-04;
+  padding-bottom: spacing.$gw-spacing-05;
+  padding-right: spacing.$gw-spacing-04;
+  background-color: colours.$gw-colour-error-message-background;
+  margin-bottom: spacing.$gw-spacing-03;
+  @include border.gw-mixin-border(
+    $border-position: borders.$gw-border-position-left,
+    $border-color: colours.$gw-colour-error-message-border,
+    $border-width: borders.$gw-border-width-medium
   );
-  @include gw-mixin-font-size($gw-font-size-error, null);
+  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-error, null);
 
   p, ul, ol {
-    @include gw-mixin-font-size($gw-font-size-error, null);
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-error, null);
 
     &:last-child {
       margin-bottom: 0;

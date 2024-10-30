@@ -1,7 +1,9 @@
+@use "../../helpers/mixins/clearfix";
+
 // LLYW.CYMRU | GOV.WALES
 // Utilities: Clearfix
 // ========================================
 
 .gw-clearfix {
-  @include gw-mixin-clearfix;
+  @include clearfix.gw-mixin-clearfix;
 }

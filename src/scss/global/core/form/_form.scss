@@ -2,8 +2,14 @@
 // Form
 // ========================================
 
-@import '../../../global/settings/all';
-@import '../../../global/helpers/all';
+@use '../../../global/settings/all';
+@use '../../../global/helpers/all' as all2;
+@use "../../helpers/mixins/media-query";
+@use "../../helpers/mixins/typography";
+@use "../../settings/colours/colours";
+@use "../../settings/spacing/spacing";
+@use "../../settings/typography/base";
+@use "../../settings/typography/font-sizes";
 
 // Class: 'gw-form'.
 .gw-form {
@@ -11,38 +17,38 @@
 
   // Class: 'gw-form__row'.
   &__row {
-    margin-bottom: $gw-spacing-06;
+    margin-bottom: spacing.$gw-spacing-06;
   }
 }
 
 // Class: 'gw-label'.
 .gw-label {
-  @include gw-mixin-font-size($gw-font-size-label, $gw-line-height);
-  @include gw-mixin-letter-spacing(
-    $gw-font-size-label,
-    $gw-letter-spacing-tight
+  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-label, base.$gw-line-height);
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-label,
+    base.$gw-letter-spacing-tight
   );
-  color: $gw-colour-label-black;
+  color: colours.$gw-colour-label-black;
   display: block;
-  font-weight: $gw-font-weight-bold;
-  margin-bottom: $gw-spacing-03;
+  font-weight: base.$gw-font-weight-bold;
+  margin-bottom: spacing.$gw-spacing-03;
 
   // Class: 'gw-label--lg'.
   &--lg {
-    @include gw-mixin-font-size($gw-font-size-label-large, $gw-line-height);
-    @include gw-mixin-letter-spacing(
-      $gw-font-size-label-large,
-      $gw-letter-spacing-tight
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-label-large, base.$gw-line-height);
+    @include typography.gw-mixin-letter-spacing(
+      font-sizes.$gw-font-size-label-large,
+      base.$gw-letter-spacing-tight
     );
 
-    @include gw-mixin-media-query(md) {
-      @include gw-mixin-font-size(
-        $gw-font-size-label-large-md,
-        $gw-line-height-headings
+    @include media-query.gw-mixin-media-query(md) {
+      @include typography.gw-mixin-font-size(
+        font-sizes.$gw-font-size-label-large-md,
+        base.$gw-line-height-headings
       );
-      @include gw-mixin-letter-spacing(
-        $gw-font-size-label-large-md,
-        $gw-letter-spacing-tight
+      @include typography.gw-mixin-letter-spacing(
+        font-sizes.$gw-font-size-label-large-md,
+        base.$gw-letter-spacing-tight
       );
     }
   }
@@ -50,17 +56,17 @@
 
 // Class: 'gw-description'.
 .gw-description {
-  @include gw-mixin-font-size(
-    $gw-font-size-description,
-    $gw-line-height
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-description,
+    base.$gw-line-height
   );
-  color: $gw-colour-description-text;
-  margin-bottom: $gw-spacing-03;
+  color: colours.$gw-colour-description-text;
+  margin-bottom: spacing.$gw-spacing-03;
 }
 
 // Class: 'gw-hint'.
 .gw-hint {
-  @include gw-mixin-font-size($gw-font-size-hint, $gw-line-height);
-  color: $gw-colour-hint-text;
-  margin-bottom: $gw-spacing-03;
+  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-hint, base.$gw-line-height);
+  color: colours.$gw-colour-hint-text;
+  margin-bottom: spacing.$gw-spacing-03;
 }

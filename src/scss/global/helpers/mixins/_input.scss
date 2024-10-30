@@ -1,3 +1,6 @@
+@use "../../settings/typography/font-sizes";
+@use "media-query";
+
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Input
 // ========================================
@@ -5,13 +8,13 @@
 @mixin gw-mixin-fixed-width-input($val) {
   .gw-input--fixed-#{$val} {
     $val: calc($val + .625);
-    max-width: calc(#{$gw-font-size-input} + #{$val + 'rem'});
+    max-width: calc(#{font-sizes.$gw-font-size-input} + #{$val + 'rem'});
   }
 }
 
 @mixin gw-mixin-fluid-width-input($val) {
   .gw-input--fluid-#{$val} {
-    @include gw-mixin-media-query(md) {
+    @include media-query.gw-mixin-media-query(md) {
       max-width: #{$val + '%'};
     }
   }

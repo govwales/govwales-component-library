@@ -1,7 +1,9 @@
+@use "../../settings/spacing/spacing";
+
 // LLYW.CYMRU | GOV.WALES
 // Main
 // ========================================
 
 .gw-main {
-  margin-bottom: $gw-spacing-10;
+  margin-bottom: spacing.$gw-spacing-10;
 }

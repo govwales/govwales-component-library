@@ -1,8 +1,13 @@
+@use "../../helpers/mixins/typography";
+@use "../../settings/spacing/spacing";
+@use "../../settings/typography/base";
+@use "../../settings/typography/font-sizes";
+
 // LLYW.CYMRU | GOV.WALES
 // Typography: Paragraph
 // ========================================
 
 p {
-  @include gw-mixin-font-size($gw-font-size-paragraph, $gw-line-height);
-  margin-bottom: $gw-spacing-04;
+  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-paragraph, base.$gw-line-height);
+  margin-bottom: spacing.$gw-spacing-04;
 }

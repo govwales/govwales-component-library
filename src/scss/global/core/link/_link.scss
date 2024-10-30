@@ -1,13 +1,19 @@
+@use "../../helpers/mixins/link";
+@use "../../helpers/mixins/media-query";
+@use "../../helpers/mixins/typography";
+@use "../../settings/typography/base";
+@use "../../settings/typography/font-sizes";
+
 // LLYW.CYMRU | GOV.WALES
 // Links
 // ========================================
 
 a,
 .gw-link {
-  @include gw-mixin-link;
+  @include link.gw-mixin-link;
 }
 
-@include gw-mixin-media-query(print) {
+@include media-query.gw-mixin-media-query(print) {
   a,
   .gw-link {
     text-decoration: underline;
@@ -17,8 +23,8 @@ a,
 
   a[href]:after {
     content: ' (' attr(href) ')';
-    font-weight: $gw-font-weight-light;
-    @include gw-mixin-font-size($gw-font-size-print-url, null);
+    font-weight: base.$gw-font-weight-light;
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-print-url, null);
   }
 
   // Do not print # or JavaScript URL.

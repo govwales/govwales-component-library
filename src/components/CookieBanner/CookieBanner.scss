@@ -2,26 +2,32 @@
 // Components: Cookie Banner
 // ========================================
 
-@import '../../scss/global/settings/all';
-@import '../../scss/global/helpers/all';
+@use '../../scss/global/settings/all';
+@use '../../scss/global/helpers/all' as all2;
+@use "../../scss/global/helpers/mixins/media-query";
+@use "../../scss/global/helpers/mixins/typography";
+@use "../../scss/global/settings/colours/colours";
+@use "../../scss/global/settings/spacing/spacing";
+@use "../../scss/global/settings/typography/base";
+@use "../../scss/global/settings/typography/font-sizes";
 
 // Specific variables.
-$gw-cookie-banner-background: $gw-colour-grey-7;
+$gw-cookie-banner-background: colours.$gw-colour-grey-7;
 
 // Class: 'gw-cookie-banner'.
 .gw-cookie-banner {
-  padding-top: $gw-spacing-04;
-  padding-bottom: $gw-spacing-04;
+  padding-top: spacing.$gw-spacing-04;
+  padding-bottom: spacing.$gw-spacing-04;
   background-color: $gw-cookie-banner-background;
   p,
   li {
-    @include gw-mixin-font-size($gw-font-size-paragraph-small, $gw-line-height);
+    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-paragraph-small, base.$gw-line-height);
   }
 
-  @include gw-mixin-media-query(md) {
+  @include media-query.gw-mixin-media-query(md) {
     p,
     li {
-      @include gw-mixin-font-size($gw-font-size-paragraph, $gw-line-height);
+      @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-paragraph, base.$gw-line-height);
     }
   }
 
@@ -37,13 +43,13 @@ $gw-cookie-banner-background: $gw-colour-grey-7;
       text-align: center;
 
       &:first-child {
-        margin-bottom: $gw-spacing-02;
+        margin-bottom: spacing.$gw-spacing-02;
       }
 
-      @include gw-mixin-media-query(md) {
+      @include media-query.gw-mixin-media-query(md) {
         display: inline-block;
         width: auto;
-        margin-right: $gw-spacing-02;
+        margin-right: spacing.$gw-spacing-02;
 
         &:first-child {
           margin-bottom: 0;
@@ -55,10 +61,10 @@ $gw-cookie-banner-background: $gw-colour-grey-7;
   // Class: 'gw-cookie__confirmation'.
   &__confirmation {
     > div {
-      margin-bottom: $gw-spacing-02;
+      margin-bottom: spacing.$gw-spacing-02;
     }
 
-    @include gw-mixin-media-query(md) {
+    @include media-query.gw-mixin-media-query(md) {
       display: flex;
       align-items: flex-start;
 
@@ -69,14 +75,14 @@ $gw-cookie-banner-background: $gw-colour-grey-7;
 
     // Btn placement.
     .gw-btn-hide {
-      color: $gw-colour-link-default;
-      @include gw-mixin-media-query(md) {
-        margin-left: $gw-spacing-08;
-        margin-top: $gw-spacing-01;
+      color: colours.$gw-colour-link-default;
+      @include media-query.gw-mixin-media-query(md) {
+        margin-left: spacing.$gw-spacing-08;
+        margin-top: spacing.$gw-spacing-01;
       }
 
       &:hover {
-        color: $gw-colour-link-hover;
+        color: colours.$gw-colour-link-hover;
       }
     }
   }
@@ -84,7 +90,7 @@ $gw-cookie-banner-background: $gw-colour-grey-7;
   // Class: 'gw-cookie__js-disabled'.
   &__js-disabled {
     .gw-btn {
-      margin-top: $gw-spacing-03;
+      margin-top: spacing.$gw-spacing-03;
     }
   }
 }

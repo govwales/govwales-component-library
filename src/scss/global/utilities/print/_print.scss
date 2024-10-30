@@ -1,3 +1,7 @@
+@use "../../helpers/mixins/media-query";
+@use "../../settings/colours/colours";
+@use "../../settings/typography/base";
+
 // LLYW.CYMRU | GOV.WALES
 // Print
 // ========================================
@@ -8,9 +12,9 @@ $gw-print-margin: 2.5cm 2cm 4cm 2cm;
 $gw-print-margin--cover: 0cm 2cm 4cm 2cm;
 $gw-print-padding: 0;
 
-@include gw-mixin-media-query(print) {
+@include media-query.gw-mixin-media-query(print) {
   body {
-    color: $gw-colour-print-default;
+    color: colours.$gw-colour-print-default;
   }
 
   .gw-none-print {
@@ -32,7 +36,7 @@ $gw-print-padding: 0;
     size: $gw-print-size;
     margin: $gw-print-margin;
     padding: $gw-print-padding;
-    font-family: $gw-font-family-primary;
+    font-family: base.$gw-font-family-primary;
   }
 
   // Cover page margins to allow for the print logo.
