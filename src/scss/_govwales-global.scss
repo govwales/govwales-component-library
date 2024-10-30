@@ -2,58 +2,12 @@
 // Frontend: Global styles
 // ========================================
 
-@use 'global/core/body';
-@use 'global/core/button';
-@use 'global/core/form';
-@use 'global/core/html';
-@use 'global/core/image';
-@use 'global/core/index-list';
-@use 'global/core/input';
-@use 'global/core/layout';
-@use 'global/core/link';
-@use 'global/core/main';
+@use 'global/core/core';
 
-@use 'global/core/typography/abbr';
-@use 'global/core/typography/heading';
-@use 'global/core/typography/list';
-@use 'global/core/typography/paragraph';
+@use 'global/helpers/helpers';
 
-@use 'global/helpers/functions/fonts';
-@use 'global/helpers/functions/grid';
-@use 'global/helpers/functions/inline-svg';
+@use 'global/initial/initial';
 
-@use 'global/helpers/mixins/border';
-@use 'global/helpers/mixins/button' as buttonMixins;
-@use 'global/helpers/mixins/clearfix';
-@use 'global/helpers/mixins/focus';
-@use 'global/helpers/mixins/grid' as gridMixins;
-@use 'global/helpers/mixins/inline-svg' as inlineSvgMixins;
-@use 'global/helpers/mixins/input' as inputMixins;
-@use 'global/helpers/mixins/link' as linkMixins;
-@use 'global/helpers/mixins/media-query';
-@use 'global/helpers/mixins/site-branding';
-@use 'global/helpers/mixins/social-media-link';
-@use 'global/helpers/mixins/subheading';
-@use 'global/helpers/mixins/transitions';
-@use 'global/helpers/mixins/typography';
-@use 'global/helpers/mixins/visibility';
+@use 'global/settings/settings';
 
-@use 'global/initial/normalise/normalise';
-
-@use 'global/initial/reset/reset';
-
-@use 'global/settings/borders/borders';
-@use 'global/settings/breakpoints/breakpoints';
-@use 'global/settings/colours/colours';
-@use 'global/settings/grid/grid' as gridSettings;
-@use 'global/settings/input/input' as inputSettings;
-@use 'global/settings/site-branding/site-branding' as siteBrandingSettings;
-@use 'global/settings/spacing/spacing' as spacingSettings;
-@use 'global/settings/transition/transition';
-@use 'global/settings/typography/base' as baseSettings;
-@use 'global/settings/typography/font-sizes';
-@use 'global/settings/ui-images/ui-images';
-
-@use 'global/utilities/clearfix' as clearfixUtilities;
-@use 'global/utilities/print';
-@use 'global/utilities/visibility' as visibilityUtilities;
+@use 'global/utilities/utilities';
