@@ -1,4 +1,4 @@
-# GOV.WALES Development React component library
+# GOV.WALES React Component Library
 
 &nbsp;
 
@@ -23,7 +23,7 @@ GOV.WALES Frontend is maintained by a team at Welsh Government Corporate Digital
 
 ### 1. Install with npm (recommended)
 
-`npm install @govwales/dev-component-library`
+`npm install @govwales/component-library`
 
 &nbsp;
 
@@ -31,7 +31,7 @@ GOV.WALES Frontend is maintained by a team at Welsh Government Corporate Digital
 
 Follow the GOV.WALES component library guidance on how to use import components properties and mark-up.
 
-`import { ComponentName } from '@govwales/dev-component-library';`
+`import { ComponentName } from '@govwales/component-library';`
 
 &nbsp;
 
@@ -50,23 +50,23 @@ To import dart sass:
 To import global SCSS add the below to your app react file:
 
 ```scss
-@import '@govwales/dev-component-library/dist/scss/_govwales-global.scss';
+@import '@govwales/component-library/dist/scss/_govwales-global.scss';
 ```
 
 To import component SCSS only add the below to app react file:
 
 ```scss
-@import '@govwales/dev-component-library/dist/scss/_govwales-components.scss';
+@import '@govwales/component-library/dist/scss/_govwales-components.scss';
 ```
 
 To import global SCSS and components add the below to app react file:
 
 ```scss
-@import '@govwales/dev-component-library/dist/scss/govwales-styles.scss';
+@import '@govwales/component-library/dist/scss/govwales-styles.scss';
 ```
 
 To import global CSS add the below to app react file:
 
 ```scss
-@import '@govwales/dev-component-library/dist/css/govwales-styles.css';
+@import '@govwales/component-library/dist/css/govwales-styles.css';
 ```
