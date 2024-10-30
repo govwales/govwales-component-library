@@ -2,14 +2,12 @@
 // Components: Error Message
 // ========================================
 
-@use '../../scss/global/settings/all';
-@use '../../scss/global/helpers/all' as all2;
-@use "../../scss/global/helpers/mixins/border";
-@use "../../scss/global/helpers/mixins/typography";
-@use "../../scss/global/settings/borders/borders";
-@use "../../scss/global/settings/colours/colours";
-@use "../../scss/global/settings/spacing/spacing";
-@use "../../scss/global/settings/typography/font-sizes";
+@use '../../scss/global/helpers/mixins/border';
+@use '../../scss/global/helpers/mixins/typography';
+@use '../../scss/global/settings/borders/borders';
+@use '../../scss/global/settings/colours/colours';
+@use '../../scss/global/settings/spacing/spacing';
+@use '../../scss/global/settings/typography/font-sizes';
 
 // Class: 'gw-error-message'.
 .gw-error-message {
@@ -26,8 +24,13 @@
   );
   @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-error, null);
 
-  p, ul, ol {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-error, null);
+  p,
+  ul,
+  ol {
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-error,
+      null
+    );
 
     &:last-child {
       margin-bottom: 0;

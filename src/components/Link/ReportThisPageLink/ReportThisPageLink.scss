@@ -2,14 +2,12 @@
 // Components: Link: Report this page
 // ========================================
 
-@use '../../../scss/global/settings/all';
-@use '../../../scss/global/helpers/all' as all2;
-@use "../../../scss/global/helpers/mixins/focus";
-@use "../../../scss/global/helpers/mixins/transitions";
-@use "../../../scss/global/settings/colours/colours";
-@use "../../../scss/global/settings/spacing/spacing";
-@use "../../../scss/global/settings/transition/transition";
-@use "../../../scss/global/settings/typography/base";
+@use '../../../scss/global/helpers/mixins/focus';
+@use '../../../scss/global/helpers/mixins/transitions';
+@use '../../../scss/global/settings/colours/colours';
+@use '../../../scss/global/settings/spacing/spacing';
+@use '../../../scss/global/settings/transition/transition';
+@use '../../../scss/global/settings/typography/base';
 
 // Specific variables.
 $gw-colour-link-default-report-this-page: colours.$gw-colour-grey-1;
@@ -20,7 +18,10 @@ $gw-colour-link-default-report-this-page-hover: colours.$gw-colour-black;
   color: $gw-colour-link-default-report-this-page;
   font-weight: base.$gw-font-weight-normal;
   text-decoration: underline;
-  @include transitions.gw-mixin-transitions(transition.$gw-transition-out-time, color);
+  @include transitions.gw-mixin-transitions(
+    transition.$gw-transition-out-time,
+    color
+  );
   margin-bottom: spacing.$gw-spacing-06;
   display: inline-block;
 
@@ -31,7 +32,10 @@ $gw-colour-link-default-report-this-page-hover: colours.$gw-colour-black;
 
   &:hover {
     color: $gw-colour-link-default-report-this-page-hover;
-    @include transitions.gw-mixin-transitions(transition.$gw-transition-in-time, color);
+    @include transitions.gw-mixin-transitions(
+      transition.$gw-transition-in-time,
+      color
+    );
   }
 
   &:focus {

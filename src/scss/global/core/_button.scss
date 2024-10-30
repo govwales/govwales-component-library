@@ -1,10 +1,10 @@
-@use "sass:map";
-@use "../../helpers/mixins/button";
-@use "../../helpers/mixins/focus";
-@use "../../helpers/mixins/inline-svg";
-@use "../../settings/colours/colours";
-@use "../../settings/spacing/spacing";
-@use "../../settings/ui-images/ui-images";
+@use 'sass:map';
+@use '../helpers/mixins/button';
+@use '../helpers/mixins/focus';
+@use '../helpers/mixins/inline-svg';
+@use '../settings/colours/colours';
+@use '../settings/spacing/spacing';
+@use '../settings/ui-images/ui-images';
 
 // LLYW.CYMRU | GOV.WALES
 // Button
@@ -138,22 +138,37 @@ $button-colours: (
 
   @each $icon, $svg in $icons {
     &--icon-#{$icon} {
-      @include inline-svg.gw-mixin-background-svg($svg, colours.$gw-colour-white);
+      @include inline-svg.gw-mixin-background-svg(
+        $svg,
+        colours.$gw-colour-white
+      );
 
       &.gw-btn--secondary {
-        @include inline-svg.gw-mixin-background-svg($svg, colours.$gw-colour-blue);
+        @include inline-svg.gw-mixin-background-svg(
+          $svg,
+          colours.$gw-colour-blue
+        );
       }
 
       &:hover {
-        @include inline-svg.gw-mixin-background-svg($svg, colours.$gw-colour-white);
+        @include inline-svg.gw-mixin-background-svg(
+          $svg,
+          colours.$gw-colour-white
+        );
 
         &:focus {
-          @include inline-svg.gw-mixin-background-svg($svg, colours.$gw-colour-black);
+          @include inline-svg.gw-mixin-background-svg(
+            $svg,
+            colours.$gw-colour-black
+          );
         }
       }
 
       &:focus {
-        @include inline-svg.gw-mixin-background-svg($svg, colours.$gw-colour-black);
+        @include inline-svg.gw-mixin-background-svg(
+          $svg,
+          colours.$gw-colour-black
+        );
       }
     }
   }
@@ -183,11 +198,17 @@ $button-colours: (
           );
 
           &:hover {
-            @include inline-svg.gw-mixin-background-svg($svg, colours.$gw-colour-white);
+            @include inline-svg.gw-mixin-background-svg(
+              $svg,
+              colours.$gw-colour-white
+            );
           }
 
           &:focus {
-            @include inline-svg.gw-mixin-background-svg($svg, colours.$gw-colour-black);
+            @include inline-svg.gw-mixin-background-svg(
+              $svg,
+              colours.$gw-colour-black
+            );
           }
         }
       }

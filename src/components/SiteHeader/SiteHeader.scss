@@ -2,14 +2,13 @@
 // Components: Site header
 // ========================================
 
-@use '../../scss/global/settings/all';
-@use '../../scss/global/helpers/all' as all2;
-@use "../../scss/global/helpers/mixins/inline-svg";
-@use "../../scss/global/helpers/mixins/media-query";
-@use "../../scss/global/helpers/mixins/site-branding" as mixins-site-branding;
-@use "../../scss/global/settings/colours/colours";
-@use "../../scss/global/settings/site-branding/site-branding" as site-branding-site-branding;
-@use "../../scss/global/settings/spacing/spacing";
+@use '../../scss/global/helpers/mixins/inline-svg';
+@use '../../scss/global/helpers/mixins/media-query';
+@use '../../scss/global/helpers/mixins/site-branding' as mixins-site-branding;
+@use '../../scss/global/settings/colours/colours';
+@use '../../scss/global/settings/site-branding/site-branding' as
+  site-branding-site-branding;
+@use '../../scss/global/settings/spacing/spacing';
 
 // Specific variables.
 $gw-header-background: colours.$gw-colour-layout-header-background;
@@ -40,7 +39,9 @@ $gw-header-site-search-border: colours.$gw-colour-white;
 
   // Class: 'gw-site-header__branding'.
   &__branding {
-    @include mixins-site-branding.gw-mixin-site-logo(site-branding-site-branding.$gw-logo-colour--header);
+    @include mixins-site-branding.gw-mixin-site-logo(
+      site-branding-site-branding.$gw-logo-colour--header
+    );
     float: left;
 
     // Print version of the logo and placement.
@@ -52,7 +53,8 @@ $gw-header-site-search-border: colours.$gw-colour-white;
         null
       ); //// SVG image, SVG colour.
       background-repeat: no-repeat;
-      background-size: site-branding-site-branding.$gw-print-logo-width site-branding-site-branding.$gw-print-logo-height;
+      background-size: site-branding-site-branding.$gw-print-logo-width
+        site-branding-site-branding.$gw-print-logo-height;
       background-position: top left;
       float: right;
     }

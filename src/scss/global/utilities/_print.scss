@@ -1,6 +1,6 @@
-@use "../../helpers/mixins/media-query";
-@use "../../settings/colours/colours";
-@use "../../settings/typography/base";
+@use '../helpers/mixins/media-query';
+@use '../settings/colours/colours';
+@use '../settings/typography/base';
 
 // LLYW.CYMRU | GOV.WALES
 // Print
@@ -43,5 +43,4 @@ $gw-print-padding: 0;
   @page :first {
     margin: $gw-print-margin--cover;
   }
-
 }

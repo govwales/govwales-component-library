@@ -2,14 +2,12 @@
 // Components: Card
 // ========================================
 
-@use '../../scss/global/settings/all';
-@use '../../scss/global/helpers/all' as all2;
-@use "../../scss/global/helpers/mixins/media-query";
-@use "../../scss/global/helpers/mixins/typography";
-@use "../../scss/global/settings/colours/colours";
-@use "../../scss/global/settings/spacing/spacing";
-@use "../../scss/global/settings/typography/base";
-@use "../../scss/global/settings/typography/font-sizes";
+@use '../../scss/global/helpers/mixins/media-query';
+@use '../../scss/global/helpers/mixins/typography';
+@use '../../scss/global/settings/colours/colours';
+@use '../../scss/global/settings/spacing/spacing';
+@use '../../scss/global/settings/typography/base';
+@use '../../scss/global/settings/typography/font-sizes';
 
 // Class: 'gw-card'.
 .gw-card {
@@ -83,10 +81,16 @@
   // Class: 'gw-card__description'.
   &__description {
     margin-bottom: spacing.$gw-spacing-02;
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-card-description, null);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-card-description,
+      null
+    );
 
     p {
-      @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-card-description, null);
+      @include typography.gw-mixin-font-size(
+        font-sizes.$gw-font-size-card-description,
+        null
+      );
     }
   }
 

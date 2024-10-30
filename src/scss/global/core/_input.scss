@@ -1,9 +1,9 @@
-@use "../../helpers/mixins/focus";
-@use "../../helpers/mixins/input" as mixins-input;
-@use "../../settings/colours/colours";
-@use "../../settings/input/input" as input-input;
-@use "../../settings/spacing/spacing";
-@use "../../settings/typography/base";
+@use '../helpers/mixins/focus';
+@use '../helpers/mixins/input' as mixins-input;
+@use '../settings/colours/colours';
+@use '../settings/input/input' as input-input;
+@use '../settings/spacing/spacing';
+@use '../settings/typography/base';
 
 // LLYW.CYMRU | GOV.WALES
 // Input

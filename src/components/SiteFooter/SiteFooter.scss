@@ -2,16 +2,15 @@
 // Components: Site footer
 // ========================================
 
-@use '../../scss/global/settings/all';
-@use '../../scss/global/helpers/all' as all2;
-@use "../../scss/global/helpers/mixins/border";
-@use "../../scss/global/helpers/mixins/site-branding" as mixins-site-branding;
-@use "../../scss/global/helpers/mixins/typography";
-@use "../../scss/global/settings/borders/borders";
-@use "../../scss/global/settings/colours/colours";
-@use "../../scss/global/settings/site-branding/site-branding" as site-branding-site-branding;
-@use "../../scss/global/settings/spacing/spacing";
-@use "../../scss/global/settings/typography/base";
+@use '../../scss/global/helpers/mixins/border';
+@use '../../scss/global/helpers/mixins/site-branding' as mixins-site-branding;
+@use '../../scss/global/helpers/mixins/typography';
+@use '../../scss/global/settings/borders/borders';
+@use '../../scss/global/settings/colours/colours';
+@use '../../scss/global/settings/site-branding/site-branding' as
+  site-branding-site-branding;
+@use '../../scss/global/settings/spacing/spacing';
+@use '../../scss/global/settings/typography/base';
 
 // Specific variables.
 $gw-footer-background: colours.$gw-colour-layout-footer-background;
@@ -30,7 +29,9 @@ $gw-footer-line-height-secondary-link: 20px;
 
   // Class: 'gw-site-footer__branding'.
   &__branding {
-    @include mixins-site-branding.gw-mixin-site-logo(site-branding-site-branding.$gw-logo-colour);
+    @include mixins-site-branding.gw-mixin-site-logo(
+      site-branding-site-branding.$gw-logo-colour
+    );
   }
 
   // Class: 'gw-site-footer__nav'.

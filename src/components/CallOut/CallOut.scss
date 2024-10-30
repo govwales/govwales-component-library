@@ -2,16 +2,14 @@
 // Components: Call Out
 // ========================================
 
-@use '../../scss/global/settings/all';
-@use '../../scss/global/helpers/all' as all2;
-@use "../../scss/global/helpers/mixins/border";
-@use "../../scss/global/helpers/mixins/inline-svg";
-@use "../../scss/global/helpers/mixins/typography";
-@use "../../scss/global/settings/borders/borders";
-@use "../../scss/global/settings/colours/colours";
-@use "../../scss/global/settings/spacing/spacing";
-@use "../../scss/global/settings/typography/font-sizes";
-@use "../../scss/global/settings/ui-images/ui-images";
+@use '../../scss/global/helpers/mixins/border';
+@use '../../scss/global/helpers/mixins/inline-svg';
+@use '../../scss/global/helpers/mixins/typography';
+@use '../../scss/global/settings/borders/borders';
+@use '../../scss/global/settings/colours/colours';
+@use '../../scss/global/settings/spacing/spacing';
+@use '../../scss/global/settings/typography/font-sizes';
+@use '../../scss/global/settings/ui-images/ui-images';
 
 // Class: 'gw-callout'.
 .gw-callout {
@@ -26,10 +24,16 @@
     $border-color: colours.$gw-colour-callout-border,
     $border-width: borders.$gw-border-width-large
   );
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-callout, null);
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-callout,
+    null
+  );
 
   p {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-callout, null);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-callout,
+      null
+    );
 
     &:last-child {
       margin-bottom: 0;
@@ -82,11 +86,17 @@
     padding-top: spacing.$gw-spacing-02;
     padding-bottom: spacing.$gw-spacing-02;
     padding-right: spacing.$gw-spacing-04;
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-callout-small, null);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-callout-small,
+      null
+    );
     background-size: 20px 20px;
 
     p {
-      @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-callout-small, null);
+      @include typography.gw-mixin-font-size(
+        font-sizes.$gw-font-size-callout-small,
+        null
+      );
     }
   }
 

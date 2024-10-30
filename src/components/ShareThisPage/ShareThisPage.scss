@@ -2,16 +2,14 @@
 // Components: ShareThisPage
 // ========================================
 
-@use '../../scss/global/settings/all';
-@use '../../scss/global/helpers/all' as all2;
-@use "../../scss/global/helpers/mixins/button";
-@use "../../scss/global/helpers/mixins/focus";
-@use "../../scss/global/helpers/mixins/inline-svg";
-@use "../../scss/global/helpers/mixins/typography";
-@use "../../scss/global/settings/colours/colours";
-@use "../../scss/global/settings/spacing/spacing";
-@use "../../scss/global/settings/typography/base";
-@use "../../scss/global/settings/ui-images/ui-images";
+@use '../../scss/global/helpers/mixins/button';
+@use '../../scss/global/helpers/mixins/focus';
+@use '../../scss/global/helpers/mixins/inline-svg';
+@use '../../scss/global/helpers/mixins/typography';
+@use '../../scss/global/settings/colours/colours';
+@use '../../scss/global/settings/spacing/spacing';
+@use '../../scss/global/settings/typography/base';
+@use '../../scss/global/settings/ui-images/ui-images';
 
 // Specific variables.
 $gw-font-size-share-this-page: 16px;
@@ -61,7 +59,7 @@ $gw-colour-btn-share-this-page-border: colours.$gw-colour-grey-2;
       $btn-background-colour-hover:
         $gw-colour-btn-share-this-page-background-hover,
       $btn-border: none,
-      $btn-padding-left: spacing.$gw-spacing-07,
+      $btn-padding-left: spacing.$gw-spacing-07
     );
 
     &:focus {

@@ -2,14 +2,12 @@
 // Form
 // ========================================
 
-@use '../../../global/settings/all';
-@use '../../../global/helpers/all' as all2;
-@use "../../helpers/mixins/media-query";
-@use "../../helpers/mixins/typography";
-@use "../../settings/colours/colours";
-@use "../../settings/spacing/spacing";
-@use "../../settings/typography/base";
-@use "../../settings/typography/font-sizes";
+@use '../helpers/mixins/media-query';
+@use '../helpers/mixins/typography';
+@use '../settings/colours/colours';
+@use '../settings/spacing/spacing';
+@use '../settings/typography/base';
+@use '../settings/typography/font-sizes';
 
 // Class: 'gw-form'.
 .gw-form {
@@ -23,7 +21,10 @@
 
 // Class: 'gw-label'.
 .gw-label {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-label, base.$gw-line-height);
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-label,
+    base.$gw-line-height
+  );
   @include typography.gw-mixin-letter-spacing(
     font-sizes.$gw-font-size-label,
     base.$gw-letter-spacing-tight
@@ -35,7 +36,10 @@
 
   // Class: 'gw-label--lg'.
   &--lg {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-label-large, base.$gw-line-height);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-label-large,
+      base.$gw-line-height
+    );
     @include typography.gw-mixin-letter-spacing(
       font-sizes.$gw-font-size-label-large,
       base.$gw-letter-spacing-tight
@@ -66,7 +70,10 @@
 
 // Class: 'gw-hint'.
 .gw-hint {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-hint, base.$gw-line-height);
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-hint,
+    base.$gw-line-height
+  );
   color: colours.$gw-colour-hint-text;
   margin-bottom: spacing.$gw-spacing-03;
 }

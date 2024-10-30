@@ -2,14 +2,12 @@
 // Components: Cookie Banner
 // ========================================
 
-@use '../../scss/global/settings/all';
-@use '../../scss/global/helpers/all' as all2;
-@use "../../scss/global/helpers/mixins/media-query";
-@use "../../scss/global/helpers/mixins/typography";
-@use "../../scss/global/settings/colours/colours";
-@use "../../scss/global/settings/spacing/spacing";
-@use "../../scss/global/settings/typography/base";
-@use "../../scss/global/settings/typography/font-sizes";
+@use '../../scss/global/helpers/mixins/media-query';
+@use '../../scss/global/helpers/mixins/typography';
+@use '../../scss/global/settings/colours/colours';
+@use '../../scss/global/settings/spacing/spacing';
+@use '../../scss/global/settings/typography/base';
+@use '../../scss/global/settings/typography/font-sizes';
 
 // Specific variables.
 $gw-cookie-banner-background: colours.$gw-colour-grey-7;
@@ -21,13 +19,19 @@ $gw-cookie-banner-background: colours.$gw-colour-grey-7;
   background-color: $gw-cookie-banner-background;
   p,
   li {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-paragraph-small, base.$gw-line-height);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-paragraph-small,
+      base.$gw-line-height
+    );
   }
 
   @include media-query.gw-mixin-media-query(md) {
     p,
     li {
-      @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-paragraph, base.$gw-line-height);
+      @include typography.gw-mixin-font-size(
+        font-sizes.$gw-font-size-paragraph,
+        base.$gw-line-height
+      );
     }
   }
 

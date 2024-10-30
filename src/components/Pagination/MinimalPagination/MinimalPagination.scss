@@ -2,16 +2,14 @@
 // Components: Minimal pagination
 // ========================================
 
-@use '../../../scss/global/settings/all';
-@use '../../../scss/global/helpers/all' as all2;
-@use "../../../scss/global/helpers/mixins/inline-svg";
-@use "../../../scss/global/helpers/mixins/media-query";
-@use "../../../scss/global/helpers/mixins/typography";
-@use "../../../scss/global/settings/colours/colours";
-@use "../../../scss/global/settings/spacing/spacing";
-@use "../../../scss/global/settings/typography/base";
-@use "../../../scss/global/settings/typography/font-sizes";
-@use "../../../scss/global/settings/ui-images/ui-images";
+@use '../../../scss/global/helpers/mixins/inline-svg';
+@use '../../../scss/global/helpers/mixins/media-query';
+@use '../../../scss/global/helpers/mixins/typography';
+@use '../../../scss/global/settings/colours/colours';
+@use '../../../scss/global/settings/spacing/spacing';
+@use '../../../scss/global/settings/typography/base';
+@use '../../../scss/global/settings/typography/font-sizes';
+@use '../../../scss/global/settings/ui-images/ui-images';
 
 // Class: 'gw-minimal-pagination-link'.
 .gw-minimal-pagination-link {
@@ -20,14 +18,20 @@
 
   // Class: 'gw-minimal-pagination-link__title'.
   &__title {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-pagination-title, null);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-pagination-title,
+      null
+    );
     @include typography.gw-mixin-letter-spacing(
       font-sizes.$gw-font-size-pagination-title,
       base.$gw-letter-spacing-tight
     );
 
     @include media-query.gw-mixin-media-query(md) {
-      @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-pagination-title-md, null);
+      @include typography.gw-mixin-font-size(
+        font-sizes.$gw-font-size-pagination-title-md,
+        null
+      );
       @include typography.gw-mixin-letter-spacing(
         font-sizes.$gw-font-size-pagination-title-md,
         base.$gw-letter-spacing-tight
@@ -40,14 +44,20 @@
     display: block;
     font-weight: base.$gw-font-weight-normal;
     color: colours.$gw-colour-pagination-label;
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-pagination-label, null);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-pagination-label,
+      null
+    );
     @include typography.gw-mixin-letter-spacing(
       font-sizes.$gw-font-size-pagination-label,
       base.$gw-letter-spacing-tight
     );
 
     @include media-query.gw-mixin-media-query(md) {
-      @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-pagination-label-md, null);
+      @include typography.gw-mixin-font-size(
+        font-sizes.$gw-font-size-pagination-label-md,
+        null
+      );
       @include typography.gw-mixin-letter-spacing(
         font-sizes.$gw-font-size-pagination-label-md,
         base.$gw-letter-spacing-tight

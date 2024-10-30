@@ -1,9 +1,9 @@
-@use "../../helpers/mixins/grid" as mixins-grid;
-@use "../../helpers/mixins/media-query";
-@use "../../settings/breakpoints/breakpoints";
-@use "../../settings/colours/colours";
-@use "../../settings/grid/grid" as grid-grid;
-@use "../../settings/spacing/spacing";
+@use '../helpers/mixins/grid' as mixins-grid;
+@use '../helpers/mixins/media-query';
+@use '../settings/breakpoints/breakpoints';
+@use '../settings/colours/colours';
+@use '../settings/grid/grid' as grid-grid;
+@use '../settings/spacing/spacing';
 
 // LLYW.CYMRU | GOV.WALES
 // Layout
