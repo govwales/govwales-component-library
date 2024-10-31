@@ -1,1 +1,1 @@
-export { default as GlobalSearchResultCard } from './GlobalSearchResultCard';
+export { default as GlobalSearchResultCard } from '.SearchResultCard';

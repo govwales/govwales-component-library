@@ -2,11 +2,11 @@
 // Components: Page header
 // ========================================
 
-@use '../../scss/global/helpers/mixins/border';
-@use '../../scss/global/helpers/mixins/subheading';
-@use '../../scss/global/variables/borders';
-@use '../../scss/global/variables/colours';
-@use '../../scss/global/variables/spacing';
+@use '../../scss/helpers/mixins/border';
+@use '../../scss/helpers/mixins/subheading';
+@use '../../scss/variables/borders';
+@use '../../scss/variables/colours';
+@use '../../scss/variables/spacing';
 
 // Class: 'gw-page-header'.
 .gw-page-header {

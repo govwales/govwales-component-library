@@ -1,12 +1,12 @@
 // LLYW.CYMRU | GOV.WALES
 // Components: Link: Breadcrumb
 // ========================================
-@use '../../scss/global/helpers/mixins/transitions';
-@use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/variables/colours';
-@use '../../scss/global/variables/transition';
-@use '../../scss/global/variables/font';
-@use '../../scss/global/variables/font-sizes';
+@use '../../scss/helpers/mixins/transitions';
+@use '../../scss/helpers/mixins/typography';
+@use '../../scss/variables/colours';
+@use '../../scss/variables/transition';
+@use '../../scss/variables/font';
+@use '../../scss/variables/font-sizes';
 
 // Class 'gw-link-breadcrumb'.
 .gw-link-breadcrumb {

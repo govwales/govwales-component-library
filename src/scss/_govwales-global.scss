@@ -3,26 +3,26 @@
 // ========================================
 
 // Core
-@use 'global/core/core';
+@use './core/core';
 
 // Variables
-@use './global/variables/borders';
-@use './global/variables/breakpoints';
-@use './global/variables/colours';
-@use './global/variables/font-sizes';
-@use './global/variables/font';
-@use './global/variables/grid';
-@use './global/variables/input';
-@use './global/variables/site-branding';
-@use './global/variables/spacing';
-@use './global/variables/transition';
-@use './global/variables/ui-images';
+@use './variables/borders';
+@use './variables/breakpoints';
+@use './variables/colours';
+@use './variables/font-sizes';
+@use './variables/font';
+@use './variables/grid';
+@use './variables/input';
+@use './variables/site-branding';
+@use './variables/spacing';
+@use './variables/transition';
+@use './variables/ui-images';
 
 // Helpers (mixins)
-@use 'global/helpers/helpers';
+@use './helpers/helpers';
 
 // Initial
-@use 'global/initial/initial';
+@use './initial/initial';
 
 // Utilities
-@use 'global/utilities/utilities';
+@use './utilities/utilities';

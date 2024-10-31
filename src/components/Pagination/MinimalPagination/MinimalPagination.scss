@@ -2,14 +2,14 @@
 // Components: Minimal pagination
 // ========================================
 
-@use '../../../scss/global/helpers/mixins/inline-svg';
-@use '../../../scss/global/helpers/mixins/media-query';
-@use '../../../scss/global/helpers/mixins/typography';
-@use '../../../scss/global/variables/colours';
-@use '../../../scss/global/variables/spacing';
-@use '../../../scss/global/variables/font';
-@use '../../../scss/global/variables/font-sizes';
-@use '../../../scss/global/variables/ui-images';
+@use '../../../scss/helpers/mixins/inline-svg';
+@use '../../../scss/helpers/mixins/media-query';
+@use '../../../scss/helpers/mixins/typography';
+@use '../../../scss/variables/colours';
+@use '../../../scss/variables/spacing';
+@use '../../../scss/variables/font';
+@use '../../../scss/variables/font-sizes';
+@use '../../../scss/variables/ui-images';
 
 // Class: 'gw-minimal-pagination-link'.
 .gw-minimal-pagination-link {

@@ -2,10 +2,10 @@
 // Components: Site utilities
 // ========================================
 
-@use '../../scss/global/helpers/mixins/inline-svg';
-@use '../../scss/global/variables/colours';
-@use '../../scss/global/variables/spacing';
-@use '../../scss/global/variables/ui-images';
+@use '../../scss/helpers/mixins/inline-svg';
+@use '../../scss/variables/colours';
+@use '../../scss/variables/spacing';
+@use '../../scss/variables/ui-images';
 
 // Specific variables.
 $gw-site-utilities-background: colours.$gw-colour-grey-6;

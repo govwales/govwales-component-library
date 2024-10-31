@@ -2,14 +2,14 @@
 // Components: ShareThisPage
 // ========================================
 
-@use '../../scss/global/helpers/mixins/button';
-@use '../../scss/global/helpers/mixins/focus';
-@use '../../scss/global/helpers/mixins/inline-svg';
-@use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/variables/colours';
-@use '../../scss/global/variables/spacing';
-@use '../../scss/global/variables/font';
-@use '../../scss/global/variables/ui-images';
+@use '../../scss/helpers/mixins/button';
+@use '../../scss/helpers/mixins/focus';
+@use '../../scss/helpers/mixins/inline-svg';
+@use '../../scss/helpers/mixins/typography';
+@use '../../scss/variables/colours';
+@use '../../scss/variables/spacing';
+@use '../../scss/variables/font';
+@use '../../scss/variables/ui-images';
 
 // Specific variables.
 $gw-font-size-share-this-page: 16px;

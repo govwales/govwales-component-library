@@ -2,14 +2,14 @@
 // Components: Site footer
 // ========================================
 
-@use '../../scss/global/helpers/mixins/border';
-@use '../../scss/global/helpers/mixins/site-branding' as mixins-site-branding;
-@use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/variables/borders';
-@use '../../scss/global/variables/colours';
-@use '../../scss/global/variables/site-branding' as site-branding-site-branding;
-@use '../../scss/global/variables/spacing';
-@use '../../scss/global/variables/font';
+@use '../../scss/helpers/mixins/border';
+@use '../../scss/helpers/mixins/site-branding' as mixins-site-branding;
+@use '../../scss/helpers/mixins/typography';
+@use '../../scss/variables/borders';
+@use '../../scss/variables/colours';
+@use '../../scss/variables/site-branding' as site-branding-site-branding;
+@use '../../scss/variables/spacing';
+@use '../../scss/variables/font';
 
 // Specific variables.
 $gw-footer-background: colours.$gw-colour-layout-footer-background;
