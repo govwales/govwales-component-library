@@ -2,27 +2,24 @@
 // Components: Page header
 // ========================================
 
-@use '../../scss/helpers/mixins/border';
-@use '../../scss/helpers/mixins/subheading';
-@use '../../scss/variables/borders';
-@use '../../scss/variables/colours';
-@use '../../scss/variables/spacing';
+@use '../../scss/variables/variables' as *;
+@use '../../scss/helpers/mixins' as *;
 
 // Class: 'gw-page-header'.
 .gw-page-header {
-  margin-bottom: spacing.$gw-spacing-08;
+  margin-bottom: $gw-spacing-08;
 
   // Class: 'gw-page-header--with-border'.
   &--with-border {
-    @include border.gw-mixin-border(
-      $border-position: borders.$gw-border-position-bottom,
-      $border-color: colours.$gw-colour-border-grey,
-      $border-width: borders.$gw-border-height-medium
+    @include gw-mixin-border(
+      $border-position: $gw-border-position-bottom,
+      $border-color: $gw-colour-border-grey,
+      $border-width: $gw-border-height-medium
     );
   }
 
   // Class: 'gw-page-header__subheading'.
   &__subheading {
-    @include subheading.gw-mixin-subheading;
+    @include gw-mixin-subheading;
   }
 }

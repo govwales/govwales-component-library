@@ -2,39 +2,27 @@
 // Components: Minimal pagination
 // ========================================
 
-@use '../../../scss/helpers/mixins/inline-svg';
-@use '../../../scss/helpers/mixins/media-query';
-@use '../../../scss/helpers/mixins/typography';
-@use '../../../scss/variables/colours';
-@use '../../../scss/variables/spacing';
-@use '../../../scss/variables/font';
-@use '../../../scss/variables/font-sizes';
-@use '../../../scss/variables/ui-images';
+@use '../../../scss/variables/variables' as *;
+@use '../../../scss/helpers/mixins' as *;
 
 // Class: 'gw-minimal-pagination-link'.
 .gw-minimal-pagination-link {
   display: inline-block;
-  margin-bottom: spacing.$gw-spacing-08;
+  margin-bottom: $gw-spacing-08;
 
   // Class: 'gw-minimal-pagination-link__title'.
   &__title {
-    @include typography.gw-mixin-font-size(
-      font-sizes.$gw-font-size-pagination-title,
-      null
-    );
-    @include typography.gw-mixin-letter-spacing(
-      font-sizes.$gw-font-size-pagination-title,
-      font.$gw-letter-spacing-tight
+    @include gw-mixin-font-size($gw-font-size-pagination-title, null);
+    @include gw-mixin-letter-spacing(
+      $gw-font-size-pagination-title,
+      $gw-letter-spacing-tight
     );
 
-    @include media-query.gw-mixin-media-query(md) {
-      @include typography.gw-mixin-font-size(
-        font-sizes.$gw-font-size-pagination-title-md,
-        null
-      );
-      @include typography.gw-mixin-letter-spacing(
-        font-sizes.$gw-font-size-pagination-title-md,
-        font.$gw-letter-spacing-tight
+    @include gw-mixin-media-query(md) {
+      @include gw-mixin-font-size($gw-font-size-pagination-title-md, null);
+      @include gw-mixin-letter-spacing(
+        $gw-font-size-pagination-title-md,
+        $gw-letter-spacing-tight
       );
     }
   }
@@ -42,25 +30,19 @@
   // Class: 'gw-minimal-pagination-link__label'.
   &__label {
     display: block;
-    font-weight: font.$gw-font-weight-normal;
-    color: colours.$gw-colour-pagination-label;
-    @include typography.gw-mixin-font-size(
-      font-sizes.$gw-font-size-pagination-label,
-      null
-    );
-    @include typography.gw-mixin-letter-spacing(
-      font-sizes.$gw-font-size-pagination-label,
-      font.$gw-letter-spacing-tight
+    font-weight: $gw-font-weight-normal;
+    color: $gw-colour-pagination-label;
+    @include gw-mixin-font-size($gw-font-size-pagination-label, null);
+    @include gw-mixin-letter-spacing(
+      $gw-font-size-pagination-label,
+      $gw-letter-spacing-tight
     );
 
-    @include media-query.gw-mixin-media-query(md) {
-      @include typography.gw-mixin-font-size(
-        font-sizes.$gw-font-size-pagination-label-md,
-        null
-      );
-      @include typography.gw-mixin-letter-spacing(
-        font-sizes.$gw-font-size-pagination-label-md,
-        font.$gw-letter-spacing-tight
+    @include gw-mixin-media-query(md) {
+      @include gw-mixin-font-size($gw-font-size-pagination-label-md, null);
+      @include gw-mixin-letter-spacing(
+        $gw-font-size-pagination-label-md,
+        $gw-letter-spacing-tight
       );
     }
   }
@@ -72,28 +54,28 @@
     background-size: 15px;
     background-position: left 2px;
 
-    @include inline-svg.gw-mixin-background-svg(
-      ui-images.$gw-ui-chevron-left,
-      colours.$gw-colour-link-default
+    @include gw-mixin-background-svg(
+      $gw-ui-chevron-left,
+      $gw-colour-link-default
     ); // SVG image, SVG colour.
 
-    @include media-query.gw-mixin-media-query(md) {
+    @include gw-mixin-media-query(md) {
       padding-left: 30px;
       background-size: 18px;
       background-position: left 4px;
     }
 
     &:hover {
-      @include inline-svg.gw-mixin-background-svg(
-        ui-images.$gw-ui-chevron-left,
-        colours.$gw-colour-link-hover
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-left,
+        $gw-colour-link-hover
       );
     }
 
     &:focus {
-      @include inline-svg.gw-mixin-background-svg(
-        ui-images.$gw-ui-chevron-left,
-        colours.$gw-colour-focus-ui
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-left,
+        $gw-colour-focus-ui
       );
     }
   }
@@ -104,31 +86,31 @@
     text-align: right;
     padding-right: 25px;
 
-    @include inline-svg.gw-mixin-background-svg(
-      ui-images.$gw-ui-chevron-right,
-      colours.$gw-colour-link-default
+    @include gw-mixin-background-svg(
+      $gw-ui-chevron-right,
+      $gw-colour-link-default
     ); // SVG image, SVG colour.
     background-repeat: no-repeat;
     background-size: 15px;
     background-position: right 2px;
 
-    @include media-query.gw-mixin-media-query(md) {
+    @include gw-mixin-media-query(md) {
       padding-right: 30px;
       background-size: 18px;
       background-position: right 4px;
     }
 
     &:hover {
-      @include inline-svg.gw-mixin-background-svg(
-        ui-images.$gw-ui-chevron-right,
-        colours.$gw-colour-link-hover
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-right,
+        $gw-colour-link-hover
       );
     }
 
     &:focus {
-      @include inline-svg.gw-mixin-background-svg(
-        ui-images.$gw-ui-chevron-right,
-        colours.$gw-colour-focus-ui
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-right,
+        $gw-colour-focus-ui
       );
     }
   }

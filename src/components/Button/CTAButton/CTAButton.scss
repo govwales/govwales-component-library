@@ -2,35 +2,29 @@
 // Components: Button: Primary
 // ========================================
 
-@use '../../../scss/helpers/mixins/typography';
-@use '../../../scss/variables/colours';
-@use '../../../scss/variables/spacing';
-@use '../../../scss/variables/font';
-@use '../../../scss/variables/font-sizes';
+@use '../../../scss/variables/variables' as *;
+@use '../../../scss/helpers/mixins' as *;
 
 .gw-btn {
   // Class: 'gw-btn--cta'.
   &--cta {
-    background-color: colours.$gw-colour-blue;
-    color: colours.$gw-colour-white;
-    border-radius: spacing.$gw-spacing-14;
-    padding: spacing.$gw-spacing-03 spacing.$gw-spacing-05;
-    @include typography.gw-mixin-font-size(
-      font-sizes.$gw-font-size-button-cta,
-      font.$gw-line-height
-    );
+    background-color: $gw-colour-blue;
+    color: $gw-colour-white;
+    border-radius: $gw-spacing-14;
+    padding: $gw-spacing-03 $gw-spacing-05;
+    @include gw-mixin-font-size($gw-font-size-button-cta, $gw-line-height);
 
     &.gw-btn--lg {
-      padding: spacing.$gw-spacing-04 spacing.$gw-spacing-06;
-      @include typography.gw-mixin-font-size(
-        font-sizes.$gw-font-size-button-cta-large,
-        font.$gw-line-height
+      padding: $gw-spacing-04 $gw-spacing-06;
+      @include gw-mixin-font-size(
+        $gw-font-size-button-cta-large,
+        $gw-line-height
       );
     }
 
     &.gw-btn--icon-right {
-      padding-right: spacing.$gw-spacing-08;
-      background-position: right spacing.$gw-spacing-03 center;
+      padding-right: $gw-spacing-08;
+      background-position: right $gw-spacing-03 center;
     }
   }
 }

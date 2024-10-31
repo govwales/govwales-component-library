@@ -2,16 +2,16 @@
 // Components: Link: Skip
 // ========================================
 
-@use '../../../scss/variables/spacing';
+@use '../../../scss/variables/variables' as *;
 
 // Class: 'gw-link--skip'.
 .gw-link--skip {
   display: inline-block;
-  padding-top: spacing.$gw-spacing-01;
-  padding-right: spacing.$gw-spacing-02;
-  padding-bottom: spacing.$gw-spacing-01;
-  padding-left: spacing.$gw-spacing-02;
-  margin-top: spacing.$gw-spacing-02;
-  margin-bottom: spacing.$gw-spacing-02;
+  padding-top: $gw-spacing-01;
+  padding-right: $gw-spacing-02;
+  padding-bottom: $gw-spacing-01;
+  padding-left: $gw-spacing-02;
+  margin-top: $gw-spacing-02;
+  margin-bottom: $gw-spacing-02;
   margin-left: -10px;
 }

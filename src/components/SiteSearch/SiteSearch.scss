@@ -2,12 +2,8 @@
 // Components: Site search
 // ========================================
 
-@use '../../scss/helpers/mixins/typography';
-@use '../../scss/variables/colours';
-@use '../../scss/variables/input';
-@use '../../scss/variables/spacing';
-@use '../../scss/variables/font';
-@use '../../scss/variables/font-sizes';
+@use '../../scss/variables/variables' as *;
+@use '../../scss/helpers/mixins' as *;
 
 // Class: 'gw-site-search'.
 .gw-site-search {
@@ -23,14 +19,14 @@
 
   .gw-input {
     height: 34px;
-    padding-top: spacing.$gw-spacing-02;
-    padding-right: spacing.$gw-spacing-09;
-    padding-bottom: spacing.$gw-spacing-02;
-    padding-left: spacing.$gw-spacing-02;
+    padding-top: $gw-spacing-02;
+    padding-right: $gw-spacing-09;
+    padding-bottom: $gw-spacing-02;
+    padding-left: $gw-spacing-02;
   }
 
   .gw-label {
-    color: colours.$gw-colour-label-white;
+    color: $gw-colour-label-white;
   }
 
   // Class: 'gw-site-search--lg'.
@@ -40,23 +36,20 @@
     }
 
     .gw-label {
-      color: colours.$gw-colour-label-black;
+      color: $gw-colour-label-black;
     }
 
     .gw-input {
       height: 44px;
-      padding-top: spacing.$gw-spacing-02;
-      padding-right: spacing.$gw-spacing-09;
-      padding-bottom: spacing.$gw-spacing-02;
-      padding-left: spacing.$gw-spacing-02;
-      border-width: input.$gw-input-border-heavy;
-      @include typography.gw-mixin-font-size(
-        font-sizes.$gw-font-size-input-large,
-        font.$gw-line-height
-      );
+      padding-top: $gw-spacing-02;
+      padding-right: $gw-spacing-09;
+      padding-bottom: $gw-spacing-02;
+      padding-left: $gw-spacing-02;
+      border-width: $gw-input-border-heavy;
+      @include gw-mixin-font-size($gw-font-size-input-large, $gw-line-height);
 
       &:focus {
-        border-width: input.$gw-input-border-medium;
+        border-width: $gw-input-border-medium;
       }
     }
   }

@@ -2,26 +2,23 @@
 // Components: Metadata
 // ========================================
 
-@use '../../scss/helpers/mixins/typography';
-@use '../../scss/variables/colours';
-@use '../../scss/variables/spacing';
-@use '../../scss/variables/font';
-@use '../../scss/variables/font-sizes';
+@use '../../scss/variables/variables' as *;
+@use '../../scss/helpers/mixins' as *;
 
 // Class: 'gw-metadata'.
 .gw-metadata {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-meta, null);
-  @include typography.gw-mixin-letter-spacing(
-    font-sizes.$gw-font-size-meta,
-    font.$gw-letter-spacing-tight
+  @include gw-mixin-font-size($gw-font-size-meta, null);
+  @include gw-mixin-letter-spacing(
+    $gw-font-size-meta,
+    $gw-letter-spacing-tight
   );
-  color: colours.$gw-colour-meta-grey;
-  margin-bottom: spacing.$gw-spacing-01;
+  color: $gw-colour-meta-grey;
+  margin-bottom: $gw-spacing-01;
 
   // Metadata types.
   // Class: 'gw-metadata--white'.
   &--white {
-    color: colours.$gw-colour-meta-white;
+    color: $gw-colour-meta-white;
   }
 
   // Class: 'gw-metadata--part-of'.

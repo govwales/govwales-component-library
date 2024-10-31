@@ -3,19 +3,13 @@
 // ========================================
 
 @use 'Breadcrumb.scss';
-@use '../../scss/helpers/mixins/inline-svg';
-@use '../../scss/helpers/mixins/media-query';
-@use '../../scss/helpers/mixins/typography';
-@use '../../scss/variables/colours';
-@use '../../scss/variables/spacing';
-@use '../../scss/variables/font';
-@use '../../scss/variables/font-sizes';
-@use '../../scss/variables/ui-images';
+@use '../../scss/variables/variables' as *;
+@use '../../scss/helpers/mixins' as *;
 
 // Class 'gw-breadcrumbs'.
 .gw-breadcrumbs {
-  padding-top: spacing.$gw-spacing-04;
-  padding-bottom: spacing.$gw-spacing-07;
+  padding-top: $gw-spacing-04;
+  padding-bottom: $gw-spacing-07;
 
   // Class 'gw-breadcrumbs__list'.
   &__list {
@@ -23,13 +17,10 @@
     flex-wrap: wrap;
     padding-left: 0;
     margin-bottom: 0;
-    @include typography.gw-mixin-font-size(
-      font-sizes.$gw-font-size-breadcrumb,
-      font.$gw-line-height
-    );
-    @include typography.gw-mixin-letter-spacing(
-      font-sizes.$gw-font-size-breadcrumb,
-      font.$gw-letter-spacing-tight
+    @include gw-mixin-font-size($gw-font-size-breadcrumb, $gw-line-height);
+    @include gw-mixin-letter-spacing(
+      $gw-font-size-breadcrumb,
+      $gw-letter-spacing-tight
     );
   }
 
@@ -40,24 +31,24 @@
     // Class 'gw-breadcrumbs__item--parent'.
     &--parent {
       display: inline-block;
-      padding-left: spacing.$gw-spacing-04;
-      @include inline-svg.gw-mixin-background-svg(
-        ui-images.$gw-ui-chevron-left,
-        colours.$gw-colour-breadcrumb-pointer
+      padding-left: $gw-spacing-04;
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-left,
+        $gw-colour-breadcrumb-pointer
       );
       background-repeat: no-repeat;
       background-size: 8px;
       background-position: left 5px;
     }
 
-    @include media-query.gw-mixin-media-query(md) {
+    @include gw-mixin-media-query(md) {
       display: inline-block;
       margin-left: 0;
-      margin-right: spacing.$gw-spacing-02;
-      padding-right: spacing.$gw-spacing-04;
-      @include inline-svg.gw-mixin-background-svg(
-        ui-images.$gw-ui-chevron-right,
-        colours.$gw-colour-breadcrumb-pointer
+      margin-right: $gw-spacing-02;
+      padding-right: $gw-spacing-04;
+      @include gw-mixin-background-svg(
+        $gw-ui-chevron-right,
+        $gw-colour-breadcrumb-pointer
       );
       background-repeat: no-repeat;
       background-size: 8px;

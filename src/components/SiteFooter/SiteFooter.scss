@@ -2,19 +2,13 @@
 // Components: Site footer
 // ========================================
 
-@use '../../scss/helpers/mixins/border';
-@use '../../scss/helpers/mixins/site-branding' as mixins-site-branding;
-@use '../../scss/helpers/mixins/typography';
-@use '../../scss/variables/borders';
-@use '../../scss/variables/colours';
-@use '../../scss/variables/site-branding' as site-branding-site-branding;
-@use '../../scss/variables/spacing';
-@use '../../scss/variables/font';
+@use '../../scss/variables/variables' as *;
+@use '../../scss/helpers/mixins' as *;
 
 // Specific variables.
-$gw-footer-background: colours.$gw-colour-layout-footer-background;
-$gw-footer-nav-border-color: colours.$gw-colour-grey-5;
-$gw-footer-link-color: colours.$gw-colour-black;
+$gw-footer-background: $gw-colour-layout-footer-background;
+$gw-footer-nav-border-color: $gw-colour-grey-5;
+$gw-footer-link-color: $gw-colour-black;
 $gw-footer-font-size-primary-link: 18px;
 $gw-footer-line-height-primary-link: 24px;
 $gw-footer-font-size-secondary-link: 16px;
@@ -23,19 +17,17 @@ $gw-footer-line-height-secondary-link: 20px;
 // Class: 'gw-site-footer'.
 .gw-site-footer {
   background-color: $gw-footer-background;
-  padding-top: spacing.$gw-spacing-12;
-  padding-bottom: spacing.$gw-spacing-08;
+  padding-top: $gw-spacing-12;
+  padding-bottom: $gw-spacing-08;
 
   // Class: 'gw-site-footer__branding'.
   &__branding {
-    @include mixins-site-branding.gw-mixin-site-logo(
-      site-branding-site-branding.$gw-logo-colour
-    );
+    @include gw-mixin-site-logo($gw-logo-colour);
   }
 
   // Class: 'gw-site-footer__nav'.
   &__nav {
-    margin-bottom: spacing.$gw-spacing-10;
+    margin-bottom: $gw-spacing-10;
 
     // Class: 'gw-site-footer__nav--primary'.
     // Class: 'gw-site-footer__nav--secondary'.
@@ -44,16 +36,16 @@ $gw-footer-line-height-secondary-link: 20px;
       list-style: none;
       margin-top: 0;
       margin-right: 0;
-      margin-bottom: spacing.$gw-spacing-03;
+      margin-bottom: $gw-spacing-03;
       margin-left: 0;
       padding-top: 0;
       padding-left: 0;
-      padding-bottom: spacing.$gw-spacing-04;
+      padding-bottom: $gw-spacing-04;
       padding-left: 0;
 
       li {
         display: inline-block;
-        margin-right: spacing.$gw-spacing-05;
+        margin-right: $gw-spacing-05;
       }
 
       a {
@@ -71,14 +63,14 @@ $gw-footer-line-height-secondary-link: 20px;
 
     // Class: 'gw-site-footer__nav--primary'.
     &--primary {
-      @include border.gw-mixin-border(
-        $border-position: borders.$gw-border-position-bottom,
+      @include gw-mixin-border(
+        $border-position: $gw-border-position-bottom,
         $border-color: $gw-footer-nav-border-color,
-        $border-width: borders.$gw-border-height-medium
+        $border-width: $gw-border-height-medium
       );
 
       a {
-        @include typography.gw-mixin-font-size(
+        @include gw-mixin-font-size(
           $gw-footer-font-size-primary-link,
           $gw-footer-line-height-primary-link
         );
@@ -88,11 +80,11 @@ $gw-footer-line-height-secondary-link: 20px;
     // Class: 'gw-site-footer__nav--secondary'.
     &--secondary {
       a {
-        @include typography.gw-mixin-font-size(
+        @include gw-mixin-font-size(
           $gw-footer-font-size-secondary-link,
           $gw-footer-line-height-secondary-link
         );
-        font-weight: font.$gw-font-weight-normal;
+        font-weight: $gw-font-weight-normal;
       }
     }
   }
