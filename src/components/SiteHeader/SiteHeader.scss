@@ -5,10 +5,9 @@
 @use '../../scss/global/helpers/mixins/inline-svg';
 @use '../../scss/global/helpers/mixins/media-query';
 @use '../../scss/global/helpers/mixins/site-branding' as mixins-site-branding;
-@use '../../scss/global/settings/colours/colours';
-@use '../../scss/global/settings/site-branding/site-branding' as
-  site-branding-site-branding;
-@use '../../scss/global/settings/spacing/spacing';
+@use '../../scss/global/variables/colours';
+@use '../../scss/global/variables/site-branding' as site-branding-site-branding;
+@use '../../scss/global/variables/spacing';
 
 // Specific variables.
 $gw-header-background: colours.$gw-colour-layout-header-background;

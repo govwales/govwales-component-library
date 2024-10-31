@@ -3,9 +3,9 @@
 // ========================================
 
 @use '../../scss/global/helpers/mixins/inline-svg';
-@use '../../scss/global/settings/colours/colours';
-@use '../../scss/global/settings/spacing/spacing';
-@use '../../scss/global/settings/ui-images/ui-images';
+@use '../../scss/global/variables/colours';
+@use '../../scss/global/variables/spacing';
+@use '../../scss/global/variables/ui-images';
 
 // Specific variables.
 $gw-site-utilities-background: colours.$gw-colour-grey-6;

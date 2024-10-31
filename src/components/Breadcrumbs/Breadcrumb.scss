@@ -3,21 +3,21 @@
 // ========================================
 @use '../../scss/global/helpers/mixins/transitions';
 @use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/settings/colours/colours';
-@use '../../scss/global/settings/transition/transition';
-@use '../../scss/global/settings/typography/base';
-@use '../../scss/global/settings/typography/font-sizes';
+@use '../../scss/global/variables/colours';
+@use '../../scss/global/variables/transition';
+@use '../../scss/global/variables/font';
+@use '../../scss/global/variables/font-sizes';
 
 // Class 'gw-link-breadcrumb'.
 .gw-link-breadcrumb {
   @include typography.gw-mixin-font-size(
     font-sizes.$gw-font-size-breadcrumb,
-    base.$gw-line-height
+    font.$gw-line-height
   );
 
   // Class 'gw-link-breadcrumb--current'.
   &--current {
-    font-weight: base.$gw-font-weight-normal;
+    font-weight: font.$gw-font-weight-normal;
     color: colours.$gw-colour-breadcrumb-current-link;
 
     &:active,

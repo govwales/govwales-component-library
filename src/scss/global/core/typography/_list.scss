@@ -1,7 +1,7 @@
 @use '../../helpers/mixins/typography';
-@use '../../settings/spacing/spacing';
-@use '../../settings/typography/base';
-@use '../../settings/typography/font-sizes';
+@use '../../variables/spacing';
+@use '../../variables/font';
+@use '../../variables/font-sizes';
 
 // LLYW.CYMRU | GOV.WALES
 // Typography: Lists
@@ -16,7 +16,7 @@ ol {
 .gw-list {
   @include typography.gw-mixin-font-size(
     font-sizes.$gw-font-size-list,
-    base.$gw-line-height
+    font.$gw-line-height
   );
   margin-bottom: spacing.$gw-spacing-04;
   padding-left: spacing.$gw-spacing-06;

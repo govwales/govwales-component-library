@@ -3,11 +3,11 @@
 // ========================================
 
 @use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/settings/colours/colours';
-@use '../../scss/global/settings/input/input';
-@use '../../scss/global/settings/spacing/spacing';
-@use '../../scss/global/settings/typography/base';
-@use '../../scss/global/settings/typography/font-sizes';
+@use '../../scss/global/variables/colours';
+@use '../../scss/global/variables/input';
+@use '../../scss/global/variables/spacing';
+@use '../../scss/global/variables/font';
+@use '../../scss/global/variables/font-sizes';
 
 // Class: 'gw-site-search'.
 .gw-site-search {
@@ -52,7 +52,7 @@
       border-width: input.$gw-input-border-heavy;
       @include typography.gw-mixin-font-size(
         font-sizes.$gw-font-size-input-large,
-        base.$gw-line-height
+        font.$gw-line-height
       );
 
       &:focus {

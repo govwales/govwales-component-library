@@ -4,10 +4,10 @@
 
 @use '../helpers/mixins/media-query';
 @use '../helpers/mixins/typography';
-@use '../settings/colours/colours';
-@use '../settings/spacing/spacing';
-@use '../settings/typography/base';
-@use '../settings/typography/font-sizes';
+@use '../variables/colours';
+@use '../variables/spacing';
+@use '../variables/font';
+@use '../variables/font-sizes';
 
 // Class: 'gw-form'.
 .gw-form {
@@ -23,36 +23,36 @@
 .gw-label {
   @include typography.gw-mixin-font-size(
     font-sizes.$gw-font-size-label,
-    base.$gw-line-height
+    font.$gw-line-height
   );
   @include typography.gw-mixin-letter-spacing(
     font-sizes.$gw-font-size-label,
-    base.$gw-letter-spacing-tight
+    font.$gw-letter-spacing-tight
   );
   color: colours.$gw-colour-label-black;
   display: block;
-  font-weight: base.$gw-font-weight-bold;
+  font-weight: font.$gw-font-weight-bold;
   margin-bottom: spacing.$gw-spacing-03;
 
   // Class: 'gw-label--lg'.
   &--lg {
     @include typography.gw-mixin-font-size(
       font-sizes.$gw-font-size-label-large,
-      base.$gw-line-height
+      font.$gw-line-height
     );
     @include typography.gw-mixin-letter-spacing(
       font-sizes.$gw-font-size-label-large,
-      base.$gw-letter-spacing-tight
+      font.$gw-letter-spacing-tight
     );
 
     @include media-query.gw-mixin-media-query(md) {
       @include typography.gw-mixin-font-size(
         font-sizes.$gw-font-size-label-large-md,
-        base.$gw-line-height-headings
+        font.$gw-line-height-headings
       );
       @include typography.gw-mixin-letter-spacing(
         font-sizes.$gw-font-size-label-large-md,
-        base.$gw-letter-spacing-tight
+        font.$gw-letter-spacing-tight
       );
     }
   }
@@ -62,7 +62,7 @@
 .gw-description {
   @include typography.gw-mixin-font-size(
     font-sizes.$gw-font-size-description,
-    base.$gw-line-height
+    font.$gw-line-height
   );
   color: colours.$gw-colour-description-text;
   margin-bottom: spacing.$gw-spacing-03;
@@ -72,7 +72,7 @@
 .gw-hint {
   @include typography.gw-mixin-font-size(
     font-sizes.$gw-font-size-hint,
-    base.$gw-line-height
+    font.$gw-line-height
   );
   color: colours.$gw-colour-hint-text;
   margin-bottom: spacing.$gw-spacing-03;

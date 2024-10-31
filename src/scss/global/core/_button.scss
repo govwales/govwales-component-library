@@ -2,9 +2,9 @@
 @use '../helpers/mixins/button';
 @use '../helpers/mixins/focus';
 @use '../helpers/mixins/inline-svg';
-@use '../settings/colours/colours';
-@use '../settings/spacing/spacing';
-@use '../settings/ui-images/ui-images';
+@use '../variables/colours';
+@use '../variables/spacing';
+@use '../variables/ui-images';
 
 // LLYW.CYMRU | GOV.WALES
 // Button

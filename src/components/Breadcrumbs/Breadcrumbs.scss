@@ -6,11 +6,11 @@
 @use '../../scss/global/helpers/mixins/inline-svg';
 @use '../../scss/global/helpers/mixins/media-query';
 @use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/settings/colours/colours';
-@use '../../scss/global/settings/spacing/spacing';
-@use '../../scss/global/settings/typography/base';
-@use '../../scss/global/settings/typography/font-sizes';
-@use '../../scss/global/settings/ui-images/ui-images';
+@use '../../scss/global/variables/colours';
+@use '../../scss/global/variables/spacing';
+@use '../../scss/global/variables/font';
+@use '../../scss/global/variables/font-sizes';
+@use '../../scss/global/variables/ui-images';
 
 // Class 'gw-breadcrumbs'.
 .gw-breadcrumbs {
@@ -25,11 +25,11 @@
     margin-bottom: 0;
     @include typography.gw-mixin-font-size(
       font-sizes.$gw-font-size-breadcrumb,
-      base.$gw-line-height
+      font.$gw-line-height
     );
     @include typography.gw-mixin-letter-spacing(
       font-sizes.$gw-font-size-breadcrumb,
-      base.$gw-letter-spacing-tight
+      font.$gw-letter-spacing-tight
     );
   }
 

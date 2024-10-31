@@ -1,8 +1,8 @@
 @use '../helpers/mixins/link';
 @use '../helpers/mixins/media-query';
 @use '../helpers/mixins/typography';
-@use '../settings/typography/base';
-@use '../settings/typography/font-sizes';
+@use '../variables/font';
+@use '../variables/font-sizes';
 
 // LLYW.CYMRU | GOV.WALES
 // Links
@@ -23,7 +23,7 @@ a,
 
   a[href]:after {
     content: ' (' attr(href) ')';
-    font-weight: base.$gw-font-weight-light;
+    font-weight: font.$gw-font-weight-light;
     @include typography.gw-mixin-font-size(
       font-sizes.$gw-font-size-print-url,
       null

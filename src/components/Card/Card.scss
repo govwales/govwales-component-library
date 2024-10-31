@@ -4,10 +4,10 @@
 
 @use '../../scss/global/helpers/mixins/media-query';
 @use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/settings/colours/colours';
-@use '../../scss/global/settings/spacing/spacing';
-@use '../../scss/global/settings/typography/base';
-@use '../../scss/global/settings/typography/font-sizes';
+@use '../../scss/global/variables/colours';
+@use '../../scss/global/variables/spacing';
+@use '../../scss/global/variables/font';
+@use '../../scss/global/variables/font-sizes';
 
 // Class: 'gw-card'.
 .gw-card {
@@ -28,21 +28,21 @@
       margin-bottom: 0;
       @include typography.gw-mixin-font-size(
         font-sizes.$gw-font-size-card-title,
-        base.$gw-line-height-headings
+        font.$gw-line-height-headings
       );
       @include typography.gw-mixin-letter-spacing(
         font-sizes.$gw-font-size-card-title,
-        base.$gw-letter-spacing-tight
+        font.$gw-letter-spacing-tight
       );
 
       @include media-query.gw-mixin-media-query(md) {
         @include typography.gw-mixin-font-size(
           font-sizes.$gw-font-size-card-title-md,
-          base.$gw-line-height-headings
+          font.$gw-line-height-headings
         );
         @include typography.gw-mixin-letter-spacing(
           font-sizes.$gw-font-size-card-title-md,
-          base.$gw-letter-spacing-tight
+          font.$gw-letter-spacing-tight
         );
       }
     }
@@ -71,7 +71,7 @@
     @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-meta, null);
     @include typography.gw-mixin-letter-spacing(
       font-sizes.$gw-font-size-meta,
-      base.$gw-letter-spacing-tight
+      font.$gw-letter-spacing-tight
     );
     color: colours.$gw-colour-meta-grey;
     margin-bottom: spacing.$gw-spacing-01;

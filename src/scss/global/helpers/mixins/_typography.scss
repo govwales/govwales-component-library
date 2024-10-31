@@ -1,4 +1,4 @@
-@use '../../settings/typography/base';
+@use '../../variables/font';
 @use '../functions/fonts';
 
 // LLYW.CYMRU | GOV.WALES
@@ -16,7 +16,7 @@
 @mixin gw-mixin-letter-spacing($font-size, $percentage) {
   $font-size: fonts.gw-function--strip-unit($font-size); // Font-size.
   $base-font-size: fonts.gw-function--strip-unit(
-    base.$gw-font-size
+    font.$gw-font-size
   ); // 16px = 1%.
   letter-spacing: fonts.gw-function--kerning(
     $base-font-size,

@@ -3,10 +3,10 @@
 // ========================================
 
 @use '../../../scss/global/helpers/mixins/typography';
-@use '../../../scss/global/settings/colours/colours';
-@use '../../../scss/global/settings/spacing/spacing';
-@use '../../../scss/global/settings/typography/base';
-@use '../../../scss/global/settings/typography/font-sizes';
+@use '../../../scss/global/variables/colours';
+@use '../../../scss/global/variables/spacing';
+@use '../../../scss/global/variables/font';
+@use '../../../scss/global/variables/font-sizes';
 
 .gw-btn {
   // Class: 'gw-btn--cta'.
@@ -17,14 +17,14 @@
     padding: spacing.$gw-spacing-03 spacing.$gw-spacing-05;
     @include typography.gw-mixin-font-size(
       font-sizes.$gw-font-size-button-cta,
-      base.$gw-line-height
+      font.$gw-line-height
     );
 
     &.gw-btn--lg {
       padding: spacing.$gw-spacing-04 spacing.$gw-spacing-06;
       @include typography.gw-mixin-font-size(
         font-sizes.$gw-font-size-button-cta-large,
-        base.$gw-line-height
+        font.$gw-line-height
       );
     }
 

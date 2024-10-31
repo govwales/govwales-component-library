@@ -1,6 +1,6 @@
-@use '../../settings/colours/colours';
-@use '../../settings/transition/transition';
-@use '../../settings/typography/base';
+@use '../../variables/colours';
+@use '../../variables/transition';
+@use '../../variables/font';
 @use 'focus';
 @use 'transitions';
 
@@ -10,7 +10,7 @@
 
 @mixin gw-mixin-link() {
   color: colours.$gw-colour-link-default;
-  font-weight: base.$gw-font-weight-bold;
+  font-weight: font.$gw-font-weight-bold;
   text-decoration: none;
   cursor: pointer;
   @include transitions.gw-mixin-transitions(

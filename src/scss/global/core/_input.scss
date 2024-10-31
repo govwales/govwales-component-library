@@ -1,9 +1,9 @@
 @use '../helpers/mixins/focus';
 @use '../helpers/mixins/input' as mixins-input;
-@use '../settings/colours/colours';
-@use '../settings/input/input' as input-input;
-@use '../settings/spacing/spacing';
-@use '../settings/typography/base';
+@use '../variables/colours';
+@use '../variables/input' as input-input;
+@use '../variables/spacing';
+@use '../variables/font';
 
 // LLYW.CYMRU | GOV.WALES
 // Input
@@ -20,7 +20,7 @@
   box-shadow: none;
   color: colours.$gw-colour-input-value;
   display: inline-block;
-  font-family: base.$gw-font-family-primary;
+  font-family: font.$gw-font-family-primary;
   padding-top: spacing.$gw-spacing-02;
   padding-right: spacing.$gw-spacing-02;
   padding-bottom: spacing.$gw-spacing-02;

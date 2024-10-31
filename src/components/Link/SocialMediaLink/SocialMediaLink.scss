@@ -6,9 +6,9 @@
 @use '../../../scss/global/helpers/mixins/focus';
 @use '../../../scss/global/helpers/mixins/social-media-link';
 @use '../../../scss/global/helpers/mixins/transitions';
-@use '../../../scss/global/settings/spacing/spacing';
-@use '../../../scss/global/settings/transition/transition';
-@use '../../../scss/global/settings/ui-images/ui-images';
+@use '../../../scss/global/variables/spacing';
+@use '../../../scss/global/variables/transition';
+@use '../../../scss/global/variables/ui-images';
 
 // Specific variables.
 $social-media-list: 'facebook' 'instagram' 'x' 'linkedin' 'pinterest' 'youtube'

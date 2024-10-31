@@ -4,10 +4,10 @@
 
 @use '../../scss/global/helpers/mixins/media-query';
 @use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/settings/colours/colours';
-@use '../../scss/global/settings/spacing/spacing';
-@use '../../scss/global/settings/typography/base';
-@use '../../scss/global/settings/typography/font-sizes';
+@use '../../scss/global/variables/colours';
+@use '../../scss/global/variables/spacing';
+@use '../../scss/global/variables/font';
+@use '../../scss/global/variables/font-sizes';
 
 // Specific variables.
 $gw-cookie-banner-background: colours.$gw-colour-grey-7;
@@ -21,7 +21,7 @@ $gw-cookie-banner-background: colours.$gw-colour-grey-7;
   li {
     @include typography.gw-mixin-font-size(
       font-sizes.$gw-font-size-paragraph-small,
-      base.$gw-line-height
+      font.$gw-line-height
     );
   }
 
@@ -30,7 +30,7 @@ $gw-cookie-banner-background: colours.$gw-colour-grey-7;
     li {
       @include typography.gw-mixin-font-size(
         font-sizes.$gw-font-size-paragraph,
-        base.$gw-line-height
+        font.$gw-line-height
       );
     }
   }

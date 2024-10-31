@@ -4,10 +4,10 @@
 
 @use '../../../scss/global/helpers/mixins/focus';
 @use '../../../scss/global/helpers/mixins/transitions';
-@use '../../../scss/global/settings/colours/colours';
-@use '../../../scss/global/settings/spacing/spacing';
-@use '../../../scss/global/settings/transition/transition';
-@use '../../../scss/global/settings/typography/base';
+@use '../../../scss/global/variables/colours';
+@use '../../../scss/global/variables/spacing';
+@use '../../../scss/global/variables/transition';
+@use '../../../scss/global/variables/font';
 
 // Specific variables.
 $gw-colour-link-default-report-this-page: colours.$gw-colour-grey-1;
@@ -16,7 +16,7 @@ $gw-colour-link-default-report-this-page-hover: colours.$gw-colour-black;
 // Class: 'gw-link-report-this-page'.
 .gw-link--report-this-page {
   color: $gw-colour-link-default-report-this-page;
-  font-weight: base.$gw-font-weight-normal;
+  font-weight: font.$gw-font-weight-normal;
   text-decoration: underline;
   @include transitions.gw-mixin-transitions(
     transition.$gw-transition-out-time,

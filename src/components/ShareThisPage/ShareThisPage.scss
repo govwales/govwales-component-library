@@ -6,10 +6,10 @@
 @use '../../scss/global/helpers/mixins/focus';
 @use '../../scss/global/helpers/mixins/inline-svg';
 @use '../../scss/global/helpers/mixins/typography';
-@use '../../scss/global/settings/colours/colours';
-@use '../../scss/global/settings/spacing/spacing';
-@use '../../scss/global/settings/typography/base';
-@use '../../scss/global/settings/ui-images/ui-images';
+@use '../../scss/global/variables/colours';
+@use '../../scss/global/variables/spacing';
+@use '../../scss/global/variables/font';
+@use '../../scss/global/variables/ui-images';
 
 // Specific variables.
 $gw-font-size-share-this-page: 16px;
@@ -46,7 +46,7 @@ $gw-colour-btn-share-this-page-border: colours.$gw-colour-grey-2;
     );
     @include typography.gw-mixin-letter-spacing(
       $gw-font-size-share-this-page,
-      base.$gw-letter-spacing-tight
+      font.$gw-letter-spacing-tight
     );
     @include inline-svg.gw-mixin-background-svg(
       ui-images.$gw-ui-share,
@@ -82,7 +82,7 @@ $gw-colour-btn-share-this-page-border: colours.$gw-colour-grey-2;
     );
     @include typography.gw-mixin-letter-spacing(
       $gw-font-size-share-this-page,
-      base.$gw-letter-spacing-tight
+      font.$gw-letter-spacing-tight
     );
 
     li {

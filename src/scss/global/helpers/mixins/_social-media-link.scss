@@ -1,5 +1,5 @@
-@use '../../settings/colours/colours';
-@use '../../settings/transition/transition';
+@use '../../variables/colours';
+@use '../../variables/transition';
 @use 'focus';
 @use 'inline-svg';
 @use 'transitions';

@@ -5,14 +5,24 @@
 // Core
 @use 'global/core/core';
 
+// Variables
+@use './global/variables/borders';
+@use './global/variables/breakpoints';
+@use './global/variables/colours';
+@use './global/variables/font-sizes';
+@use './global/variables/font';
+@use './global/variables/grid';
+@use './global/variables/input';
+@use './global/variables/site-branding';
+@use './global/variables/spacing';
+@use './global/variables/transition';
+@use './global/variables/ui-images';
+
 // Helpers (mixins)
 @use 'global/helpers/helpers';
 
 // Initial
 @use 'global/initial/initial';
-
-// Settings (vars)
-@use 'global/settings/settings';
 
 // Utilities
 @use 'global/utilities/utilities';
