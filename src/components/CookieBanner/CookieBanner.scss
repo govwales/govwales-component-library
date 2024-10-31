@@ -2,36 +2,23 @@
 // Components: Cookie Banner
 // ========================================
 
-@use '../../scss/helpers/mixins/media-query';
-@use '../../scss/helpers/mixins/typography';
-@use '../../scss/variables/colours';
-@use '../../scss/variables/spacing';
-@use '../../scss/variables/font';
-@use '../../scss/variables/font-sizes';
-
-// Specific variables.
-$gw-cookie-banner-background: colours.$gw-colour-grey-7;
+@use '../../scss/helpers/mixins' as *;
+@use '../../scss/variables/variables' as *;
 
 // Class: 'gw-cookie-banner'.
 .gw-cookie-banner {
-  padding-top: spacing.$gw-spacing-04;
-  padding-bottom: spacing.$gw-spacing-04;
-  background-color: $gw-cookie-banner-background;
+  padding-top: $gw-spacing-04;
+  padding-bottom: $gw-spacing-04;
+  background-color: $gw-colour-grey-7;
   p,
   li {
-    @include typography.gw-mixin-font-size(
-      font-sizes.$gw-font-size-paragraph-small,
-      font.$gw-line-height
-    );
+    @include gw-mixin-font-size($gw-font-size-paragraph-small, $gw-line-height);
   }
 
-  @include media-query.gw-mixin-media-query(md) {
+  @include gw-mixin-media-query(md) {
     p,
     li {
-      @include typography.gw-mixin-font-size(
-        font-sizes.$gw-font-size-paragraph,
-        font.$gw-line-height
-      );
+      @include gw-mixin-font-size($gw-font-size-paragraph, $gw-line-height);
     }
   }
 
@@ -47,13 +34,13 @@ $gw-cookie-banner-background: colours.$gw-colour-grey-7;
       text-align: center;
 
       &:first-child {
-        margin-bottom: spacing.$gw-spacing-02;
+        margin-bottom: $gw-spacing-02;
       }
 
-      @include media-query.gw-mixin-media-query(md) {
+      @include gw-mixin-media-query(md) {
         display: inline-block;
         width: auto;
-        margin-right: spacing.$gw-spacing-02;
+        margin-right: $gw-spacing-02;
 
         &:first-child {
           margin-bottom: 0;
@@ -65,10 +52,10 @@ $gw-cookie-banner-background: colours.$gw-colour-grey-7;
   // Class: 'gw-cookie__confirmation'.
   &__confirmation {
     > div {
-      margin-bottom: spacing.$gw-spacing-02;
+      margin-bottom: $gw-spacing-02;
     }
 
-    @include media-query.gw-mixin-media-query(md) {
+    @include gw-mixin-media-query(md) {
       display: flex;
       align-items: flex-start;
 
@@ -79,14 +66,14 @@ $gw-cookie-banner-background: colours.$gw-colour-grey-7;
 
     // Btn placement.
     .gw-btn-hide {
-      color: colours.$gw-colour-link-default;
-      @include media-query.gw-mixin-media-query(md) {
-        margin-left: spacing.$gw-spacing-08;
-        margin-top: spacing.$gw-spacing-01;
+      color: $gw-colour-link-default;
+      @include gw-mixin-media-query(md) {
+        margin-left: $gw-spacing-08;
+        margin-top: $gw-spacing-01;
       }
 
       &:hover {
-        color: colours.$gw-colour-link-hover;
+        color: $gw-colour-link-hover;
       }
     }
   }
@@ -94,7 +81,7 @@ $gw-cookie-banner-background: colours.$gw-colour-grey-7;
   // Class: 'gw-cookie__js-disabled'.
   &__js-disabled {
     .gw-btn {
-      margin-top: spacing.$gw-spacing-03;
+      margin-top: $gw-spacing-03;
     }
   }
 }

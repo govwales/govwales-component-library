@@ -5,9 +5,6 @@
 // Variables
 @use './variables/variables';
 
-// Core
-@use './core/core';
-
 // Helpers (mixins)
 @use './helpers/helpers';
 
@@ -16,3 +13,6 @@
 
 // Utilities
 @use './utilities/utilities';
+
+// Core
+@use './core/core';

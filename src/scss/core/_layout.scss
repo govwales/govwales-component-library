@@ -1,6 +1,5 @@
 @use '../helpers/mixins/grid' as mixins-grid;
 @use '../helpers/mixins/media-query';
-@use '../variables/breakpoints';
 @use '../variables/colours';
 @use '../variables/grid' as grid-grid;
 @use '../variables/spacing';
@@ -35,7 +34,7 @@ $gw-box-border-colour: colours.$gw-colour-blue; // To be removed.
 // Fixed Container.
 // Class: 'gw-container'.
 .gw-container {
-  max-width: breakpoints.$gw-container-width;
+  max-width: grid-grid.$gw-container-width;
   margin-left: auto;
   margin-right: auto;
   padding-left: grid-grid.$gw-container-padding;
