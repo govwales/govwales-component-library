@@ -1,2 +1,2 @@
 export { default as Card } from './Card';
-export * from '.SearchResultCard';
+export * from './GlobalSearchResultCard';
