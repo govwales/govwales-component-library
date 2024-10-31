@@ -2,8 +2,8 @@
 // Components: Button: Primary
 // ========================================
 
-@import '../../../scss/global/settings/all';
-@import '../../../scss/global/helpers/all';
+@use '../../../scss/variables/variables' as *;
+@use '../../../scss/helpers/mixins' as *;
 
 .gw-btn {
   // Class: 'gw-btn--cta'.
