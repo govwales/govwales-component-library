@@ -1,31 +1,28 @@
-@use '../../variables/colours';
-@use '../../variables/spacing';
-@use '../../variables/font';
-@use '../../variables/font-sizes';
-@use 'media-query';
-@use 'typography';
-
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Button
 // ========================================
 
+@use '../../variables/variables' as *;
+@use 'media-query' as *;
+@use 'typography' as *;
+
 @mixin gw-mixin-btn(
-  $btn-text-colour: colours.$gw-colour-btn-text,
-  $btn-text-colour-hover: colours.$gw-colour-btn-text-hover,
-  $btn-background-colour: colours.$gw-colour-btn-background,
-  $btn-background-colour-hover: colours.$gw-colour-btn-background-hover,
+  $btn-text-colour: $gw-colour-btn-text,
+  $btn-text-colour-hover: $gw-colour-btn-text-hover,
+  $btn-background-colour: $gw-colour-btn-background,
+  $btn-background-colour-hover: $gw-colour-btn-background-hover,
   $btn-border: none,
-  $btn-line-height: font.$gw-line-height-buttons,
-  $btn-padding-top: spacing.$gw-spacing-02,
-  $btn-padding-right: spacing.$gw-spacing-04,
-  $btn-padding-bottom: spacing.$gw-spacing-02,
-  $btn-padding-left: spacing.$gw-spacing-04
+  $btn-line-height: $gw-line-height-buttons,
+  $btn-padding-top: $gw-spacing-02,
+  $btn-padding-right: $gw-spacing-04,
+  $btn-padding-bottom: $gw-spacing-02,
+  $btn-padding-left: $gw-spacing-04
 ) {
   border: $btn-border;
   border-radius: 0;
   display: inline-block;
   appearance: button;
-  font-weight: font.$gw-font-weight-bold;
+  font-weight: $gw-font-weight-bold;
   line-height: $btn-line-height;
   cursor: pointer;
   text-decoration: none;
@@ -47,7 +44,7 @@
   }
 
   // Do not display print URL on buttons.
-  @include media-query.gw-mixin-media-query(print) {
+  @include gw-mixin-media-query(print) {
     &[href]:after {
       content: '';
     }
@@ -55,34 +52,34 @@
 }
 
 @mixin gw-mixin-btn-xs() {
-  @include typography.gw-mixin-font-size(
-    font-sizes.$gw-font-size-button-small,
-    font.$gw-line-height-buttons
+  @include gw-mixin-font-size(
+    $gw-font-size-button-small,
+    $gw-line-height-buttons
   );
-  padding-top: spacing.$gw-spacing-01;
-  padding-right: spacing.$gw-spacing-02;
-  padding-bottom: spacing.$gw-spacing-01;
-  padding-left: spacing.$gw-spacing-02;
+  padding-top: $gw-spacing-01;
+  padding-right: $gw-spacing-02;
+  padding-bottom: $gw-spacing-01;
+  padding-left: $gw-spacing-02;
 }
 
 @mixin gw-mixin-btn-sm() {
-  @include typography.gw-mixin-font-size(
-    font-sizes.$gw-font-size-button-small,
-    font.$gw-line-height-buttons
+  @include gw-mixin-font-size(
+    $gw-font-size-button-small,
+    $gw-line-height-buttons
   );
-  padding-top: spacing.$gw-spacing-01;
-  padding-right: spacing.$gw-spacing-03;
-  padding-bottom: spacing.$gw-spacing-01;
-  padding-left: spacing.$gw-spacing-03;
+  padding-top: $gw-spacing-01;
+  padding-right: $gw-spacing-03;
+  padding-bottom: $gw-spacing-01;
+  padding-left: $gw-spacing-03;
 }
 
 @mixin gw-mixin-btn-lg() {
-  @include typography.gw-mixin-font-size(
-    font-sizes.$gw-font-size-button-large,
-    font.$gw-line-height-buttons
+  @include gw-mixin-font-size(
+    $gw-font-size-button-large,
+    $gw-line-height-buttons
   );
-  padding-top: spacing.$gw-spacing-03;
-  padding-right: spacing.$gw-spacing-04;
-  padding-bottom: spacing.$gw-spacing-03;
-  padding-left: spacing.$gw-spacing-04;
+  padding-top: $gw-spacing-03;
+  padding-right: $gw-spacing-04;
+  padding-bottom: $gw-spacing-03;
+  padding-left: $gw-spacing-04;
 }

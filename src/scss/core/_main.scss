@@ -1,9 +1,9 @@
-@use '../variables/spacing';
-
 // LLYW.CYMRU | GOV.WALES
 // Main
 // ========================================
 
+@use '../variables/variables' as *;
+
 .gw-main {
-  margin-bottom: spacing.$gw-spacing-10;
+  margin-bottom: $gw-spacing-10;
 }

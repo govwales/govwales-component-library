@@ -1,15 +1,15 @@
-@use 'sass:map';
-@use '../../variables/breakpoints';
-
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Media query
 // ========================================
 
+@use 'sass:map';
+@use '../../variables/variables' as *;
+
 @mixin gw-mixin-media-query($breakpoint) {
-  $media-query: breakpoints.$gw-media-breakpoints;
+  $media-query: $gw-media-breakpoints;
 
   @if $breakpoint == 'print' or $breakpoint == 'screen' {
-    $media-query: breakpoints.$gw-media-generic;
+    $media-query: $gw-media-generic;
   }
 
   // validate param.

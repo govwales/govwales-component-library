@@ -1,12 +1,12 @@
-@use '../variables/colours';
-
 // LLYW.CYMRU | GOV.WALES
 // HTML
 // ========================================
 
+@use '../variables/variables' as *;
+
 // This class should be added to your HTML markup.
 // <html class="gw-template" lang="en">
 .gw-template {
-  background: colours.$gw-colour-layout-html-background;
+  background: $gw-colour-layout-html-background;
   text-size-adjust: 100%;
 }

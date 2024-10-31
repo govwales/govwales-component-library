@@ -1,25 +1,18 @@
-@use '../../variables/colours';
-@use '../../variables/font';
-@use '../../variables/font-sizes';
-@use 'typography';
-
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Subheading
 // ========================================
 
-@mixin gw-mixin-subheading(
-  $subheading-colour: colours.$gw-colour-subheading-grey
-) {
+@use '../../variables/variables' as *;
+@use 'typography' as *;
+
+@mixin gw-mixin-subheading($subheading-colour: $gw-colour-subheading-grey) {
   color: $subheading-colour;
   text-transform: uppercase;
-  font-weight: font.$gw-font-weight-bold;
+  font-weight: $gw-font-weight-bold;
 
-  @include typography.gw-mixin-font-size(
-    font-sizes.$gw-font-size-subheading,
-    font.$gw-line-height
-  );
-  @include typography.gw-mixin-letter-spacing(
-    font-sizes.$gw-font-size-breadcrumb,
-    font.$gw-letter-spacing-wide
+  @include gw-mixin-font-size($gw-font-size-subheading, $gw-line-height);
+  @include gw-mixin-letter-spacing(
+    $gw-font-size-breadcrumb,
+    $gw-letter-spacing-wide
   );
 }

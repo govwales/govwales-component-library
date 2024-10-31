@@ -1,5 +1,3 @@
-@use 'sass:math';
-@use 'sass:string';
 // LLYW.CYMRU | GOV.WALES
 // Functions: Inline SVG
 // ========================================
@@ -8,6 +6,9 @@
 // Version: 1.0.6
 // @see https://codepen.io/jakob-e/pen/doMoML
 // @see https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+
+@use 'sass:math';
+@use 'sass:string';
 
 @function gw-function--svg-url($svg, $colour) {
   // Add missing namespace.

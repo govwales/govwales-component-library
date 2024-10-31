@@ -1,7 +1,8 @@
-@use 'sass:list';
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Transitions
 // ========================================
+
+@use 'sass:list';
 
 @mixin gw-mixin-transitions($time, $properties...) {
   $transition: ();

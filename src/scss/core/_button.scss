@@ -1,97 +1,93 @@
-@use 'sass:map';
-@use '../helpers/mixins/button';
-@use '../helpers/mixins/focus';
-@use '../helpers/mixins/inline-svg';
-@use '../variables/colours';
-@use '../variables/spacing';
-@use '../variables/ui-images';
-
 // LLYW.CYMRU | GOV.WALES
 // Button
 // ========================================
 
+@use 'sass:map';
+@use '../variables/variables' as *;
+@use '../helpers/mixins' as *;
+
 $icons: (
-  'close': ui-images.$gw-ui-close,
-  'chevron-left': ui-images.$gw-ui-chevron-left,
-  'chevron-right': ui-images.$gw-ui-chevron-right,
-  'chevron-up': ui-images.$gw-ui-chevron-up,
-  'chevron-down': ui-images.$gw-ui-chevron-down,
-  'save': ui-images.$gw-ui-save,
-  'search': ui-images.$gw-ui-keyword-search,
+  'close': $gw-ui-close,
+  'chevron-left': $gw-ui-chevron-left,
+  'chevron-right': $gw-ui-chevron-right,
+  'chevron-up': $gw-ui-chevron-up,
+  'chevron-down': $gw-ui-chevron-down,
+  'save': $gw-ui-save,
+  'search': $gw-ui-keyword-search,
 );
 
 // TODO: Align colours with Figma designs when done
 $button-colours: (
   'red': (
-    'primary': colours.$gw-colour-red,
-    'secondary': colours.$gw-colour-red-2,
+    'primary': $gw-colour-red,
+    'secondary': $gw-colour-red-2,
   ),
   'black': (
-    'primary': colours.$gw-colour-black,
-    'secondary': colours.$gw-colour-grey-1,
+    'primary': $gw-colour-black,
+    'secondary': $gw-colour-grey-1,
   ),
   'green': (
-    'primary': colours.$gw-colour-green,
-    'secondary': colours.$gw-colour-green-2,
+    'primary': $gw-colour-green,
+    'secondary': $gw-colour-green-2,
   ),
   'grey': (
-    'primary': colours.$gw-colour-grey-1,
-    'secondary': colours.$gw-colour-grey-2,
+    'primary': $gw-colour-grey-1,
+    'secondary': $gw-colour-grey-2,
   ),
 );
 
 // Class: 'gw-btn'.
 .gw-btn {
   // Common btn.
-  @include button.gw-mixin-btn;
+  @include gw-mixin-btn;
 
   &:focus {
-    @include focus.gw-mixin-focused-btn;
+    @include gw-mixin-focused-btn;
   }
 
   &:hover:focus {
-    @include focus.gw-mixin-focused-btn;
+    @include gw-mixin-focused-btn;
   }
 
   // Class: 'gw-btn--primary'.
   &--primary {
     border: none;
-    background-color: colours.$gw-colour-blue;
-    color: colours.$gw-colour-white;
+    background-color: $gw-colour-blue;
+    color: $gw-colour-white;
 
     &:hover {
-      background-color: colours.$gw-colour-blue-2;
+      background-color: $gw-colour-blue-2;
     }
   }
 
   // Class: 'gw-btn--secondary'.
   &--secondary {
-    border: 1px solid colours.$gw-colour-blue;
-    color: colours.$gw-colour-blue;
+    border: 1px solid $gw-colour-blue;
+    color: $gw-colour-blue;
     background-color: inherit;
   }
 
   // Class: 'gw-btn--cta'.
   &--cta {
     &:hover {
-      background-color: colours.$gw-colour-blue-2;
+      background-color: $gw-colour-blue-2;
     }
   }
 
   // Sizes.
   // Class: 'gw-btn--xs'.
   &--xs {
-    @include button.gw-mixin-btn-xs();
+    @include gw-mixin-btn-xs();
   }
 
   // Class: 'gw-btn--sm'.
   &--sm {
-    @include button.gw-mixin-btn-sm();
+    @include gw-mixin-btn-sm();
   }
 
   // Class: 'gw-btn--lg'.
   &--lg {
-    @include button.gw-mixin-btn-lg();
+    @include gw-mixin-btn-lg();
   }
 
   // Class: 'gw-btn--icon'.
@@ -102,23 +98,23 @@ $button-colours: (
 
   // Class: 'gw-btn--icon-left'.
   &--icon-left {
-    padding-left: spacing.$gw-spacing-09;
+    padding-left: $gw-spacing-09;
     background-position: left 20px center;
 
     &.gw-btn--sm {
       background-position: left 15px center;
-      padding-left: spacing.$gw-spacing-08;
+      padding-left: $gw-spacing-08;
     }
   }
 
   // Class: 'gw-btn--icon-right'.
   &--icon-right {
-    padding-right: spacing.$gw-spacing-09;
+    padding-right: $gw-spacing-09;
     background-position: right 20px center;
 
     &.gw-btn--sm {
       background-position: right 15px center;
-      padding-right: spacing.$gw-spacing-08;
+      padding-right: $gw-spacing-08;
     }
   }
 
@@ -138,37 +134,22 @@ $button-colours: (
 
   @each $icon, $svg in $icons {
     &--icon-#{$icon} {
-      @include inline-svg.gw-mixin-background-svg(
-        $svg,
-        colours.$gw-colour-white
-      );
+      @include gw-mixin-background-svg($svg, $gw-colour-white);
 
       &.gw-btn--secondary {
-        @include inline-svg.gw-mixin-background-svg(
-          $svg,
-          colours.$gw-colour-blue
-        );
+        @include gw-mixin-background-svg($svg, $gw-colour-blue);
       }
 
       &:hover {
-        @include inline-svg.gw-mixin-background-svg(
-          $svg,
-          colours.$gw-colour-white
-        );
+        @include gw-mixin-background-svg($svg, $gw-colour-white);
 
         &:focus {
-          @include inline-svg.gw-mixin-background-svg(
-            $svg,
-            colours.$gw-colour-black
-          );
+          @include gw-mixin-background-svg($svg, $gw-colour-black);
         }
       }
 
       &:focus {
-        @include inline-svg.gw-mixin-background-svg(
-          $svg,
-          colours.$gw-colour-black
-        );
+        @include gw-mixin-background-svg($svg, $gw-colour-black);
       }
     }
   }
@@ -192,23 +173,17 @@ $button-colours: (
 
       @each $icon, $svg in $icons {
         &.gw-btn--icon-#{$icon} {
-          @include inline-svg.gw-mixin-background-svg(
+          @include gw-mixin-background-svg(
             $svg,
             map.get($button-colours, $button-colour, 'primary')
           );
 
           &:hover {
-            @include inline-svg.gw-mixin-background-svg(
-              $svg,
-              colours.$gw-colour-white
-            );
+            @include gw-mixin-background-svg($svg, $gw-colour-white);
           }
 
           &:focus {
-            @include inline-svg.gw-mixin-background-svg(
-              $svg,
-              colours.$gw-colour-black
-            );
+            @include gw-mixin-background-svg($svg, $gw-colour-black);
           }
         }
       }

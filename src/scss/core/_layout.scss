@@ -1,47 +1,44 @@
-@use '../helpers/mixins/grid' as mixins-grid;
-@use '../helpers/mixins/media-query';
-@use '../variables/colours';
-@use '../variables/grid' as grid-grid;
-@use '../variables/spacing';
-
 // LLYW.CYMRU | GOV.WALES
 // Layout
 // ========================================
+
+@use '../variables/variables' as *;
+@use '../helpers/mixins' as *;
 
 // Based on a 12 column grid system similar to bootstrap.
 
 // Grid demonstration display.
 // Not to be used in production.
-$gw-box-background-colour: colours.$gw-colour-blue-5; // To be removed.
-$gw-box-border-colour: colours.$gw-colour-blue; // To be removed.
+$gw-box-background-colour: $gw-colour-blue-5; // To be removed.
+$gw-box-border-colour: $gw-colour-blue; // To be removed.
 
 // Box can be used for wire framing prototypes.
 // Class: 'gw-box'.
 .box {
   background-color: $gw-box-background-colour;
-  padding: spacing.$gw-spacing-02;
-  margin-bottom: spacing.$gw-spacing-04;
+  padding: $gw-spacing-02;
+  margin-bottom: $gw-spacing-04;
   text-align: center;
 }
 
 // Fluid container.
 // Class: 'gw-container-fluid'.
 .gw-container-fluid {
-  padding-left: grid-grid.$gw-container-padding;
-  padding-right: grid-grid.$gw-container-padding;
+  padding-left: $gw-container-padding;
+  padding-right: $gw-container-padding;
 }
 
 // Fixed Container.
 // Class: 'gw-container'.
 .gw-container {
-  max-width: grid-grid.$gw-container-width;
+  max-width: $gw-container-width;
   margin-left: auto;
   margin-right: auto;
-  padding-left: grid-grid.$gw-container-padding;
-  padding-right: grid-grid.$gw-container-padding;
+  padding-left: $gw-container-padding;
+  padding-right: $gw-container-padding;
 
   &--grey {
-    background-color: colours.$gw-colour-background-grey;
+    background-color: $gw-colour-background-grey;
   }
 }
 
@@ -52,8 +49,8 @@ $gw-box-border-colour: colours.$gw-colour-blue; // To be removed.
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: grid-grid.$gw-container-margin;
-  margin-right: grid-grid.$gw-container-margin;
+  margin-left: $gw-container-margin;
+  margin-right: $gw-container-margin;
 
   // Class: 'gw-row--reversed'.
   &--reversed {
@@ -74,8 +71,8 @@ $gw-box-border-colour: colours.$gw-colour-blue; // To be removed.
 // Column.
 // Class: 'gw-col'.
 .gw-col {
-  padding-left: grid-grid.$gw-container-padding;
-  padding-right: grid-grid.$gw-container-padding;
+  padding-left: $gw-container-padding;
+  padding-right: $gw-container-padding;
   width: 100%;
 
   // Class: 'gw-col--auto'.
@@ -86,13 +83,13 @@ $gw-box-border-colour: colours.$gw-colour-blue; // To be removed.
 
 // Default xs column.
 // Class: 'gw-col-xs'.
-@include mixins-grid.gw-mixin-grid('xs');
+@include gw-mixin-grid('xs');
 
 // Viewports.
 // Class: 'gw-col-sm gw-col-md gw-col-lg'.
-@each $key, $val in grid-grid.$gw-column-breakpoints {
+@each $key, $val in $gw-column-breakpoints {
   // Media queries.
-  @include media-query.gw-mixin-media-query($val) {
-    @include mixins-grid.gw-mixin-grid($key);
+  @include gw-mixin-media-query($val) {
+    @include gw-mixin-grid($key);
   }
 }
