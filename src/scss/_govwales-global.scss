@@ -2,21 +2,11 @@
 // Frontend: Global styles
 // ========================================
 
+// Variables
+@use './variables/variables';
+
 // Core
 @use './core/core';
-
-// Variables
-@use './variables/borders';
-@use './variables/breakpoints';
-@use './variables/colours';
-@use './variables/font-sizes';
-@use './variables/font';
-@use './variables/grid';
-@use './variables/input';
-@use './variables/site-branding';
-@use './variables/spacing';
-@use './variables/transition';
-@use './variables/ui-images';
 
 // Helpers (mixins)
 @use './helpers/helpers';
