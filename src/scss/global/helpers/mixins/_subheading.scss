@@ -1,22 +1,25 @@
-@use "../../settings/colours/colours";
-@use "../../settings/typography/base";
-@use "../../settings/typography/font-sizes";
-@use "typography";
+@use '../../settings/colours/colours';
+@use '../../settings/typography/base';
+@use '../../settings/typography/font-sizes';
+@use 'typography';
 
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Subheading
 // ========================================
 
 @mixin gw-mixin-subheading(
-    $subheading-colour: colours.$gw-colour-subheading-grey
-  ) {
-    color: $subheading-colour;
-    text-transform: uppercase;
-    font-weight: base.$gw-font-weight-bold;
+  $subheading-colour: colours.$gw-colour-subheading-grey
+) {
+  color: $subheading-colour;
+  text-transform: uppercase;
+  font-weight: base.$gw-font-weight-bold;
 
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-subheading, base.$gw-line-height);
-    @include typography.gw-mixin-letter-spacing(
-      font-sizes.$gw-font-size-breadcrumb,
-      base.$gw-letter-spacing-wide
-    );
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-subheading,
+    base.$gw-line-height
+  );
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-breadcrumb,
+    base.$gw-letter-spacing-wide
+  );
 }

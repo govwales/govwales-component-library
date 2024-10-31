@@ -1,32 +1,58 @@
-@use "../../helpers/mixins/media-query";
-@use "../../helpers/mixins/typography";
-@use "../../settings/spacing/spacing";
-@use "../../settings/typography/base";
-@use "../../settings/typography/font-sizes";
+@use '../../helpers/mixins/media-query';
+@use '../../helpers/mixins/typography';
+@use '../../settings/spacing/spacing';
+@use '../../settings/typography/base';
+@use '../../settings/typography/font-sizes';
 
 // LLYW.CYMRU | GOV.WALES
 // Typograpy: Heading
 // ========================================
 
-h1, .gw-h1 {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h1, base.$gw-line-height-headings);
-  @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h1, base.$gw-letter-spacing-tight);
+h1,
+.gw-h1 {
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-h1,
+    base.$gw-line-height-headings
+  );
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-h1,
+    base.$gw-letter-spacing-tight
+  );
   margin-bottom: spacing.$gw-spacing-05;
 
   @include media-query.gw-mixin-media-query(md) {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h1-md, base.$gw-line-height-headings);
-    @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h1-md, base.$gw-letter-spacing-tight);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-h1-md,
+      base.$gw-line-height-headings
+    );
+    @include typography.gw-mixin-letter-spacing(
+      font-sizes.$gw-font-size-h1-md,
+      base.$gw-letter-spacing-tight
+    );
   }
 }
 
-h2, .gw-h2 {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h2, base.$gw-line-height-headings);
-  @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h2, base.$gw-letter-spacing-tight);
+h2,
+.gw-h2 {
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-h2,
+    base.$gw-line-height-headings
+  );
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-h2,
+    base.$gw-letter-spacing-tight
+  );
   margin-bottom: spacing.$gw-spacing-05;
 
   @include media-query.gw-mixin-media-query(md) {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h2-md, base.$gw-line-height-headings);
-    @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h2-md, base.$gw-letter-spacing-tight);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-h2-md,
+      base.$gw-line-height-headings
+    );
+    @include typography.gw-mixin-letter-spacing(
+      font-sizes.$gw-font-size-h2-md,
+      base.$gw-letter-spacing-tight
+    );
   }
 
   &:not(:first-child) {
@@ -34,14 +60,27 @@ h2, .gw-h2 {
   }
 }
 
-h3, .gw-h3 {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h3, base.$gw-line-height-headings);
-  @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h3, base.$gw-letter-spacing-tight);
+h3,
+.gw-h3 {
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-h3,
+    base.$gw-line-height-headings
+  );
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-h3,
+    base.$gw-letter-spacing-tight
+  );
   margin-bottom: spacing.$gw-spacing-04;
 
   @include media-query.gw-mixin-media-query(md) {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h3-md, base.$gw-line-height-headings);
-    @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h3-md, base.$gw-letter-spacing-tight);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-h3-md,
+      base.$gw-line-height-headings
+    );
+    @include typography.gw-mixin-letter-spacing(
+      font-sizes.$gw-font-size-h3-md,
+      base.$gw-letter-spacing-tight
+    );
   }
 
   &:not(:first-child) {
@@ -49,14 +88,27 @@ h3, .gw-h3 {
   }
 }
 
-h4, .gw-h4 {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h4, base.$gw-line-height-headings);
-  @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h4, base.$gw-letter-spacing-tight);
+h4,
+.gw-h4 {
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-h4,
+    base.$gw-line-height-headings
+  );
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-h4,
+    base.$gw-letter-spacing-tight
+  );
   margin-bottom: spacing.$gw-spacing-04;
 
   @include media-query.gw-mixin-media-query(md) {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h4-md, base.$gw-line-height-headings);
-    @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h4-md, base.$gw-letter-spacing-tight);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-h4-md,
+      base.$gw-line-height-headings
+    );
+    @include typography.gw-mixin-letter-spacing(
+      font-sizes.$gw-font-size-h4-md,
+      base.$gw-letter-spacing-tight
+    );
   }
 
   &:not(:first-child) {
@@ -64,14 +116,27 @@ h4, .gw-h4 {
   }
 }
 
-h5, .gw-h5 {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h5, base.$gw-line-height-headings);
-  @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h5, base.$gw-letter-spacing-tight);
+h5,
+.gw-h5 {
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-h5,
+    base.$gw-line-height-headings
+  );
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-h5,
+    base.$gw-letter-spacing-tight
+  );
   margin-bottom: spacing.$gw-spacing-04;
 
   @include media-query.gw-mixin-media-query(md) {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h5-md, base.$gw-line-height-headings);
-    @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h5-md, base.$gw-letter-spacing-tight);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-h5-md,
+      base.$gw-line-height-headings
+    );
+    @include typography.gw-mixin-letter-spacing(
+      font-sizes.$gw-font-size-h5-md,
+      base.$gw-letter-spacing-tight
+    );
   }
 
   &:not(:first-child) {
@@ -79,18 +144,26 @@ h5, .gw-h5 {
   }
 }
 
-h6, .gw-h6 {
-  @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h6, base.$gw-line-height-headings);
-  @include typography.gw-mixin-letter-spacing(font-sizes.$gw-font-size-h6, base.$gw-letter-spacing-tight);
+h6,
+.gw-h6 {
+  @include typography.gw-mixin-font-size(
+    font-sizes.$gw-font-size-h6,
+    base.$gw-line-height-headings
+  );
+  @include typography.gw-mixin-letter-spacing(
+    font-sizes.$gw-font-size-h6,
+    base.$gw-letter-spacing-tight
+  );
   margin-bottom: spacing.$gw-spacing-04;
 
   @include media-query.gw-mixin-media-query(md) {
-    @include typography.gw-mixin-font-size(font-sizes.$gw-font-size-h6-md, base.$gw-line-height-headings);
+    @include typography.gw-mixin-font-size(
+      font-sizes.$gw-font-size-h6-md,
+      base.$gw-line-height-headings
+    );
   }
 
   &:not(:first-child) {
     margin-top: spacing.$gw-spacing-04;
   }
 }
-
-

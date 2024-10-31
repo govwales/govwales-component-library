@@ -46,7 +46,7 @@
     @include inline-svg.gw-mixin-background-svg(
       ui-images.$gw-ui-callout-warning,
       colours.$gw-colour-callout-warning-icon
-    ); //// SVG image, SVG colour.
+    ); // SVG image, SVG colour.
     background-repeat: no-repeat;
     background-size: 25px 25px;
     background-position: left 10px center;
@@ -58,7 +58,7 @@
     @include inline-svg.gw-mixin-background-svg(
       ui-images.$gw-ui-callout-alert,
       colours.$gw-colour-callout-alert-icon
-    ); //// SVG image, SVG colour.
+    ); // SVG image, SVG colour.
     background-repeat: no-repeat;
     background-size: 25px 25px;
     background-position: left 10px center;

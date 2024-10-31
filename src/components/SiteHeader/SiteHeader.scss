@@ -51,7 +51,7 @@ $gw-header-site-search-border: colours.$gw-colour-white;
       @include inline-svg.gw-mixin-background-svg(
         site-branding-site-branding.$gw-print-logo,
         null
-      ); //// SVG image, SVG colour.
+      ); // SVG image, SVG colour.
       background-repeat: no-repeat;
       background-size: site-branding-site-branding.$gw-print-logo-width
         site-branding-site-branding.$gw-print-logo-height;

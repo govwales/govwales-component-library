@@ -1,5 +1,5 @@
-@use "sass:math";
-@use "sass:string";
+@use 'sass:math';
+@use 'sass:string';
 // LLYW.CYMRU | GOV.WALES
 // Functions: Inline SVG
 // ========================================
@@ -32,7 +32,7 @@
 
     // Encode.
 
-    $chunk: str-replace($chunk, '"', '\'');
+    $chunk: str-replace($chunk, '"', "'");
     $chunk: str-replace($chunk, '%', '%25');
     $chunk: str-replace($chunk, '#', '%23');
     $chunk: str-replace($chunk, '{', '%7B');
@@ -43,16 +43,21 @@
     $index: $index + $slice;
   }
 
-  @return url("data:image/svg+xml,#{$encoded}");
+  @return url('data:image/svg+xml,#{$encoded}');
 }
 
 // Helper function to replace characters in a string.
 
 @function str-replace($string, $search, $replace: '') {
   $index: string.index($string, $search);
-  @return if($index,
+  @return if(
+    $index,
     string.slice($string, 1, $index - 1) + $replace +
-    str-replace(string.slice($string, $index +
-    string.length($search)), $search, $replace),
-    $string);
+      str-replace(
+        string.slice($string, $index + string.length($search)),
+        $search,
+        $replace
+      ),
+    $string
+  );
 }

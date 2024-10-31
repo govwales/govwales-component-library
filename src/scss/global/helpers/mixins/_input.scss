@@ -1,5 +1,5 @@
-@use "../../settings/typography/font-sizes";
-@use "media-query";
+@use '../../settings/typography/font-sizes';
+@use 'media-query';
 
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Input
@@ -7,7 +7,7 @@
 
 @mixin gw-mixin-fixed-width-input($val) {
   .gw-input--fixed-#{$val} {
-    $val: calc($val + .625);
+    $val: calc($val + 0.625);
     max-width: calc(#{font-sizes.$gw-font-size-input} + #{$val + 'rem'});
   }
 }

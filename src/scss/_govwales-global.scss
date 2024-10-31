@@ -2,12 +2,17 @@
 // Frontend: Global styles
 // ========================================
 
+// Core
 @use 'global/core/core';
 
+// Helpers (mixins)
 @use 'global/helpers/helpers';
 
+// Initial
 @use 'global/initial/initial';
 
+// Settings (vars)
 @use 'global/settings/settings';
 
+// Utilities
 @use 'global/utilities/utilities';

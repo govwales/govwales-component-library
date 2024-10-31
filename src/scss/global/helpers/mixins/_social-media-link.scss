@@ -1,18 +1,24 @@
-@use "../../settings/colours/colours";
-@use "../../settings/transition/transition";
-@use "focus";
-@use "inline-svg";
-@use "transitions";
+@use '../../settings/colours/colours';
+@use '../../settings/transition/transition';
+@use 'focus';
+@use 'inline-svg';
+@use 'transitions';
 
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Social media link
 // ========================================
 
 @mixin gw-mixin-social-media-svg($platform-ui-icon) {
-  @include inline-svg.gw-mixin-background-svg($platform-ui-icon, colours.$gw-colour-link-default);
+  @include inline-svg.gw-mixin-background-svg(
+    $platform-ui-icon,
+    colours.$gw-colour-link-default
+  );
 
   &:hover {
-    @include transitions.gw-mixin-transitions(transition.$gw-transition-in-time, color);
+    @include transitions.gw-mixin-transitions(
+      transition.$gw-transition-in-time,
+      color
+    );
     @include inline-svg.gw-mixin-background-svg(
       $platform-ui-icon,
       colours.$gw-colour-link-hover
@@ -29,6 +35,9 @@
 
   &:focus {
     @include focus.gw-mixin-focused-btn;
-    @include inline-svg.gw-mixin-background-svg($platform-ui-icon, colours.$gw-colour-focus-ui);
+    @include inline-svg.gw-mixin-background-svg(
+      $platform-ui-icon,
+      colours.$gw-colour-focus-ui
+    );
   }
 }

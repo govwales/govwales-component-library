@@ -1,17 +1,16 @@
-@use "../../settings/borders/borders";
-@use "../../settings/colours/colours";
+@use '../../settings/borders/borders';
+@use '../../settings/colours/colours';
 
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Border
 // ========================================
 
 @mixin gw-mixin-border(
-    $border-position: null,
-    $border-style: borders.$gw-border-style,
-    $border-color: colours.$gw-colour-border-grey,
-    $border-width: borders.$gw-border-height-small,
-  ) {
-
+  $border-position: null,
+  $border-style: borders.$gw-border-style,
+  $border-color: colours.$gw-colour-border-grey,
+  $border-width: borders.$gw-border-height-small
+) {
   @if ($border-position) {
     border-#{$border-position}: $border-style $border-width $border-color;
   } @else {

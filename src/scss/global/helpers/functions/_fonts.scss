@@ -1,4 +1,4 @@
-@use "../../settings/typography/base";
+@use '../../settings/typography/base';
 
 // LLYW.CYMRU | GOV.WALES
 // Functions: Fonts
@@ -18,7 +18,10 @@
   @return gw-function--strip-unit($rem * $base) * 1px;
 }
 
-@function gw-function--line-height($font-size, $line-height: base.$gw-line-height) {
+@function gw-function--line-height(
+  $font-size,
+  $line-height: base.$gw-line-height
+) {
   @return calc(math.round($font-size * $line-height) / $font-size);
 }
 

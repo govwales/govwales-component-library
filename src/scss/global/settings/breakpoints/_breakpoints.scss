@@ -6,8 +6,8 @@ $gw-xs: 400;
 $gw-sm: 600;
 $gw-md: 768;
 $gw-lg: 960;
-$gw-xl: 1240; //// Not used at present.
-$gw-xxl: 1440; //// Not used at present.
+$gw-xl: 1240; // Not used at present.
+$gw-xxl: 1440; // Not used at present.
 
 $gw-media-breakpoints: (
   xs: '(min-width: ' + $gw-xs + 'px)',
@@ -15,7 +15,7 @@ $gw-media-breakpoints: (
   md: '(min-width: ' + $gw-md + 'px)',
   lg: '(min-width: ' + $gw-lg + 'px)',
   xl: '(min-width: ' + $gw-xl + 'px)',
-  xxl: '(min-width: ' + $gw-xxl + 'px)'
+  xxl: '(min-width: ' + $gw-xxl + 'px)',
 );
 
 $gw-media-breakpoints-max: (
@@ -24,12 +24,12 @@ $gw-media-breakpoints-max: (
   md: '(max-width: ' + $gw-md + 'px)',
   lg: '(max-width: ' + $gw-lg + 'px)',
   xl: '(max-width: ' + $gw-xl + 'px)',
-  xxl: '(max-width: ' + $gw-xxl + 'px)'
+  xxl: '(max-width: ' + $gw-xxl + 'px)',
 );
 
 $gw-media-generic: (
   print: 'print',
-  screen: 'screen'
+  screen: 'screen',
 );
 
 // Container max width.

@@ -1,6 +1,6 @@
-@use "../../settings/colours/colours";
-@use "../../settings/site-branding/site-branding";
-@use "inline-svg";
+@use '../../settings/colours/colours';
+@use '../../settings/site-branding/site-branding';
+@use 'inline-svg';
 
 // LLYW.CYMRU | GOV.WALES
 // Mixins: Site branding
@@ -14,13 +14,19 @@
     display: block;
     width: site-branding.$gw-logo-width;
     height: site-branding.$gw-logo-height;
-    @include inline-svg.gw-mixin-background-svg(site-branding.$gw-logo, $logo-colour); //// SVG image, SVG colour.
+    @include inline-svg.gw-mixin-background-svg(
+      site-branding.$gw-logo,
+      $logo-colour
+    ); // SVG image, SVG colour.
     background-repeat: no-repeat;
     background-size: site-branding.$gw-logo-width site-branding.$gw-logo-height;
     background-position: top left;
 
     &:focus {
-      @include inline-svg.gw-mixin-background-svg(site-branding.$gw-logo, colours.$gw-colour-focus-text); //// SVG image, SVG colour.
+      @include inline-svg.gw-mixin-background-svg(
+        site-branding.$gw-logo,
+        colours.$gw-colour-focus-text
+      ); // SVG image, SVG colour.
     }
   }
 }
