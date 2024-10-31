@@ -1,11 +1,9 @@
-@use '../../helpers/mixins/typography';
-@use '../../variables/spacing';
-@use '../../variables/font';
-@use '../../variables/font-sizes';
-
 // LLYW.CYMRU | GOV.WALES
 // Typography: Lists
 // ========================================
+
+@use '../../variables/variables' as *;
+@use '../../helpers/mixins' as *;
 
 dd,
 ul,
@@ -14,15 +12,12 @@ ol {
 }
 
 .gw-list {
-  @include typography.gw-mixin-font-size(
-    font-sizes.$gw-font-size-list,
-    font.$gw-line-height
-  );
-  margin-bottom: spacing.$gw-spacing-04;
-  padding-left: spacing.$gw-spacing-06;
+  @include gw-mixin-font-size($gw-font-size-list, $gw-line-height);
+  margin-bottom: $gw-spacing-04;
+  padding-left: $gw-spacing-06;
 
   li {
-    margin-bottom: spacing.$gw-spacing-01;
+    margin-bottom: $gw-spacing-01;
 
     &:last-child {
       margin-bottom: 0;
@@ -47,10 +42,10 @@ ol {
 
   &--dash {
     list-style-type: '-';
-    padding-left: spacing.$gw-spacing-05;
+    padding-left: $gw-spacing-05;
 
     li {
-      padding-left: spacing.$gw-spacing-01;
+      padding-left: $gw-spacing-01;
     }
   }
 
@@ -64,7 +59,7 @@ ol {
   }
 
   &--index {
-    margin-bottom: spacing.$gw-spacing-04;
+    margin-bottom: $gw-spacing-04;
     list-style-type: none;
     padding-left: 0;
   }
