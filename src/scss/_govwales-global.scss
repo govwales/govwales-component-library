@@ -6,7 +6,8 @@
 @use './variables/variables';
 
 // Helpers (mixins)
-@use './helpers/helpers';
+@use './helpers/functions';
+@use './helpers/mixins';
 
 // Initial
 @use './initial/initial';
